@@ -249,7 +249,7 @@
                             <a href="mailto:lawrencetendenilla@outlook.com"><img src="https://itsmelawrence.b-cdn.net/outlook.png" alt="outlook"></a>
                         </div>
                         <div class="links-container-icons" data-tippy-content="Whatsapp">
-                            <a href="#" target="_blank"><img src="https://itsmelawrence.b-cdn.net/whatsapp.png" alt="whatsapp"></a>
+                            <a href="https://wa.me/+639623424669" target="_blank"><img src="https://itsmelawrence.b-cdn.net/whatsapp.png" alt="whatsapp"></a>
                         </div>
                     </div>
                 </div>
