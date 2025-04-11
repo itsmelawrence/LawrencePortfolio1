@@ -323,6 +323,11 @@ textarea{
     display: flex;
 }
 
+.button-container input:active {
+    background: #574037c9;
+    color: white;
+}
+
 
 /** -CONTACT **/
 
