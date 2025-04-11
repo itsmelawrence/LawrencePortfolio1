@@ -235,6 +235,15 @@
                 </div>    
             </div>
         </div>
+
+        <script>
+            document.addEventListener('contextmenu', e => {
+                if (e.target.closest('video')) {
+                    e.preventDefault();
+                }
+            });
+        </script>
+
         <div id="contact" class="contact">
             <div class="fade-in-viewc contact-banner">
                 <div class="contact-tag-text">
