@@ -240,7 +240,7 @@
             </div>
         </div>
         
-        <div id="contact" class="card-info-container">
+        <div id="contact" class="card-info-container contact-card">
             <div class="fade-in-viewc">
                 <h1 class="contact-tag">CONTACT</h1>
                 <div class="main-info-container">
@@ -261,6 +261,7 @@
                             </li>
                         </div>
                     </div>
+                    
                     <div class="fade-right-info-holder">
                         <div class="contact-us-form">
                             <div class="contact-header">
@@ -323,7 +324,11 @@
                                 </div>
                                 
                                 <div class="button-container">
-                                    <input type="submit" name="submit" value="Send Message">
+                                    <input type="submit" name="submit" value="Send Message" id="submitButton">
+                                    <div id="loadingIcon" style="display: none;">
+                                        <!-- This is a simple loading spinner, you can use any spinner you like -->
+                                        <img src="https://i.gifer.com/VAyR.gif" alt="Loading..." />
+                                    </div>
                                     <div id="responseMessage" class="success-message"></div>
                                 </div>
 
@@ -398,6 +403,47 @@
             </div>
         </div>
         
+        <script>
+            // Wait for DOM content to load
+            document.addEventListener('DOMContentLoaded', function () {
+                // GSAP ScrollTrigger animation for list items
+                gsap.registerPlugin(ScrollTrigger);
+
+                // Animate list items from the left
+                const listItems = document.querySelectorAll('.list-item-link');
+                gsap.from(listItems, {
+                    scrollTrigger: {
+                        trigger: "#contact", // Section that triggers the animation
+                        start: "top bottom", // When the top of the contact-card hits the bottom of the viewport
+                        end: "top top", // Animation end when the section top reaches the top of the viewport
+                        scrub: true, // Sync animation with scroll position
+                        once: true // Trigger animation only once
+                    },
+                    x: -200, // Initial position off-screen to the left
+                    opacity: 0, // Start with opacity 0 (invisible)
+                    duration: 1, // Duration of the animation
+                    stagger: 0.2, // Stagger each list item's animation by 0.2 seconds
+                    ease: "power3.out" // Ease-in-out effect
+                });
+
+                // Animate input fields and button from the right
+                const formElements = document.querySelectorAll('.group-input, .message-input, .button-container');
+                gsap.from(formElements, {
+                    scrollTrigger: {
+                        trigger: "#contact", // Section that triggers the animation
+                        start: "top bottom", // When the top of the contact-card hits the bottom of the viewport
+                        end: "top top", // Animation end when the section top reaches the top of the viewport
+                        scrub: true, // Sync animation with scroll position
+                        once: true // Trigger animation only once
+                    },
+                    x: 200, // Initial position off-screen to the right
+                    opacity: 0, // Start with opacity 0 (invisible)
+                    duration: 1, // Duration of the animation
+                    stagger: 0.2, // Stagger each form element's animation by 0.2 seconds
+                    ease: "power3.out" // Ease-in-out effect
+                });
+            });
+        </script>
         <script>
             document.addEventListener('contextmenu', e => {
                 if (e.target.closest('video')) {
@@ -480,26 +526,6 @@
 
         </script>
         
-        <script>
-
-            document.addEventListener('DOMContentLoaded', () => {
-                gsap.registerPlugin(ScrollTrigger);
-
-                gsap.from(".links-container-icons", {
-                    scrollTrigger: {
-                        trigger: ".links-container",
-                        start: "top 90%", // triggers when container hits 80% of viewport
-                        toggleActions: "play none none none"
-                    },
-                    opacity: 0,
-                    y: -100,
-                    duration: .3,
-                    ease: "power2.in",
-                    stagger: 0.2 // animate each icon one after the other
-                });
-            });
-        </script>
-
         <script>
             gsap.registerPlugin(ScrollTrigger);
 
