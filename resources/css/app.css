@@ -247,6 +247,22 @@ body{
     display: flex;
 }
 
+.footer-card{
+    text-align: center;
+    background: #747474;
+    height: 25px;
+    display: flex;
+}
+
+.footer-card h2{
+    width: fit-content;
+    margin: auto;
+    font-size: 10px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-style: italic;
+}
+
 @media screen and (min-width: 800px) and (max-width: 1000px){
     .desc-group{
         width: 500px;
