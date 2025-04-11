@@ -239,6 +239,7 @@
             <div class="fade-in-viewc contact-banner">
                 <div class="contact-tag-text">
                     <span class="contact-tag">Time to build something extraordinary.</span>
+                    <span class="sub-tag">You can get in touch with me via any of the links below.</span>
                 </div>
                 <div class="main-links-container">
                     <div class="links-container">
@@ -333,35 +334,14 @@
                         toggleActions: "play none none none"
                     },
                     opacity: 0,
-                    y: 50,
-                    duration: 1,
+                    y: -100,
+                    duration: .3,
                     ease: "power2.in",
                     stagger: 0.2 // animate each icon one after the other
                 });
             });
         </script>
 
-        <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-        <script>
-            function addDarkmodeWidget() {
-                const options = {
-                    bottom: '64px', // default: '32px'
-                    right: '32px', // default: '32px'
-                    left: 'unset', // default: 'unset'
-                    time: '0.5s', // default: '0.3s'
-                    mixColor: '#fff', // default: '#fff'
-                    backgroundColor: '#f6f6f6',  // default: '#fff'
-                    buttonColorDark: '#100f2c',  // default: '#100f2c'
-                    buttonColorLight: '#fff', // default: '#fff'
-                    saveInCookies: false, // default: true,
-                    label: '🌓', // default: ''
-                    autoMatchOsTheme: true // default: true
-                }
-                new Darkmode(options).showWidget();
-            }
-            window.addEventListener('load', addDarkmodeWidget);
-        </script>
-        
         <script>
             gsap.registerPlugin(ScrollTrigger);
 
