@@ -75,7 +75,7 @@
             <div class="info-holder">
                 <div class="left-info-holder">
                     <div class="left-info-holder-i">
-                        <img src="{{ asset('storage/headimg.png') }}" alt="">
+                        <img src="https://itsmelawrence.b-cdn.net/headimg.png" alt="">
                     </div>
                 </div>
                 <div class="right-info-holder">
@@ -243,13 +243,13 @@
                 <div class="main-links-container">
                     <div class="links-container">
                         <div class="links-container-icons" data-tippy-content="LinkedIn">
-                            <a href="https://linkedin.com/in/lawrence-t-b73006261" target="_blank"><img src="{{ asset('storage/linkedin.png') }}" alt="linkedin"></a>
+                            <a href="https://linkedin.com/in/lawrence-t-b73006261" target="_blank"><img src="https://itsmelawrence.b-cdn.net/linkedin.png" alt="linkedin"></a>
                         </div>
                         <div class="links-container-icons" data-tippy-content="Outlook">
-                            <a href="mailto:lawrencetendenilla@outlook.com"><img src="{{ asset('storage/outlook.png') }}" alt="outlook"></a>
+                            <a href="mailto:lawrencetendenilla@outlook.com"><img src="https://itsmelawrence.b-cdn.net/outlook.png" alt="outlook"></a>
                         </div>
                         <div class="links-container-icons" data-tippy-content="Whatsapp">
-                            <a href="#" target="_blank"><img src="{{ asset('storage/whatsapp.png') }}" alt="whatsapp"></a>
+                            <a href="#" target="_blank"><img src="https://itsmelawrence.b-cdn.net/whatsapp.png" alt="whatsapp"></a>
                         </div>
                     </div>
                 </div>
