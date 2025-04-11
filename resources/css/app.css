@@ -13,7 +13,7 @@
 /** HEADER **/
 
 h1, h2{
-    font-family: Times New Roman, Arial, sans-serif;
+    font-family: 'Noto Serif JP', sans-serif;
 }
 
 .darkmode-layer, .darkmode-toggle {
@@ -47,11 +47,13 @@ body{
 
 .typedjs {
     text-align: center;
-    font-family: Times New Roman, Arial, sans-serif;
+    font-family: 'Noto Serif JP', sans-serif;    
     font-size: 25px;
-    font-weight: 100;
+    font-weight: 400;
 }
 
+
+                                                
 .navigation-row{
     width: fit-content;
     margin: auto;
@@ -66,7 +68,7 @@ body{
 
 .nav-text{
     font-size: 12px;
-    font-family: Times New Roman, Arial, sans-serif;
+    font-family: 'Noto Serif JP', sans-serif;
     opacity: 0;
     font-style: italic;
     transform: translateY(50px);
@@ -81,7 +83,10 @@ body{
     text-align: center;
     opacity: 0;
     font-size: 12px;
+    font-family: 'Manjari', sans-serif;
 }
+
+
 
 .scroll-down-arrow{
     inset: auto 0% 3%;
@@ -131,8 +136,8 @@ body{
 .right-info-holder span {
     margin: auto;
     font-size: 14px;
-    font-family: Montserrat, sans-serif;
-    font-weight: 100;
+    font-family: 'Manjari', sans-serif;
+    font-weight: 400;
     color: #d7d7d7;
     max-width: 900px;
 }
@@ -174,10 +179,11 @@ body{
 }
 
 .fade-in-viewc h1{
-    margin-bottom: 200px !important;
+    
     font-size: 35px;
     width: 80%;
     margin: auto;
+    margin-bottom: 200px;
 }
 
 .main-info-container{
@@ -186,9 +192,9 @@ body{
     display: flex;
 }
 
-.fade-left-info-holder {
+.fade-left-info-holder{
     width: 30%;
-    display: flex;
+    display: block;
 }
 .fade-right-info-holder{
     width: 70%;
@@ -206,6 +212,7 @@ body{
 
 .fade-left-info-holder-i p{
     font-size: 13px;
+    font-family: 'Manjari', sans-serif;
 }
 
 .content-holder{
@@ -216,68 +223,126 @@ body{
 
 /** CONTACT **/
 
-.main-links-container {
+.list-item{
+    list-style-type: none;
+}
+
+.list-item li {
+    margin: 25px 0;
     display: flex;
-    height: 350px;
 }
 
-.links-container{
-    width: 80%;
-    margin: auto;
-    display: flex;
-    z-index: 501 !important;
+.list-item-link span {
+    width: 40px;
+    margin: auto 0 auto 0;
 }
 
-.links-container-icons{
-    display: flex;
+.list-item-link a {
+    color: black;
+    text-decoration: none;
     margin: auto;
-    width: 100%;
+    margin-left: 10px;
+    font-size: 14px;
+    font-family: 'Manjari', sans-serif;
 }
 
-.links-container-icons a img{
-    width: 160px;
-    margin: auto;
-    
-}
-
-.links-container-icons a{
-    margin: auto;
+.list-item-link a:hover {
+    color: #0661a7;
+    text-decoration: underline;
+    transition: color .4s, text-decoration .4s;
 }
 
 .contact-tag{
-    display: flex;
-    font-size: 35px;
-    width: 80%;
-    margin: auto;
-    font-family: Times New Roman, Arial, sans-serif;
+    margin-bottom: 80px !important;
 }
 
-.sub-tag {
-    width: 80%;
-    margin: auto;
-    margin-top: 50px;
+.contact-us-form{
+    margin-left: 70px;
+    width: 100%;
+}
+
+.contact-header h2, .contact-links-header{
+    height: 60px;
+}
+
+.main-form, .main-form label{
     font-size: 14px;
+    display: block;
+    position: relative;
+    margin: 25px 0;
+}
+
+.main-form label {
+    margin-bottom: 15px;
+}
+
+
+.main-form input{
+    width: 100%;
+    border: 1px solid gainsboro;
+    height: 30px;
+    text-indent: 10px;
+}
+
+.group-input{
     display: flex;
 }
+
+.group-input div:nth-child(2) {
+    margin-left: auto;
+}
+
+.group-input div {
+    width: 45%;
+}
+
+textarea{
+    width: 100%;
+    border: 1px solid gainsboro;
+    padding: 10px;
+}
+
+.text-danger {
+    font-size: 12px;
+    color: #dd0000;
+}
+
+.alert-danger {
+    font-size: 13px;
+    color: #c10000;
+}
+
+.success-message{
+    margin: auto;
+    margin-left: 30px;
+    color: #194019;
+}
+
 
 /** -CONTACT **/
 
 /** FOOTER **/
 
-.footer-card{
+.footer-card {
     text-align: center;
-    background: #747474;
     height: 25px;
-    display: flex;
+    display: flex
+;
 }
 
-.footer-card h2{
+.footer-card h2 {
+    color: #000000;
     width: fit-content;
     margin: auto;
-    font-size: 10px;
-    color: white;
-    font-family: Arial, sans-serif;
-    font-style: italic;
+    font-family: 'Manjari', sans-serif;
+    font-size: 11px;
+}
+
+.button-container input{
+    width: 200px;
+    margin: 20px 0;
+    height: 40px;
+    cursor: pointer;
 }
 
 /** -FOOTER **/
@@ -287,14 +352,14 @@ body{
 
     .typedjs {
         text-align: center;
-        font-family: Times New Roman, Arial, sans-serif;
+        font-family: 'Noto Serif JP', sans-serif;
         font-size: 16px;
-        font-weight: 100;
+        font-weight: 400;
     }
 
     .nav-text{
         font-size: 10px;
-        font-family: Times New Roman, Arial, sans-serif;
+        font-family: 'Noto Serif JP', sans-serif;
         opacity: 0;
         font-style: italic;
         transform: translateY(50px);
@@ -337,8 +402,8 @@ body{
     .right-info-holder span {
         margin: auto;
         font-size: 14px;
-        font-family: Montserrat, sans-serif;
-        font-weight: 100;
+        font-family: 'Manjari', sans-serif;
+        font-weight: 400;
         color: #d7d7d7;
     }
 
@@ -356,7 +421,7 @@ body{
     background-color: yellow;
     }
 
-    .gallery{
+    .card-info-container{
     margin-top: 50px;
     }
 
@@ -376,7 +441,7 @@ body{
     }
 
     .fade-in-viewc h1{
-        margin-bottom: 200px !important;
+        margin-bottom: 200px;
         font-size: 35px;
         width: 80%;
         margin: auto;
@@ -390,7 +455,7 @@ body{
 
     .fade-left-info-holder {
         width: 100%;
-        display: flex;
+        display: block;
     }
     .fade-right-info-holder{
         width: 100%;
@@ -408,55 +473,20 @@ body{
     }
 
     .fade-left-info-holder-i p{
+
         font-size: 13px;
+        font-family: 'Manjari', sans-serif;
     }
 
     .content-holder{
         z-index: 501 !important;
     }
 
-    .main-links-container {
-        height: 170px;
-        display: flex;
-    }
-
-    .links-container{
-        width: 80%;
-        margin: auto;
-        display: flex;
-        z-index: 501 !important;
-    }
-
-    .links-container-icons{
-        display: flex;
-        margin: auto;
+    .contact-us-form {
         width: 100%;
+        margin-left: auto;
     }
 
-    .links-container-icons a img{
-        width: 90px;
-        margin: auto;
-    }
-
-    .links-container-icons a{
-        margin: auto;
-    }
-
-    .contact-tag{
-        display: flex;
-        font-size: 35px;
-        width: 80%;
-        margin: auto;
-        font-family: Times New Roman, Arial, sans-serif;
-    }
-
-    .sub-tag {
-        width: 80%;
-        margin: auto;
-        margin-top: 50px;
-        font-size: 14px;
-        display: flex;
-    }
 
 }
 
@@ -464,9 +494,9 @@ body{
     
     .typedjs {
         text-align: center;
-        font-family: Times New Roman, Arial, sans-serif;
+        font-family: 'Noto Serif JP', sans-serif;
         font-size: 20px;
-        font-weight: 100;
+        font-weight: 400;
     }
         
     .about{
@@ -506,8 +536,8 @@ body{
     .right-info-holder span {
         margin: auto;
         font-size: 14px;
-        font-family: Montserrat, sans-serif;
-        font-weight: 100;
+        font-family: 'Manjari', sans-serif;
+        font-weight: 400;
         color: #d7d7d7;
     }
 
@@ -525,7 +555,7 @@ body{
     background-color: yellow;
     }
 
-    .gallery{
+    .card-info-container{
     margin-top: 50px;
     }
 
@@ -545,7 +575,7 @@ body{
     }
 
     .fade-in-viewc h1{
-        margin-bottom: 200px !important;
+        margin-bottom: 200px;
         font-size: 35px;
         width: 80%;
         margin: auto;
@@ -559,7 +589,7 @@ body{
 
     .fade-left-info-holder {
         width: 100%;
-        display: flex;
+        display: block;
     }
     .fade-right-info-holder{
         width: 100%;
@@ -578,52 +608,16 @@ body{
 
     .fade-left-info-holder-i p{
         font-size: 13px;
+        font-family: 'Manjari', sans-serif;
     }
 
     .content-holder{
         z-index: 501 !important;
     }
 
-    .main-links-container {
-    display: flex;
-    height: 300px;
-    }
-
-    .links-container{
-        width: 80%;
-        margin: auto;
-        display: flex;
-        z-index: 501 !important;
-    }
-
-    .links-container-icons{
-        display: flex;
-        margin: auto;
+    .contact-us-form {
         width: 100%;
-    }
-
-    .links-container-icons a img{
-        width: 90px;
-        margin: auto;
-    }
-
-    .links-container-icons a{
-        margin: auto;
-    }
-
-    .contact-tag{
-        display: flex;
-        font-size: 35px;
-        width: 80%;
-        margin: auto;
-        font-family: Times New Roman, Arial, sans-serif;
-    }
-    .sub-tag {
-        width: 80%;
-        margin: auto;
-        margin-top: 50px;
-        font-size: 14px;
-        display: flex;
+        margin-left: auto;
     }
 
 }
@@ -666,8 +660,8 @@ body{
     .right-info-holder span {
         margin: auto;
         font-size: 14px;
-        font-family: Montserrat, sans-serif;
-        font-weight: 100;
+        font-family: 'Manjari', sans-serif;
+        font-weight: 400;
         color: #d7d7d7;
     }
 
@@ -685,7 +679,7 @@ body{
     background-color: yellow;
     }
 
-    .gallery{
+    .card-info-container{
     margin-top: 50px;
     }
 
@@ -705,7 +699,7 @@ body{
     }
 
     .fade-in-viewc h1{
-        margin-bottom: 200px !important;
+        margin-bottom: 200px;
         font-size: 35px;
         width: 80%;
         margin: auto;
@@ -719,7 +713,7 @@ body{
 
     .fade-left-info-holder {
         width: 100%;
-        display: flex;
+        display: block;
     }
     .fade-right-info-holder{
         width: 100%;
@@ -738,59 +732,21 @@ body{
 
     .fade-left-info-holder-i p{
         font-size: 13px;
+        font-family: 'Manjari', sans-serif;
     }
 
     .content-holder{
         z-index: 501 !important;
     }
 
-    .main-links-container {
-    display: flex;
-    height: 300px;
-    }
-
-    .links-container{
-        width: 80%;
-        margin: auto;
-        display: flex;
-        z-index: 501 !important;
-    }
-
-    .links-container-icons{
-        display: flex;
-        margin: auto;
+    .contact-us-form {
         width: 100%;
-    }
-
-    .links-container-icons a img{
-        width: 90px;
-        margin: auto;
-        
-    }
-
-    .links-container-icons a{
-        margin: auto;
-    }
-
-    .contact-tag{
-        display: flex;
-        font-size: 35px;
-        width: 80%;
-        margin: auto;
-        font-family: Times New Roman, Arial, sans-serif;
-    }
-
-    .sub-tag {
-        width: 80%;
-        margin: auto;
-        margin-top: 50px;
-        font-size: 14px;
-        display: flex;
+        margin-left: 0;
     }
 
 }
 
-@media screen and (min-width: 700px) and (max-width: 800px) {
+@media screen and (min-width: 700px) and (max-width: 850px) {
 
     .about{
         height: 100vh;
@@ -829,8 +785,8 @@ body{
     .right-info-holder span {
         margin: auto;
         font-size: 14px;
-        font-family: Montserrat, sans-serif;
-        font-weight: 100;
+        font-family: 'Manjari', sans-serif;
+        font-weight: 400;
         color: #d7d7d7;
     }
 
@@ -848,7 +804,7 @@ body{
     background-color: yellow;
     }
 
-    .gallery{
+    .card-info-container{
     margin-top: 50px;
     }
 
@@ -868,7 +824,7 @@ body{
     }
 
     .fade-in-viewc h1{
-        margin-bottom: 200px !important;
+        margin-bottom: 200px;
         font-size: 35px;
         width: 80%;
         margin: auto;
@@ -882,7 +838,7 @@ body{
 
     .fade-left-info-holder {
         width: 100%;
-        display: flex;
+        display: block;
     }
     .fade-right-info-holder{
         width: 100%;
@@ -901,58 +857,22 @@ body{
 
     .fade-left-info-holder-i p{
         font-size: 13px;
+        font-family: 'Manjari', sans-serif;
     }
 
     .content-holder{
         z-index: 501 !important;
     }
 
-    .main-links-container {
-        display: flex;
-        height: 300px;
-    }
-
-    .links-container{
-        width: 80%;
-        margin: auto;
-        display: flex;
-        z-index: 501 !important;
-    }
-
-    .links-container-icons{
-        display: flex;
-        margin: auto;
+    .contact-us-form {
         width: 100%;
+        margin-left: 0;
     }
 
-    .links-container-icons a img{
-        width: 90px;
-        margin: auto;
-    }
-
-    .links-container-icons a{
-        margin: auto;
-    }
-
-    .contact-tag{
-        display: flex;
-        font-size: 35px;
-        width: 80%;
-        margin: auto;
-        font-family: Times New Roman, Arial, sans-serif;
-    }
-
-    .sub-tag {
-        width: 80%;
-        margin: auto;
-        margin-top: 50px;
-        font-size: 14px;
-        display: flex;
-    }
 
 }
 
-@media screen and (min-width: 800px) and (max-width: 1000px){
+@media screen and (min-width: 850px) and (max-width: 1000px){
     .desc-group{
         width: 500px;
         margin: auto;

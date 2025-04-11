@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -9,6 +10,9 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/noto-serif-jp" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/manjari-2" rel="stylesheet">
 
         <!-- Styles / Scripts -->
         <link href="https://fonts.cdnfonts.com/css/timesnow" rel="stylesheet">
@@ -192,7 +196,7 @@
                 </div>
             </div>
         </div>
-        <div id="gallery" class="gallery">
+        <div id="gallery" class="card-info-container">
             <div class="fade-in-viewc">
                 <h1>GALLERY</h1>
                 <div class="main-info-container">
@@ -235,7 +239,165 @@
                 </div>    
             </div>
         </div>
+        
+        <div id="contact" class="card-info-container">
+            <div class="fade-in-viewc">
+                <h1 class="contact-tag">CONTACT</h1>
+                <div class="main-info-container">
+                    <div class="fade-left-info-holder">
+                        <h2 class="contact-links-header">You can contact me through one of these links.</h2>
+                        <div class="list-item">
+                            <li class="list-item-link">
+                                <span><img src="https://lawrencepull.b-cdn.net/linkedin-i.png" alt="linkedin"></span>
+                                <a href="https://linkedin.com/in/lawrence-t-b73006261" target="_blank">Lawrence Tendenilla</a>
+                            </li>
+                            <li class="list-item-link">
+                                <span><img src="https://lawrencepull.b-cdn.net/outlook-i.png" alt="outlook"></span>
+                                <a href="mailto:lawrencetendenilla@outlook.com" target="_blank">lawrencetendenilla@outlook.com</a>
+                            </li>
+                            <li class="list-item-link">
+                                <span><img src="https://lawrencepull.b-cdn.net/whatsapp-i.png" alt="whatsapp"></span>
+                                <a href="https://wa.me/+639623424669" target="_blank">Let's chat on WhatsApp</a>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="fade-right-info-holder">
+                        <div class="contact-us-form">
+                            <div class="contact-header">
+                                <h2>You’re also welcome to send me a message.</h2>
+                            </div>
+                            <div class="form-container">
+                            <form id="contactForm" method="POST" action="{{ route('contact.us.store') }}" class="main-form">
+                                @csrf
+                                <div class="group-input">
+                                    <div class="name-input">
+                                        <label for="name">Full Name</label>
+ 
+                                        <input type="text" name="name" class="form-control" placeholder="Name" value="{{ old('name') }}">
+                                        <span id="nameError" class="text-danger"></span>
 
+                                        @if ($errors->has('name'))
+
+                                            <span class="text-danger">{{ $errors->first('name') }}</span>
+
+                                        @endif
+                                    </div>
+                                    <div class="email-input">
+                                        <label for="email">Email address</label>
+ 
+                                        <input type="text" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
+                                        <span id="emailError" class="text-danger"></span>
+
+                                        @if ($errors->has('email'))
+
+                                            <span class="text-danger">{{ $errors->first('email') }}</span>
+
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="group-input">
+                                    <div class="name-input">
+                                        <label for="phone">Phone Number</label>
+ 
+                                        <input type="number" name="phone" class="form-control" placeholder="Phone" value="{{ old('phone') }}">
+                                        <span id="phoneError" class="text-danger"></span>
+
+                                        @if ($errors->has('phone'))
+
+                                            <span class="text-danger">{{ $errors->first('phone') }}</span>
+
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="message-input">
+                                    <label for="message">Your Message</label>
+
+                                    <textarea name="message" rows="3" class="form-control">{{ old('message') }}</textarea>
+                                    <span id="messageError" class="text-danger"></span>
+
+                                        @if ($errors->has('message'))
+
+                                            <span class="text-danger">{{ $errors->first('message') }}</span>
+
+                                        @endif
+                                </div>
+                                
+                                <div class="button-container">
+                                    <input type="submit" name="submit" value="Send Message">
+                                    <div id="responseMessage" class="success-message"></div>
+                                </div>
+
+                            </form>
+                            
+
+                            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+                            <script>
+                                $('#contactForm').on('submit', function(e) {
+                                    e.preventDefault();
+                                    
+                                    // Get the CSRF token dynamically
+                                    var csrfToken = $('meta[name="csrf-token"]').attr('content');
+                                    
+                                    $.ajax({
+                                        url: "{{ url('/') }}", // POST to the root URL
+                                        method: "POST",
+                                        data: $(this).serialize() + '&_token=' + csrfToken,  // Add CSRF token
+                                        success: function(response) {
+                                             // Clear all validation error messages
+                                            $('#nameError').text('');
+                                            $('#emailError').text('');
+                                            $('#phoneError').text('');
+                                            $('#messageError').text('');
+
+                                            // Display success message
+                                            $('#responseMessage').html('<div class="alert alert-success">' + response.message + '</div>');
+
+                                            // Reset the form
+                                            $('#contactForm')[0].reset();
+
+                                            setTimeout(function() {
+                                                $('#responseMessage').fadeOut('slow', function() {
+                                                    $(this).html('').show(); // Clear content and reset display
+                                                });
+                                            }, 5000); // 5000ms = 5 seconds
+                                        },
+                                        error: function(response) {
+                                            let errors = response.responseJSON?.errors;
+
+                                            // Clear previous errors
+                                            $('#nameError').text('');
+                                            $('#emailError').text('');
+                                            $('#phoneError').text('');
+                                            $('#messageError').text('');
+
+                                            // Display new errors if they exist
+                                            if (errors) {
+                                                if (errors.name) $('#nameError').text(errors.name[0]);
+                                                if (errors.email) $('#emailError').text(errors.email[0]);
+                                                if (errors.phone) $('#phoneError').text(errors.phone[0]);
+                                                if (errors.message) $('#messageError').text(errors.message[0]);
+                                            } else {
+                                                // Generic fallback error
+                                                $('#responseMessage').html('<div class="alert alert-danger">Something went wrong. Please try again.</div>');
+                                            }
+                                        }
+                                    });
+                                });
+                            </script>
+
+                            </div>
+                        </div>
+                    </div>
+                    @if(session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+                </div>
+            </div>
+        </div>
+        
         <script>
             document.addEventListener('contextmenu', e => {
                 if (e.target.closest('video')) {
@@ -249,30 +411,6 @@
                 }
             });
         </script>
-
-        
-
-        <div id="contact" class="contact">
-            <div class="fade-in-viewc contact-banner">
-                <div class="contact-tag-text">
-                    <span class="contact-tag">Time to build something extraordinary.</span>
-                    <span class="sub-tag">You can get in touch with me via any of the links below.</span>
-                </div>
-                <div class="main-links-container">
-                    <div class="links-container">
-                        <div class="links-container-icons" data-tippy-content="LinkedIn">
-                            <a href="https://linkedin.com/in/lawrence-t-b73006261" target="_blank"><img src="https://itsmelawrence.b-cdn.net/linkedin.png" alt="linkedin"></a>
-                        </div>
-                        <div class="links-container-icons" data-tippy-content="Outlook">
-                            <a href="mailto:lawrencetendenilla@outlook.com"><img src="https://itsmelawrence.b-cdn.net/outlook.png" alt="outlook"></a>
-                        </div>
-                        <div class="links-container-icons" data-tippy-content="Whatsapp">
-                            <a href="https://wa.me/+639623424669" target="_blank"><img src="https://itsmelawrence.b-cdn.net/whatsapp.png" alt="whatsapp"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="footer-card">
             <h2>Website designed and developed by Lawrence Tendenilla</h2>
         </div>
