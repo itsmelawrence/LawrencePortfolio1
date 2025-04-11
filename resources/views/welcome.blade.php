@@ -311,7 +311,7 @@
                 } else {
                     gsap.to(word, {
                     opacity: 1,  // Hide word if not reached yet
-                    color: "#969696",  // Reset color
+                    color: "#d7d7d7",  // Reset color
                     duration: 0.2,
                     });
                 }
