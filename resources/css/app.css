@@ -318,6 +318,10 @@ textarea{
     color: #194019;
 }
 
+.button-container{
+    display: flex;
+}
+
 
 /** -CONTACT **/
 
