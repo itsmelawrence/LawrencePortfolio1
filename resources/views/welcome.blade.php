@@ -242,7 +242,15 @@
                     e.preventDefault();
                 }
             });
+
+            document.addEventListener('contextmenu', e => {
+                if (e.target.tagName === 'IMG') {
+                    e.preventDefault();
+                }
+            });
         </script>
+
+        
 
         <div id="contact" class="contact">
             <div class="fade-in-viewc contact-banner">
