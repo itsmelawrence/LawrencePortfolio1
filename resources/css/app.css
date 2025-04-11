@@ -205,7 +205,7 @@ body{
 
 .main-links-container {
     display: flex;
-    height: 500px;
+    height: 350px;
 }
 
 .links-container{
@@ -237,6 +237,14 @@ body{
     width: 80%;
     margin: auto;
     font-family: Times New Roman, Arial, sans-serif;
+}
+
+.sub-tag {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 14px;
+    display: flex;
 }
 
 @media screen and (min-width: 350px) and (max-width: 450px){
@@ -574,6 +582,13 @@ body{
         margin: auto;
         font-family: Times New Roman, Arial, sans-serif;
     }
+    .sub-tag {
+        width: 80%;
+        margin: auto;
+        margin-top: 50px;
+        font-size: 14px;
+        display: flex;
+    }
 
 }
 
@@ -729,6 +744,14 @@ body{
         font-family: Times New Roman, Arial, sans-serif;
     }
 
+    .sub-tag {
+        width: 80%;
+        margin: auto;
+        margin-top: 50px;
+        font-size: 14px;
+        display: flex;
+    }
+
 }
 
 @media screen and (min-width: 550px) and (max-width: 700px) {
@@ -881,6 +904,14 @@ body{
         width: 80%;
         margin: auto;
         font-family: Times New Roman, Arial, sans-serif;
+    }
+
+    .sub-tag {
+        width: 80%;
+        margin: auto;
+        margin-top: 50px;
+        font-size: 14px;
+        display: flex;
     }
 
 }
