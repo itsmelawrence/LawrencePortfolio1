@@ -79,7 +79,7 @@
             <div class="info-holder">
                 <div class="left-info-holder">
                     <div class="left-info-holder-i">
-                        <img src="https://itsmelawrence.b-cdn.net/headimg.png" alt="">
+                        <img src="https://lawrencepull.b-cdn.net/headimg.png" alt="">
                     </div>
                 </div>
                 <div class="right-info-holder">
@@ -402,7 +402,7 @@
                 </div>
             </div>
         </div>
-        
+
         <script>
             // Wait for DOM content to load
             document.addEventListener('DOMContentLoaded', function () {
