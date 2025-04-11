@@ -283,6 +283,15 @@ body{
     border: 1px solid gainsboro;
     height: 30px;
     text-indent: 10px;
+    background: transparent;
+    color: black;
+    transition: background .4s, color .4s;
+}
+
+.main-form input:hover {
+    background: #8c7070;
+    color: white;
+    transition: background .4s, color .4s;
 }
 
 .group-input{
@@ -451,10 +460,11 @@ textarea{
     }
 
     .fade-in-viewc h1{
-        margin-bottom: 200px;
+        
         font-size: 35px;
         width: 80%;
         margin: auto;
+        margin-bottom: 100px;
     }
 
     .main-info-container{
@@ -585,10 +595,11 @@ textarea{
     }
 
     .fade-in-viewc h1{
-        margin-bottom: 200px;
+        
         font-size: 35px;
         width: 80%;
         margin: auto;
+        margin-bottom: 100px;
     }
 
     .main-info-container{
@@ -709,10 +720,11 @@ textarea{
     }
 
     .fade-in-viewc h1{
-        margin-bottom: 200px;
+        
         font-size: 35px;
         width: 80%;
         margin: auto;
+        margin-bottom: 100px;
     }
 
     .main-info-container{
@@ -834,10 +846,11 @@ textarea{
     }
 
     .fade-in-viewc h1{
-        margin-bottom: 200px;
+        
         font-size: 35px;
         width: 80%;
         margin: auto;
+        margin-bottom: 100px;
     }
 
     .main-info-container{
