@@ -10,6 +10,7 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+/** HEADER **/
 
 h1, h2{
     font-family: Times New Roman, Arial, sans-serif;
@@ -93,6 +94,10 @@ body{
     opacity: 0;
 }
 
+/** -HEADER **/
+
+/** ABOUT **/
+
 .about{
     height: 100vh;
     display: flex;
@@ -144,6 +149,10 @@ body{
 .highlighted {
   background-color: yellow;
 }
+
+/** -ABOUT **/
+
+/** GALLERY **/
 
 .gallery{
     margin-top: 50px;
@@ -203,6 +212,10 @@ body{
     z-index: 501 !important;
 }
 
+/** GALLERY **/
+
+/** CONTACT **/
+
 .main-links-container {
     display: flex;
     height: 350px;
@@ -247,6 +260,10 @@ body{
     display: flex;
 }
 
+/** -CONTACT **/
+
+/** FOOTER **/
+
 .footer-card{
     text-align: center;
     background: #747474;
@@ -263,33 +280,8 @@ body{
     font-style: italic;
 }
 
-@media screen and (min-width: 800px) and (max-width: 1000px){
-    .desc-group{
-        width: 500px;
-        margin: auto;
-    }
-}
+/** -FOOTER **/
 
-@media screen and (min-width: 1000px) and (max-width: 1300px){
-    .desc-group{
-        width: 700px;
-        margin: auto;
-    }
-}
-
-@media screen and (min-width: 1300px) and (max-width: 1500px){
-    .desc-group{
-        width: 800px;
-        margin: auto;
-    }
-}
-
-@media screen and (min-width: 1500px){
-    .desc-group{
-        width: 1000px;
-        margin: auto;
-    }
-}
 
 @media screen and (min-width: 350px) and (max-width: 450px){
 
@@ -636,6 +628,168 @@ body{
 
 }
 
+@media screen and (min-width: 550px) and (max-width: 700px) {
+        .about{
+        height: 100vh;
+        display: block;
+    }
+
+    .info-holder{
+        margin: auto;
+        display: block;
+        width: 100%;
+    }
+
+    .left-info-holder {
+        margin: auto;
+        width: 300px;
+    }
+
+    .left-info-holder-i{
+        display: flex;
+    }
+
+    .left-info-holder-i img{
+        margin: auto;
+        width: 300px;
+        z-index: 501;
+    }
+
+    .right-info-holder {
+        width: 500px;
+        display: block;
+        margin: auto;
+        margin-top: 40px;
+
+    }
+
+    .right-info-holder span {
+        margin: auto;
+        font-size: 14px;
+        font-family: Montserrat, sans-serif;
+        font-weight: 100;
+        color: #d7d7d7;
+    }
+
+    .desc-text{
+        transition: color 0.3s ease;
+    }
+
+    .desc-group{
+        margin: auto;
+        width: 100%;
+        display: block;
+    }
+
+    .highlighted {
+    background-color: yellow;
+    }
+
+    .gallery{
+    margin-top: 50px;
+    }
+
+    .container{
+        background: #6d6d6d;
+        height: 300px;
+        width: 100%;
+    }
+
+    .fade-in-viewc{
+        width: 100%;
+        opacity: 0;
+        display: block;
+        width: 100%;
+        margin-top: 200px;
+        
+    }
+
+    .fade-in-viewc h1{
+        margin-bottom: 200px !important;
+        font-size: 35px;
+        width: 80%;
+        margin: auto;
+    }
+
+    .main-info-container{
+        width: 80%;
+        margin: auto;
+        display: block;
+    }
+
+    .fade-left-info-holder {
+        width: 100%;
+        display: flex;
+    }
+    .fade-right-info-holder{
+        width: 100%;
+        display: flex;
+        margin-top: 40px;
+    }
+
+    .fade-left-info-holder-i{
+        display: block;
+    }
+
+    .fade-left-info-holder-i h2{
+        margin-bottom: 15px;
+        font-size: 32px;
+    }
+
+    .fade-left-info-holder-i p{
+        font-size: 13px;
+    }
+
+    .content-holder{
+        z-index: 501 !important;
+    }
+
+    .main-links-container {
+    display: flex;
+    height: 300px;
+    }
+
+    .links-container{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        z-index: 501 !important;
+    }
+
+    .links-container-icons{
+        display: flex;
+        margin: auto;
+        width: 100%;
+    }
+
+    .links-container-icons a img{
+        width: 90px;
+        margin: auto;
+        
+    }
+
+    .links-container-icons a{
+        margin: auto;
+    }
+
+    .contact-tag{
+        display: flex;
+        font-size: 35px;
+        width: 80%;
+        margin: auto;
+        font-family: Times New Roman, Arial, sans-serif;
+    }
+
+    .sub-tag {
+        width: 80%;
+        margin: auto;
+        margin-top: 50px;
+        font-size: 14px;
+        display: flex;
+    }
+
+}
+
 @media screen and (min-width: 700px) and (max-width: 800px) {
 
     .about{
@@ -798,164 +952,30 @@ body{
 
 }
 
-@media screen and (min-width: 550px) and (max-width: 700px) {
-        .about{
-        height: 100vh;
-        display: block;
-    }
-
-    .info-holder{
-        margin: auto;
-        display: block;
-        width: 100%;
-    }
-
-    .left-info-holder {
-        margin: auto;
-        width: 300px;
-    }
-
-    .left-info-holder-i{
-        display: flex;
-    }
-
-    .left-info-holder-i img{
-        margin: auto;
-        width: 300px;
-        z-index: 501;
-    }
-
-    .right-info-holder {
-        width: 500px;
-        display: block;
-        margin: auto;
-        margin-top: 40px;
-
-    }
-
-    .right-info-holder span {
-        margin: auto;
-        font-size: 14px;
-        font-family: Montserrat, sans-serif;
-        font-weight: 100;
-        color: #d7d7d7;
-    }
-
-    .desc-text{
-        transition: color 0.3s ease;
-    }
-
+@media screen and (min-width: 800px) and (max-width: 1000px){
     .desc-group{
-        margin: auto;
-        width: 100%;
-        display: block;
-    }
-
-    .highlighted {
-    background-color: yellow;
-    }
-
-    .gallery{
-    margin-top: 50px;
-    }
-
-    .container{
-        background: #6d6d6d;
-        height: 300px;
-        width: 100%;
-    }
-
-    .fade-in-viewc{
-        width: 100%;
-        opacity: 0;
-        display: block;
-        width: 100%;
-        margin-top: 200px;
-        
-    }
-
-    .fade-in-viewc h1{
-        margin-bottom: 200px !important;
-        font-size: 35px;
-        width: 80%;
+        width: 500px;
         margin: auto;
     }
+}
 
-    .main-info-container{
-        width: 80%;
-        margin: auto;
-        display: block;
-    }
-
-    .fade-left-info-holder {
-        width: 100%;
-        display: flex;
-    }
-    .fade-right-info-holder{
-        width: 100%;
-        display: flex;
-        margin-top: 40px;
-    }
-
-    .fade-left-info-holder-i{
-        display: block;
-    }
-
-    .fade-left-info-holder-i h2{
-        margin-bottom: 15px;
-        font-size: 32px;
-    }
-
-    .fade-left-info-holder-i p{
-        font-size: 13px;
-    }
-
-    .content-holder{
-        z-index: 501 !important;
-    }
-
-    .main-links-container {
-    display: flex;
-    height: 300px;
-    }
-
-    .links-container{
-        width: 80%;
-        margin: auto;
-        display: flex;
-        z-index: 501 !important;
-    }
-
-    .links-container-icons{
-        display: flex;
-        margin: auto;
-        width: 100%;
-    }
-
-    .links-container-icons a img{
-        width: 90px;
-        margin: auto;
-        
-    }
-
-    .links-container-icons a{
+@media screen and (min-width: 1000px) and (max-width: 1300px){
+    .desc-group{
+        width: 700px;
         margin: auto;
     }
+}
 
-    .contact-tag{
-        display: flex;
-        font-size: 35px;
-        width: 80%;
+@media screen and (min-width: 1300px) and (max-width: 1500px){
+    .desc-group{
+        width: 800px;
         margin: auto;
-        font-family: Times New Roman, Arial, sans-serif;
     }
+}
 
-    .sub-tag {
-        width: 80%;
+@media screen and (min-width: 1500px){
+    .desc-group{
+        width: 1000px;
         margin: auto;
-        margin-top: 50px;
-        font-size: 14px;
-        display: flex;
     }
-
 }
