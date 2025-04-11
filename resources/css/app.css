@@ -247,6 +247,34 @@ body{
     display: flex;
 }
 
+@media screen and (min-width: 800px) and (max-width: 1000px){
+    .desc-group{
+        width: 500px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1300px){
+    .desc-group{
+        width: 700px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1500px){
+    .desc-group{
+        width: 800px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1500px){
+    .desc-group{
+        width: 1000px;
+        margin: auto;
+    }
+}
+
 @media screen and (min-width: 350px) and (max-width: 450px){
 
     .typedjs {
