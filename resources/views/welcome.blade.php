@@ -211,7 +211,7 @@
                         <div class="content-holder">
                             <div class="video-container">
                                 <video autoplay loop muted playsinline>
-                                    <source src="https://itsmelawrence.b-cdn.net/ct.mp4" type="video/mp4">
+                                    <source src="https://newpullzone1.b-cdn.net/ct.mp4" type="video/mp4">
                                 </video>
                             </div>
                         </div>
@@ -231,14 +231,200 @@
                         <div class="content-holder">
                             <div class="video-container">
                                 <video autoplay loop muted playsinline>
-                                    <source src="https://itsmelawrence.b-cdn.net/smt2.mp4" type="video/mp4">
+                                    <source src="https://newpullzone1.b-cdn.net/smt2.mp4" type="video/mp4">
                                 </video>
                             </div>
                         </div>
                     </div>  
                 </div>    
             </div>
+            <div class="fade-in-viewc">
+                <div class="main-info-container">
+                    <div class="fade-left-info-holder">
+                        <div class="fade-left-info-holder-i">
+                            <h2>WEBSITE DESIGN INFOGRAPHICS</h2>
+                            <p>+ Infographics Template</p>
+                            <p>+ Made in Canva</p>
+                        </div>
+                    </div>  
+                    <div class="fade-right-info-holder">
+                        <div class="content-holder">
+                            <div class="video-container">
+                                <video autoplay loop muted playsinline>
+                                    <source src="https://newpullzone1.b-cdn.net/websiteinfographics.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>  
+                </div>    
+            </div>
+
+            <div class="fade-in-viewc">
+                <div class="images-container">
+                    <div class="image-container-header">
+                        <h1>GALLERY  -  VISUALS</h1>
+                    </div>
+                    <div class="main-image-container">
+                        <h2 class="image-header1">Catalog Visuals</h2>
+                        <div class="image-block"> <!-- 4-IMAGE BLOCK -->
+                            <div class="image-block-container"> <!-- 1 IMAGE BLOCK -->
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+                                    <div class="image-handler">
+                                        <img src="https://newpullzone1.b-cdn.net/vesaro1.png" alt="Vesaro 1">
+                                    </div>
+                                    <div class="image-text">
+                                        <h3>Front & Back</h3>
+                                    </div>
+                                </div>
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+                                    <div class="image-handler">
+                                        <img src="https://newpullzone1.b-cdn.net/vesaro2.png" alt="Vesaro 2">
+                                    </div>
+                                    <div class="image-text">
+                                        <h3>Inner Page 1</h3>
+                                    </div>
+                                </div>
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+                                    <div class="image-handler">
+                                        <img src="https://newpullzone1.b-cdn.net/vesaro3.png" alt="Vesaro 3">
+                                    </div>
+                                    <div class="image-text">
+                                        <h3>Inner Page 2</h3>
+                                    </div>
+                                </div>
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+                                    <div class="image-handler">
+                                        <img src="https://newpullzone1.b-cdn.net/vesaro4.png" alt="Vesaro 4">
+                                    </div>
+                                    <div class="image-text">
+                                        <h3>Inner Page 3</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <h2 class="image-header2">Social Media Visuals</h2>
+                        <div class="image-block"> <!-- 4-IMAGE BLOCK -->
+                            <div class="image-block-container"> <!-- 1 IMAGE BLOCK -->
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+                                    <div class="image-handler">
+                                        <img src="https://newpullzone1.b-cdn.net/social1.png" alt="Social Media 1">
+                                    </div>
+                                    <div class="image-text">
+                                        <h3>Template 1</h3>
+                                    </div>
+                                </div>
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+                                    <div class="image-handler">
+                                        <img src="https://newpullzone1.b-cdn.net/social2.png" alt="Social Media 2">
+                                    </div>
+                                    <div class="image-text">
+                                        <h3>Template 2</h3>
+                                    </div>
+                                </div>
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+                                    <div class="image-handler">
+                                        <img src="https://newpullzone1.b-cdn.net/social3.png" alt="Social Media 3">
+                                    </div>
+                                    <div class="image-text">
+                                        <h3>Template 3</h3>
+                                    </div>
+                                </div>
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+                                    <div class="image-handler">
+                                        <img src="https://newpullzone1.b-cdn.net/social4.png" alt="Social Media 4">
+                                    </div>
+                                    <div class="image-text">
+                                        <h3>Template 4</h3>
+                                    </div>
+                                </div>
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+                                    <div class="image-handler">
+                                        <img src="https://newpullzone1.b-cdn.net/social5.png" alt="Social Media 4">
+                                    </div>
+                                    <div class="image-text">
+                                        <h3>Template 5</h3>
+                                    </div>
+                                </div>
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+                                    <div class="image-handler">
+                                        <img src="https://newpullzone1.b-cdn.net/social6.png" alt="Social Media 6">
+                                    </div>
+                                    <div class="image-text">
+                                        <h3>Template 6</h3>
+                                    </div>
+                                </div>
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+                                    <div class="image-handler">
+                                        <img src="https://newpullzone1.b-cdn.net/social7.png" alt="Social Media 7">
+                                    </div>
+                                    <div class="image-text">
+                                        <h3>Template 7</h3>
+                                    </div>
+                                </div>
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+                                    <div class="image-handler">
+                                        <img src="https://newpullzone1.b-cdn.net/social8.png" alt="Social Media 8">
+                                    </div>
+                                    <div class="image-text">
+                                        <h3>Template 8</h3>
+                                    </div>
+                                </div>
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+                                    <div class="image-handler">
+                                        <img src="https://newpullzone1.b-cdn.net/social9.png" alt="Social Media 9">
+                                    </div>
+                                    <div class="image-text">
+                                        <h3>Template 9</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <h2 class="image-header3">Web Design Visuals</h2>
+                        <div class="image-block"> <!-- 4-IMAGE BLOCK -->
+                            <div class="image-block-container"> <!-- 1 IMAGE BLOCK -->
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+                                    <div class="image-handler">
+                                        <img src="https://newpullzone1.b-cdn.net/webdesign1.png" alt="Web Design 1">
+                                    </div>
+                                    <div class="image-text">
+                                        <h3>Template 1</h3>
+                                    </div>
+                                </div>
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+                                    <div class="image-handler">
+                                        <img src="https://newpullzone1.b-cdn.net/webdesign2.png" alt="Web Design 2">
+                                    </div>
+                                    <div class="image-text">
+                                        <h3>Template 2</h3>
+                                    </div>
+                                </div>
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+                                    <div class="image-handler">
+                                        <img src="https://newpullzone1.b-cdn.net/webdesign3.png" alt="Web Design 3">
+                                    </div>
+                                    <div class="image-text">
+                                        <h3>Template 3</h3>
+                                    </div>
+                                </div>
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+                                    <div class="image-handler">
+                                        <img src="https://newpullzone1.b-cdn.net/webdesign4.png" alt="Web Design 4">
+                                    </div>
+                                    <div class="image-text">
+                                        <h3>Template 4</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
+        
         
         <div id="contact" class="card-info-container contact-card">
             <div class="fade-in-viewc">
@@ -402,48 +588,6 @@
                 </div>
             </div>
         </div>
-
-        <script>
-            // Wait for DOM content to load
-            document.addEventListener('DOMContentLoaded', function () {
-                // GSAP ScrollTrigger animation for list items
-                gsap.registerPlugin(ScrollTrigger);
-
-                // Animate list items from the left
-                const listItems = document.querySelectorAll('.list-item-link');
-                gsap.from(listItems, {
-                    scrollTrigger: {
-                        trigger: "#contact", // Section that triggers the animation
-                        start: "top bottom", // When the top of the contact-card hits the bottom of the viewport
-                        end: "top top", // Animation end when the section top reaches the top of the viewport
-                        scrub: true, // Sync animation with scroll position
-                        once: true // Trigger animation only once
-                    },
-                    x: -200, // Initial position off-screen to the left
-                    opacity: 0, // Start with opacity 0 (invisible)
-                    duration: 1, // Duration of the animation
-                    stagger: 0.2, // Stagger each list item's animation by 0.2 seconds
-                    ease: "power3.out" // Ease-in-out effect
-                });
-
-                // Animate input fields and button from the right
-                const formElements = document.querySelectorAll('.group-input, .message-input, .button-container');
-                gsap.from(formElements, {
-                    scrollTrigger: {
-                        trigger: "#contact", // Section that triggers the animation
-                        start: "top bottom", // When the top of the contact-card hits the bottom of the viewport
-                        end: "top top", // Animation end when the section top reaches the top of the viewport
-                        scrub: true, // Sync animation with scroll position
-                        once: true // Trigger animation only once
-                    },
-                    x: 200, // Initial position off-screen to the right
-                    opacity: 0, // Start with opacity 0 (invisible)
-                    duration: 1, // Duration of the animation
-                    stagger: 0.2, // Stagger each form element's animation by 0.2 seconds
-                    ease: "power3.out" // Ease-in-out effect
-                });
-            });
-        </script>
         <script>
             document.addEventListener('contextmenu', e => {
                 if (e.target.closest('video')) {

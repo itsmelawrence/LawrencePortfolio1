@@ -219,6 +219,47 @@ body{
     z-index: 501 !important;
 }
 
+.main-image-container{
+    width: 80%;
+    margin: auto auto 200px;
+}
+
+
+.main-image-container h2{
+    font-size: 30px;
+}
+
+.image-block-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-handler-block {
+    width: 33%;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.image-handler img {
+    width: 200px;
+    margin: auto;
+}
+
+.image-text{
+    display: flex;
+}
+
+.image-text h3 {
+    margin: auto;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.image-header1, .image-header2, .image-header3{
+    background: #fafafa;
+    padding: 30px 0;
+}
+
 /** GALLERY **/
 
 /** CONTACT **/
@@ -507,6 +548,34 @@ textarea{
         margin-left: auto;
     }
 
+    .image-block{
+        display: flex;
+        overflow: scroll;
+    }
+
+    .image-block-container {
+        flex: none;
+        display: flex;
+        position: relative;
+        box-shadow: inset -4px 0 12px rgb(0 0 0 / 0%), inset 4px 0 20px 0px rgb(0 0 0 / 15%);
+        background: white;
+    }
+
+    .image-handler img {
+        width: 200px;
+        margin: auto;
+    }
+
+    .image-text h3 {
+        margin: 15px auto auto;
+        font-size: 15px;
+    }
+
+    .image-handler-block {
+        width: unset;
+        margin: 50px 20px;
+    }
+
 
 }
 
@@ -641,6 +710,34 @@ textarea{
         margin-left: auto;
     }
 
+    .image-block{
+        display: flex;
+        overflow: scroll;
+    }
+
+    .image-block-container {
+        flex: none;
+        display: flex;
+        position: relative;
+        box-shadow: inset -4px 0 12px rgb(0 0 0 / 0%), inset 4px 0 20px 0px rgb(0 0 0 / 15%);
+        background: white;
+    }
+
+    .image-handler img {
+        width: 200px;
+        margin: auto;
+    }
+
+    .image-text h3 {
+        margin: 15px auto auto;
+        font-size: 15px;
+    }
+
+    .image-handler-block {
+        width: unset;
+        margin: 50px 20px;
+    }
+
 }
 
 @media screen and (min-width: 550px) and (max-width: 700px) {
@@ -764,6 +861,34 @@ textarea{
     .contact-us-form {
         width: 100%;
         margin-left: 0;
+    }
+
+    .image-block{
+        display: flex;
+        overflow: scroll;
+    }
+
+    .image-block-container {
+        flex: none;
+        display: flex;
+        position: relative;
+        box-shadow: inset -4px 0 12px rgb(0 0 0 / 0%), inset 4px 0 20px 0px rgb(0 0 0 / 15%);
+        background: white;
+    }
+
+    .image-handler img {
+        width: 300px;
+        margin: auto;
+    }
+
+    .image-text h3 {
+        margin: 15px auto auto;
+        font-size: 15px;
+    }
+
+    .image-handler-block {
+        width: unset;
+        margin: 50px 20px;
     }
 
 }
@@ -892,6 +1017,33 @@ textarea{
         margin-left: 0;
     }
 
+    .image-block{
+        display: flex;
+        overflow: scroll;
+    }
+
+    .image-block-container {
+        flex: none;
+        display: flex;
+        position: relative;
+        box-shadow: inset -4px 0 12px rgb(0 0 0 / 0%), inset 4px 0 20px 0px rgb(0 0 0 / 15%);
+        background: white;
+    }
+
+    .image-handler img {
+        width: 400px;
+        margin: auto;
+    }
+
+    .image-text h3 {
+        margin: 15px auto auto;
+        font-size: 15px;
+    }
+
+    .image-handler-block {
+        width: unset;
+        margin: 50px 20px;
+    }
 
 }
 
@@ -900,6 +1052,8 @@ textarea{
         width: 500px;
         margin: auto;
     }
+
+   
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1300px){
