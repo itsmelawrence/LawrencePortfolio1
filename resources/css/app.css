@@ -558,8 +558,8 @@ textarea{
         flex: none;
         display: flex;
         position: relative;
-        box-shadow: inset -4px 0 12px rgb(0 0 0 / 0%), inset 4px 0 20px 0px rgb(0 0 0 / 15%);
-        background: white;
+        
+        
     }
 
     .image-handler img {
@@ -721,8 +721,8 @@ textarea{
         flex: none;
         display: flex;
         position: relative;
-        box-shadow: inset -4px 0 12px rgb(0 0 0 / 0%), inset 4px 0 20px 0px rgb(0 0 0 / 15%);
-        background: white;
+        
+        
     }
 
     .image-handler img {
@@ -875,8 +875,8 @@ textarea{
         flex: none;
         display: flex;
         position: relative;
-        box-shadow: inset -4px 0 12px rgb(0 0 0 / 0%), inset 4px 0 20px 0px rgb(0 0 0 / 15%);
-        background: white;
+        
+        
     }
 
     .image-handler img {
@@ -1030,7 +1030,7 @@ textarea{
         flex: none;
         display: flex;
         position: relative;
-        background: white;
+        
     }
 
     .image-handler img {
