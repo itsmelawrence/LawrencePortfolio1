@@ -16,6 +16,9 @@
 
         <!-- Styles / Scripts -->
         <link href="https://fonts.cdnfonts.com/css/timesnow" rel="stylesheet">
+        <!-- Add AOS styles -->
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         @else
@@ -264,162 +267,210 @@
                     <div class="image-container-header">
                         <h1>GALLERY  -  VISUALS</h1>
                     </div>
+                    
                     <div class="main-image-container">
-                        <h2 class="image-header1">Catalog Visuals</h2>
-                        <div class="image-block"> <!-- 4-IMAGE BLOCK -->
-                            <div class="image-block-container"> <!-- 1 IMAGE BLOCK -->
-                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+                            <h2 class="image-header1">Catalog Visuals</h2>
+                            <div class="image-block" data-aos="fade-up"> <!-- 4-IMAGE BLOCK -->
+                                <div class="image-block-container"> <!-- 1 IMAGE BLOCK -->
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <img src="https://newpullzone1.b-cdn.net/vesaro1.png" alt="Vesaro 1">
+                                        <a href="https://newpullzone1.b-cdn.net/vesaro1.png" data-lightbox="portfolio" data-title="Template 1">
+                                            <img src="https://newpullzone1.b-cdn.net/vesaro1.png" alt="Vesaro 1">
+                                        </a>
                                     </div>
                                     <div class="image-text">
                                         <h3>Front & Back</h3>
                                     </div>
                                 </div>
-                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <img src="https://newpullzone1.b-cdn.net/vesaro2.png" alt="Vesaro 2">
+                                        <a href="https://newpullzone1.b-cdn.net/vesaro2.png" data-lightbox="portfolio" data-title="Template 2">
+                                            <img src="https://newpullzone1.b-cdn.net/vesaro2.png" alt="Vesaro 2">
+                                        </a>
                                     </div>
                                     <div class="image-text">
                                         <h3>Inner Page 1</h3>
                                     </div>
                                 </div>
-                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <img src="https://newpullzone1.b-cdn.net/vesaro3.png" alt="Vesaro 3">
+                                        <a href="https://newpullzone1.b-cdn.net/vesaro3.png" data-lightbox="portfolio" data-title="Template 3">
+                                            <img src="https://newpullzone1.b-cdn.net/vesaro3.png" alt="Vesaro 3">
+                                        </a>
                                     </div>
                                     <div class="image-text">
                                         <h3>Inner Page 2</h3>
                                     </div>
                                 </div>
-                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <img src="https://newpullzone1.b-cdn.net/vesaro4.png" alt="Vesaro 4">
+                                        <a href="https://newpullzone1.b-cdn.net/vesaro4.png" data-lightbox="portfolio" data-title="Template 4">
+                                            <img src="https://newpullzone1.b-cdn.net/vesaro4.png" alt="Vesaro 4">
+                                        </a>
                                     </div>
                                     <div class="image-text">
                                         <h3>Inner Page 3</h3>
                                     </div>
                                 </div>
+                                </div>
+                                
                             </div>
-                            
-                        </div>
-                        <h2 class="image-header2">Social Media Visuals</h2>
-                        <div class="image-block"> <!-- 4-IMAGE BLOCK -->
-                            <div class="image-block-container"> <!-- 1 IMAGE BLOCK -->
-                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+                            <h2 class="image-header2">Social Media Visuals</h2>
+                            <div class="image-block" data-aos="fade-up"> <!-- 4-IMAGE BLOCK -->
+                                <div class="image-block-container"> <!-- 1 IMAGE BLOCK -->
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <img src="https://newpullzone1.b-cdn.net/social1.png" alt="Social Media 1">
+                                        <a href="https://newpullzone1.b-cdn.net/social1.png" data-lightbox="portfolio" data-title="Social 1">
+                                            <img src="https://newpullzone1.b-cdn.net/social1.png" alt="Social 1">
+                                        </a>
                                     </div>
                                     <div class="image-text">
                                         <h3>Template 1</h3>
                                     </div>
                                 </div>
-                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <img src="https://newpullzone1.b-cdn.net/social2.png" alt="Social Media 2">
+                                        <a href="https://newpullzone1.b-cdn.net/social2.png" data-lightbox="portfolio" data-title="Social 2">
+                                            <img src="https://newpullzone1.b-cdn.net/social2.png" alt="Social 2">
+                                        </a>
                                     </div>
                                     <div class="image-text">
                                         <h3>Template 2</h3>
                                     </div>
                                 </div>
-                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <img src="https://newpullzone1.b-cdn.net/social3.png" alt="Social Media 3">
+                                        <a href="https://newpullzone1.b-cdn.net/social3.png" data-lightbox="portfolio" data-title="Social 3">
+                                            <img src="https://newpullzone1.b-cdn.net/social3.png" alt="Social 3">
+                                        </a>
                                     </div>
                                     <div class="image-text">
                                         <h3>Template 3</h3>
                                     </div>
                                 </div>
-                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <img src="https://newpullzone1.b-cdn.net/social4.png" alt="Social Media 4">
+                                        <a href="https://newpullzone1.b-cdn.net/social4.png" data-lightbox="portfolio" data-title="Social 4">
+                                            <img src="https://newpullzone1.b-cdn.net/social4.png" alt="Social 4">
+                                        </a>
                                     </div>
                                     <div class="image-text">
                                         <h3>Template 4</h3>
                                     </div>
                                 </div>
-                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <img src="https://newpullzone1.b-cdn.net/social5.png" alt="Social Media 4">
+                                        <a href="https://newpullzone1.b-cdn.net/social5.png" data-lightbox="portfolio" data-title="Social 5">
+                                            <img src="https://newpullzone1.b-cdn.net/social5.png" alt="Social 5">
+                                        </a>
                                     </div>
                                     <div class="image-text">
                                         <h3>Template 5</h3>
                                     </div>
                                 </div>
-                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <img src="https://newpullzone1.b-cdn.net/social6.png" alt="Social Media 6">
+                                        <a href="https://newpullzone1.b-cdn.net/social6.png" data-lightbox="portfolio" data-title="Social 6">
+                                            <img src="https://newpullzone1.b-cdn.net/social6.png" alt="Social 6">
+                                        </a>
                                     </div>
                                     <div class="image-text">
                                         <h3>Template 6</h3>
                                     </div>
                                 </div>
-                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <img src="https://newpullzone1.b-cdn.net/social7.png" alt="Social Media 7">
+                                        <a href="https://newpullzone1.b-cdn.net/social7.png" data-lightbox="portfolio" data-title="Social 7">
+                                            <img src="https://newpullzone1.b-cdn.net/social7.png" alt="Social 7">
+                                        </a>
                                     </div>
                                     <div class="image-text">
                                         <h3>Template 7</h3>
                                     </div>
                                 </div>
-                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <img src="https://newpullzone1.b-cdn.net/social8.png" alt="Social Media 8">
+                                        <a href="https://newpullzone1.b-cdn.net/social8.png" data-lightbox="portfolio" data-title="Social 8">
+                                            <img src="https://newpullzone1.b-cdn.net/social8.png" alt="Social 8">
+                                        </a>
                                     </div>
                                     <div class="image-text">
                                         <h3>Template 8</h3>
                                     </div>
                                 </div>
-                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <img src="https://newpullzone1.b-cdn.net/social9.png" alt="Social Media 9">
+                                        <a href="https://newpullzone1.b-cdn.net/social9.png" data-lightbox="portfolio" data-title="Social 9">
+                                            <img src="https://newpullzone1.b-cdn.net/social9.png" alt="Social 9">
+                                        </a>
                                     </div>
                                     <div class="image-text">
                                         <h3>Template 9</h3>
                                     </div>
                                 </div>
+                                </div>
+                                
                             </div>
-                            
-                        </div>
-                        <h2 class="image-header3">Web Design Visuals</h2>
-                        <div class="image-block"> <!-- 4-IMAGE BLOCK -->
-                            <div class="image-block-container"> <!-- 1 IMAGE BLOCK -->
-                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+                            <h2 class="image-header3">Web Design Visuals</h2>
+                            <div class="image-block" data-aos="fade-up"> <!-- 4-IMAGE BLOCK -->
+                                <div class="image-block-container"> <!-- 1 IMAGE BLOCK -->
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <img src="https://newpullzone1.b-cdn.net/webdesign1.png" alt="Web Design 1">
+                                        <a href="https://newpullzone1.b-cdn.net/webdesign1.png" data-lightbox="portfolio" data-title="WebDesign 1">
+                                            <img src="https://newpullzone1.b-cdn.net/WebDesign1.png" alt="WebDesign 1">
+                                        </a>
                                     </div>
                                     <div class="image-text">
                                         <h3>Template 1</h3>
                                     </div>
                                 </div>
-                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <img src="https://newpullzone1.b-cdn.net/webdesign2.png" alt="Web Design 2">
+                                        <a href="https://newpullzone1.b-cdn.net/webdesign2.png" data-lightbox="portfolio" data-title="WebDesign 2">
+                                            <img src="https://newpullzone1.b-cdn.net/webdesign2.png" alt="Web Design 2">
+                                        </a>
                                     </div>
                                     <div class="image-text">
                                         <h3>Template 2</h3>
                                     </div>
                                 </div>
-                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <img src="https://newpullzone1.b-cdn.net/webdesign3.png" alt="Web Design 3">
+                                        <a href="https://newpullzone1.b-cdn.net/webdesign3.png" data-lightbox="portfolio" data-title="WebDesign 3">
+                                            <img src="https://newpullzone1.b-cdn.net/webdesign3.png" alt="Web Design 3">
+                                        </a>
                                     </div>
                                     <div class="image-text">
                                         <h3>Template 3</h3>
                                     </div>
                                 </div>
-                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK  -->
+
+                                <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <img src="https://newpullzone1.b-cdn.net/webdesign4.png" alt="Web Design 4">
+                                        <a href="https://newpullzone1.b-cdn.net/webdesign4.png" data-lightbox="portfolio" data-title="WebDesign 4">
+                                            <img src="https://newpullzone1.b-cdn.net/webdesign4.png" alt="Web Design 4">
+                                        </a>
                                     </div>
                                     <div class="image-text">
                                         <h3>Template 4</h3>
                                     </div>
                                 </div>
+                                </div>
+                                
                             </div>
-                            
-                        </div>
-                        
                     </div>
                 </div>
             </div>
@@ -524,59 +575,77 @@
                             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
                             <script>
-                                $('#contactForm').on('submit', function(e) {
+                                let isCooldown = false;
+
+                                $('#contactForm').on('submit', function (e) {
                                     e.preventDefault();
-                                    
-                                    // Get the CSRF token dynamically
+
+                                    if (isCooldown) {
+                                        $('#responseMessage').html('<div class="alert alert-warning">Please wait before submitting again.</div>');
+
+                                        // Remove the warning after 3 seconds
+                                        setTimeout(function () {
+                                            $('#responseMessage').fadeOut('slow', function () {
+                                                $(this).html('').show();
+                                            });
+                                        }, 3000);
+
+                                        return;
+                                    }
+
                                     var csrfToken = $('meta[name="csrf-token"]').attr('content');
-                                    
+
                                     $.ajax({
-                                        url: "{{ url('/') }}", // POST to the root URL
+                                        url: "{{ url('/') }}",
                                         method: "POST",
-                                        data: $(this).serialize() + '&_token=' + csrfToken,  // Add CSRF token
-                                        success: function(response) {
-                                             // Clear all validation error messages
+                                        data: $(this).serialize() + '&_token=' + csrfToken,
+                                        beforeSend: function () {
+                                            $('#submitBtn').prop('disabled', true); // Disable button before sending
+                                        },
+                                        success: function (response) {
                                             $('#nameError').text('');
                                             $('#emailError').text('');
                                             $('#phoneError').text('');
                                             $('#messageError').text('');
 
-                                            // Display success message
                                             $('#responseMessage').html('<div class="alert alert-success">' + response.message + '</div>');
-
-                                            // Reset the form
                                             $('#contactForm')[0].reset();
 
-                                            setTimeout(function() {
-                                                $('#responseMessage').fadeOut('slow', function() {
-                                                    $(this).html('').show(); // Clear content and reset display
+                                            setTimeout(function () {
+                                                $('#responseMessage').fadeOut('slow', function () {
+                                                    $(this).html('').show();
                                                 });
-                                            }, 5000); // 5000ms = 5 seconds
+                                            }, 5000);
+
+                                            // Start cooldown after successful send
+                                            isCooldown = true;
+                                            setTimeout(function () {
+                                                isCooldown = false;
+                                                $('#submitBtn').prop('disabled', false); // Re-enable button after cooldown
+                                            }, 10000); // 10-second cooldown
                                         },
-                                        error: function(response) {
+                                        error: function (response) {
                                             let errors = response.responseJSON?.errors;
 
-                                            // Clear previous errors
                                             $('#nameError').text('');
                                             $('#emailError').text('');
                                             $('#phoneError').text('');
                                             $('#messageError').text('');
 
-                                            // Display new errors if they exist
                                             if (errors) {
                                                 if (errors.name) $('#nameError').text(errors.name[0]);
                                                 if (errors.email) $('#emailError').text(errors.email[0]);
                                                 if (errors.phone) $('#phoneError').text(errors.phone[0]);
                                                 if (errors.message) $('#messageError').text(errors.message[0]);
                                             } else {
-                                                // Generic fallback error
                                                 $('#responseMessage').html('<div class="alert alert-danger">Something went wrong. Please try again.</div>');
                                             }
+
+                                            $('#submitBtn').prop('disabled', false); // Re-enable on failure
                                         }
                                     });
                                 });
                             </script>
-
                             </div>
                         </div>
                     </div>
@@ -612,6 +681,25 @@
 
         <script src="https://unpkg.com/@popperjs/core@2"></script>
         <script src="https://unpkg.com/tippy.js@6"></script>
+
+
+
+        <!-- PENDING CHANGES -->
+
+        <!-- Add AOS script -->
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <!-- Add Lightbox2 JS -->
+        <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+
+
+        <script>
+            AOS.init({
+                duration: 1000, // Animation duration in ms
+                once: true,     // Whether animation should happen only once
+            });
+        </script>
+        <!-- PENDING CHANGES -->
+
 
         <script>
             document.addEventListener('DOMContentLoaded', () => {

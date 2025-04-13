@@ -232,7 +232,12 @@ body{
 .image-block-container{
     display: flex;
     flex-wrap: wrap;
+    box-shadow: inset -4px 0 10px rgba(0, 0, 0, 0.03),
+              inset 4px 0 10px rgba(0, 0, 0, 0.03),
+              0 10px 25px rgba(0, 0, 0, 0.06);
 }
+
+
 
 .image-handler-block {
     width: 33%;
@@ -259,6 +264,22 @@ body{
     background: #fafafa;
     padding: 30px 0;
 }
+
+.image-handler img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .image-handler img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .image-text h3 {
+    color: #333; /* or try #1e1e2f, #0f172a, #2c3e50 */
+    font-weight: 600;
+  }
+
+  
 
 /** GALLERY **/
 
@@ -407,6 +428,16 @@ textarea{
 
 /** -FOOTER **/
 
+@media screen and (max-width: 350px) {
+    .image-block {
+      display: block;
+      overflow: hidden;
+    }
+  
+    .image-handler-block {
+      margin: 20px auto;
+    }
+  }
 
 @media screen and (min-width: 350px) and (max-width: 450px){
 
@@ -548,12 +579,6 @@ textarea{
         margin-left: auto;
     }
 
-    .image-block{
-        display: flex;
-        overflow: scroll;
-        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-    }
-
     .image-block-container {
         flex: none;
         display: flex;
@@ -572,8 +597,18 @@ textarea{
         font-size: 15px;
     }
 
+    .image-block{
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    }
+
     .image-handler-block {
         width: unset;
+        scroll-snap-align: start;
+        flex-shrink: 0;
         margin: 50px 20px;
     }
 
@@ -711,12 +746,6 @@ textarea{
         margin-left: auto;
     }
 
-    .image-block{
-        display: flex;
-        overflow: scroll;
-        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-    }
-
     .image-block-container {
         flex: none;
         display: flex;
@@ -735,8 +764,18 @@ textarea{
         font-size: 15px;
     }
 
+    .image-block{
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    }
+
     .image-handler-block {
         width: unset;
+        scroll-snap-align: start;
+        flex-shrink: 0;
         margin: 50px 20px;
     }
 
@@ -865,11 +904,6 @@ textarea{
         margin-left: 0;
     }
 
-    .image-block{
-        display: flex;
-        overflow: scroll;
-        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-    }
 
     .image-block-container {
         flex: none;
@@ -889,8 +923,18 @@ textarea{
         font-size: 15px;
     }
 
+    .image-block{
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    }
+
     .image-handler-block {
         width: unset;
+        scroll-snap-align: start;
+        flex-shrink: 0;
         margin: 50px 20px;
     }
 
@@ -1020,11 +1064,8 @@ textarea{
         margin-left: 0;
     }
 
-    .image-block{
-        display: flex;
-        overflow: scroll;
-        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-    }
+
+    
 
     .image-block-container {
         flex: none;
@@ -1043,8 +1084,18 @@ textarea{
         font-size: 15px;
     }
 
+    .image-block{
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    }
+
     .image-handler-block {
         width: unset;
+        scroll-snap-align: start;
+        flex-shrink: 0;
         margin: 50px 20px;
     }
 
@@ -1055,6 +1106,16 @@ textarea{
         width: 500px;
         margin: auto;
     }
+    
+
+    .image-handler img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .image-handler img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
 
    
 }
