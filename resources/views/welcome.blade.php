@@ -20,6 +20,7 @@
         <!-- Add AOS styles -->
         <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
+
         
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -543,7 +544,9 @@
                                     <div class="name-input">
                                         <label for="phone">Phone Number</label>
  
-                                        <input type="number" name="phone" class="form-control" placeholder="Phone" value="{{ old('phone') }}">
+                                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/css/intlTelInput.css">
+                                        <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/intlTelInput.min.js"></script>
+                                        <input type="tel" id="phone" name="phone" class="" placeholder="Phone" value="{{ old('phone') }}">
                                         <span id="phoneError" class="text-danger"></span>
 
                                         @if ($errors->has('phone'))
@@ -551,6 +554,14 @@
                                             <span class="text-danger">{{ $errors->first('phone') }}</span>
 
                                         @endif
+                                        <script>
+                                            const input = document.querySelector("#phone");
+                                            const iti = window.intlTelInput(input, {
+                                            initialCountry: "us", // Default country
+                                            separateDialCode: true, // Display country code separately
+                                            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/utils.js" // Optional for validation and formatting
+                                            });
+                                        </script>
                                     </div>
                                 </div>
                                 <div class="message-input">
@@ -568,9 +579,6 @@
                                 
                                 <div class="button-container">
                                     <input type="submit" name="submit" value="Send Message" id="submitButton">
-                                    <div id="loadingIcon" style="display: none;">
-                                        <!-- This is a simple loading spinner, you can use any spinner you like -->
-                                        <img src="https://i.gifer.com/VAyR.gif" alt="Loading..." />
                                     </div>
                                     <div id="responseMessage" class="success-message"></div>
                                 </div>
@@ -579,8 +587,8 @@
                             
 
                             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
                             <script>
+
                                 let isCooldown = false;
 
                                 $('#contactForm').on('submit', function (e) {
