@@ -472,6 +472,10 @@
                                 
                             </div>
                     </div>
+                    <!-- Add Lightbox2 JS -->
+                    
+                    
+                    </script>
                 </div>
             </div>
         </div>
@@ -688,9 +692,8 @@
 
         <!-- Add AOS script -->
         <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-        <!-- Add Lightbox2 JS -->
         <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
-
+        
 
         <script>
             AOS.init({
@@ -698,8 +701,12 @@
                 once: true,     // Whether animation should happen only once
             });
         </script>
-        <!-- PENDING CHANGES -->
 
+        <script>
+            lightbox.option({ disableScrolling: true });
+        </script>
+        
+        <!-- PENDING CHANGES -->
 
         <script>
             document.addEventListener('DOMContentLoaded', () => {
