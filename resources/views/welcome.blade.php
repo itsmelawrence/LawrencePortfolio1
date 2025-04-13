@@ -16,9 +16,11 @@
 
         <!-- Styles / Scripts -->
         <link href="https://fonts.cdnfonts.com/css/timesnow" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
         <!-- Add AOS styles -->
         <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
+        
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         @else
@@ -202,7 +204,7 @@
         <div id="gallery" class="card-info-container">
             <div class="fade-in-viewc">
                 <h1>GALLERY</h1>
-                <div class="main-info-container">
+                <div class="main-info-container" data-aos="fade-up">
                     <div class="fade-left-info-holder">
                         <div class="fade-left-info-holder-i">
                             <h2>VESARO</h2>
@@ -222,7 +224,7 @@
                 </div>    
             </div>
             <div class="fade-in-viewc">
-                <div class="main-info-container">
+                <div class="main-info-container" data-aos="fade-up">
                     <div class="fade-left-info-holder">
                         <div class="fade-left-info-holder-i">
                             <h2>SOCIAL MEDIA TEMPLATE</h2>
@@ -242,7 +244,7 @@
                 </div>    
             </div>
             <div class="fade-in-viewc">
-                <div class="main-info-container">
+                <div class="main-info-container" data-aos="fade-up">
                     <div class="fade-left-info-holder">
                         <div class="fade-left-info-holder-i">
                             <h2>WEBSITE DESIGN INFOGRAPHICS</h2>
@@ -262,7 +264,7 @@
                 </div>    
             </div>
 
-            <div class="fade-in-viewc">
+            <div class="fade-in-viewc" data-aos="fade-up">
                 <div class="images-container">
                     <div class="image-container-header">
                         <h1>GALLERY  -  VISUALS</h1>
@@ -801,7 +803,7 @@
             );
             });
         </script>
-            
+        
         <script>
             // Detect if a link's href goes to the current page
             function getSamePageAnchor(link) {
@@ -840,5 +842,30 @@
             // Scroll to the element in the URL's hash on load
             scrollToHash(window.location.hash);
         </script>
+    <button id="backToTopBtn" title="Go to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+        //Get the button
+    const backToTopBtn = document.getElementById("backToTopBtn");
+
+    // When the user scrolls down 300px from the top, show the button
+    window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    };
+
+    // When the user clicks the button, scroll to the top smoothly
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    </script>
     </body>
 </html>

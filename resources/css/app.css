@@ -10,6 +10,43 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+#backToTopBtn {
+    position: fixed;
+    bottom: 20px;    /* Space from the bottom */
+    right: 20px;     /* Space from the right */
+    z-index: 9999;   /* Ensures it's always on top */
+    background-color: #2a2a2a;  /* Adjust background color */
+    color: #fff;     /* Adjust text color */
+    padding: 10px 15px;  /* Button padding */
+    border-radius: 50%;  /* Makes the button round */
+    border: none;   /* No border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    cursor: pointer;
+    transition: all 0.3s ease;  /* Smooth transition for effects */
+}
+
+#backToTopBtn:hover {
+    background-color: #ff6347;  /* Hover background color */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);  /* Hover shadow effect */
+    transform: scale(1.1);  /* Slight scale-up effect */
+}
+
+#backToTopBtn i {
+    font-size: 24px;  /* Adjust size of the icon */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+#backToTopBtn {
+    margin-bottom: 0;  /* Ensure no extra bottom margin */
+}
+
+body {
+    overflow-x: hidden;
+}
 /** HEADER **/
 
 h1, h2{
@@ -265,19 +302,56 @@ body{
     padding: 30px 0;
 }
 
-.image-handler img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .image-handler img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  }
+@keyframes pulseGlow {
+    0% {
+        box-shadow:
+            0 12px 24px rgba(0, 0, 0, 0.3),
+            0 0 20px rgba(181, 101, 29, 0.6),
+            0 0 40px rgba(210, 140, 60, 0.4),
+            0 0 60px rgba(255, 220, 150, 0.3);
+    }
+    50% {
+        box-shadow:
+            0 16px 32px rgba(0, 0, 0, 0.35),
+            0 0 30px rgba(181, 101, 29, 0.7),
+            0 0 60px rgba(210, 140, 60, 0.5),
+            0 0 80px rgba(255, 220, 150, 0.4);
+    }
+    100% {
+        box-shadow:
+            0 12px 24px rgba(0, 0, 0, 0.3),
+            0 0 20px rgba(181, 101, 29, 0.6),
+            0 0 40px rgba(210, 140, 60, 0.4),
+            0 0 60px rgba(255, 220, 150, 0.3);
+    }
+}
 
-  .image-text h3 {
-    color: #333; /* or try #1e1e2f, #0f172a, #2c3e50 */
-    font-weight: 600;
-  }
+.image-handler img {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border-radius: 12px;
+}
+
+.image-handler img:hover {
+    
+    transform: scale(1.08) rotate3d(1, 1, 0, 5deg) rotate(1deg);
+    box-shadow:
+        0 12px 24px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(181, 101, 29, 0.6),
+        0 0 40px rgba(210, 140, 60, 0.4),
+        0 0 60px rgba(255, 220, 150, 0.3);
+    animation: pulseGlow 2s infinite alternate;
+}
+
+.image-text h3 {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    transform: translateY(10px);
+    opacity: 0.7;
+}
+
+.image-handler-block:hover .image-text h3 {
+    transform: translateY(0);
+    opacity: 1;
+}
 
 
 /** GALLERY **/
