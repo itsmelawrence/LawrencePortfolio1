@@ -474,25 +474,6 @@ textarea{
     color: white;
 }
 
-.iti--allow-dropdown input, .iti--allow-dropdown input[type=text], .iti--allow-dropdown input[type=tel], .iti--separate-dial-code input, .iti--separate-dial-code input[type=text], .iti--separate-dial-code input[type=tel] {
-    padding-right: 6px;
-    padding-left: unset !important;
-    margin-left: 80px !important;
-}
-
-.iti__selected-flag {
-    width: 75px !important;
-}
-
-.iti__arrow{
-    width: 2px !important;
-}
-
-span#phoneError {
-    display: flex
-;
-}
-
 
 /** -CONTACT **/
 

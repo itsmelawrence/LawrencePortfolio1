@@ -544,8 +544,7 @@
                                     <div class="name-input">
                                         <label for="phone">Phone Number</label>
  
-                                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/css/intlTelInput.css">
-                                        <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/intlTelInput.min.js"></script>
+                                        
                                         <input type="tel" id="phone" name="phone" class="" placeholder="Phone" value="{{ old('phone') }}">
                                         <span id="phoneError" class="text-danger"></span>
 
@@ -554,14 +553,7 @@
                                             <span class="text-danger">{{ $errors->first('phone') }}</span>
 
                                         @endif
-                                        <script>
-                                            const input = document.querySelector("#phone");
-                                            const iti = window.intlTelInput(input, {
-                                            initialCountry: "us", // Default country
-                                            separateDialCode: true, // Display country code separately
-                                            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/utils.js" // Optional for validation and formatting
-                                            });
-                                        </script>
+                                        
                                     </div>
                                 </div>
                                 <div class="message-input">
