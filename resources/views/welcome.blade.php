@@ -224,6 +224,7 @@
                     </div>  
                 </div>    
             </div>
+            
             <div class="fade-in-viewc">
                 <div class="main-info-container" data-aos="fade-up">
                     <div class="fade-left-info-holder">
