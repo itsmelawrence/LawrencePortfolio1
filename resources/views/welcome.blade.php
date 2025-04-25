@@ -217,7 +217,7 @@
                         <div class="content-holder">
                             <div class="video-container">
                                 <video autoplay loop muted playsinline>
-                                    <source src="https://newpullzonel.b-cdn.net/ct.mp4" type="video/mp4">
+                                    <source src="https://newpullzonel.b-cdn.net/catalogtemplate.mp4" type="video/mp4">
                                 </video>
                             </div>
                         </div>
@@ -237,7 +237,7 @@
                         <div class="content-holder">
                             <div class="video-container">
                                 <video autoplay loop muted playsinline>
-                                    <source src="https://newpullzonel.b-cdn.net/smt2.mp4" type="video/mp4">
+                                    <source src="https://newpullzonel.b-cdn.net/socialmedia.mp4" type="video/mp4">
                                 </video>
                             </div>
                         </div>
@@ -483,7 +483,7 @@
             </div>
         </div>
         
-        
+
         
         <div id="contact" class="card-info-container contact-card">
             <div class="fade-in-viewc">
