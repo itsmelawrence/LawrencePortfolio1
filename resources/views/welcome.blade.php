@@ -484,6 +484,7 @@
         </div>
         
         
+        
         <div id="contact" class="card-info-container contact-card">
             <div class="fade-in-viewc">
                 <h1 class="contact-tag">CONTACT</h1>
