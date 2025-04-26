@@ -679,7 +679,7 @@
             });
         </script>
         <div class="footer-card">
-            <h2>Website designed and developed by Lawrence Tendenilla</h2>
+            <h2>Website designed and developed by Lawrence Tendenilla | 2025</h2>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>  
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
