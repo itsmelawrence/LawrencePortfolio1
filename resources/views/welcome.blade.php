@@ -499,7 +499,7 @@
                             </li>
                             <li class="list-item-link">
                                 <span><img src="https://newpullzonel.b-cdn.net/outlook-i.png" alt="outlook"></span>
-                                <a href="mailto:lawrencetendenilla@outlook.com" target="_blank">lawrencetendenilla@outlook.com</a>
+                                <a href="mailto:lawrencetendenilla@outlook.com" target="_blank">lawrencetendenilla83@gmail.com</a>
                             </li>
                             <li class="list-item-link">
                                 <span><img src="https://newpullzonel.b-cdn.net/whatsapp-i.png" alt="whatsapp"></span>
