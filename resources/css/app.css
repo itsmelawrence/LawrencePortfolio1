@@ -50,7 +50,7 @@ body {
 /** HEADER **/
 
 h1, h2{
-    font-family: 'Noto Serif JP', ui-sans-serif;
+    font-family: 'Namdhinggo', sans-serif;
 }
 
 .darkmode-layer, .darkmode-toggle {
@@ -84,7 +84,7 @@ body{
 
 .typedjs {
     text-align: center;
-    font-family: 'Noto Serif JP', ui-sans-serif;    
+    font-family: 'Namdhinggo', sans-serif;    
     font-size: 25px;
     font-weight: 400;
 }
@@ -105,7 +105,7 @@ body{
 
 .nav-text{
     font-size: 12px;
-    font-family: 'Noto Serif JP', ui-sans-serif;
+    font-family: 'Namdhinggo', sans-serif;
     opacity: 0;
     font-style: italic;
     transform: translateY(50px);
@@ -518,14 +518,14 @@ textarea{
 
     .typedjs {
         text-align: center;
-        font-family: 'Noto Serif JP', ui-sans-serif;
+        font-family: 'Namdhinggo', sans-serif;
         font-size: 16px;
         font-weight: 400;
     }
 
     .nav-text{
         font-size: 10px;
-        font-family: 'Noto Serif JP', ui-sans-serif;
+        font-family: 'Namdhinggo', sans-serif;
         opacity: 0;
         font-style: italic;
         transform: translateY(50px);
@@ -694,7 +694,7 @@ textarea{
     
     .typedjs {
         text-align: center;
-        font-family: 'Noto Serif JP', ui-sans-serif;
+        font-family: 'Namdhinggo', sans-serif;
         font-size: 20px;
         font-weight: 400;
     }
