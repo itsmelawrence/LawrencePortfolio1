@@ -13,6 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="preconnect">
         <link href="https://fonts.cdnfonts.com/css/namdhinggo" rel="stylesheet">
         <link href="https://fonts.cdnfonts.com/css/manjari-2" rel="preconnect">
+        <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">
 
         <!-- Styles / Scripts -->
         <link href="https://fonts.cdnfonts.com/css/timesnow" rel="stylpreconnectesheet">
@@ -676,7 +677,7 @@
             });
         </script>
         <div class="footer-card">
-            <h2>Website designed and developed by Lawrence Tendenilla | 2025</h2>
+            <p>Crafted by Lawrence with pixels, passion and a midnight soundtrack</p>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>  
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>

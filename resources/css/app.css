@@ -141,12 +141,12 @@ body{
     width: 300px;
     text-align: center;
     opacity: 0;
-    transition: inset .4s;
+    transition: inset .4s ease;
 }
 
 .scroll-down-a:hover ~ .scroll-down-arrow{
     inset: auto 0% 2%;
-    transition: inset .4s;
+    transition: inset .4s ease;
 }
 
 
@@ -531,10 +531,18 @@ textarea:hover{
 
 .footer-card {
     text-align: center;
-    height: 25px;
-    display: flex
-;
+    background: #2a1106;
+    padding: 10px;
+    display: block;
 }
+
+.footer-card p {
+    color: #fff;
+    font-family: Product Sans, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+}
+
 
 .footer-card h2 {
     color: #000000;
