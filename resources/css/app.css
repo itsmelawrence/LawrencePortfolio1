@@ -366,7 +366,9 @@ body{
 .list-item li {
     margin: 25px 0;
     display: flex;
+    flex-wrap: wrap;
 }
+
 
 .list-item-link span {
     width: 40px;
@@ -374,11 +376,11 @@ body{
 }
 
 .list-item-link a {
-    color: black;
+    color: #5252a7;
     text-decoration: none;
     margin: auto;
     margin-left: 10px;
-    font-size: 14px;
+    font-size: 15px;
     font-family: 'Manjari', sans-serif;
 }
 
@@ -386,6 +388,11 @@ body{
     color: #0661a7;
     text-decoration: underline;
     transition: color .4s, text-decoration .4s;
+}
+
+.list-item-link h3{
+    color: #353535;
+    font-weight: 600;
 }
 
 .contact-tag{
@@ -397,7 +404,7 @@ body{
     width: 100%;
 }
 
-.contact-header h2, .contact-links-header{
+.contact-header h2{
     height: 60px;
 }
 
@@ -417,18 +424,18 @@ body{
 
 .main-form input{
     width: 100%;
-    border: 1px solid gainsboro;
-    height: 30px;
     text-indent: 10px;
-    background: transparent;
+    border: 2px solid gainsboro;
+    border-radius: 5px;
+    height: 40px;
     color: black;
-    transition: background .4s, color .4s;
+    transition: border .4s, color .4s;
 }
 
 .main-form input:hover {
-    background: #8c7070;
-    color: white;
-    transition: background .4s, color .4s;
+    color: black;
+    border: 2px solid #8c7070;
+    transition: border .4s, color .4s;
 }
 
 .group-input{
@@ -445,8 +452,21 @@ body{
 
 textarea{
     width: 100%;
-    border: 1px solid gainsboro;
+    border: 2px solid gainsboro;
+    border-radius: 5px;
     padding: 10px;
+    transition: border .4s;
+}
+
+textarea:hover{
+    border: 2px solid #8c7070;
+    transition: border .4s;
+}
+
+#submitButton:hover{
+    color: white;
+    background: #8c7070;
+    transition: background .4s;
 }
 
 .text-danger {

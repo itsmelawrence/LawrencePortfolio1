@@ -81,6 +81,7 @@
                         </script>
             </div>
         </div>
+
         <div id="about" class="about">
             <div class="info-holder">
                 <div class="left-info-holder">
@@ -202,6 +203,7 @@
                 </div>
             </div>
         </div>
+
         <div id="gallery" class="card-info-container">
             <div class="fade-in-viewc">
                 <h1>GALLERY</h1>
@@ -484,26 +486,24 @@
             </div>
         </div>
         
-
-        
         <div id="contact" class="card-info-container contact-card">
             <div class="fade-in-viewc">
-                <h1 class="contact-tag">CONTACT</h1>
+                <h1 class="contact-tag">Let's Work Together</h1>
                 <div class="main-info-container">
                     <div class="fade-left-info-holder">
-                        <h2 class="contact-links-header">You can contact me through one of these links.</h2>
+                        <h2 class="contact-links-header">Have an idea, a vision, or a blank canvas? I’d love to hear from you. Whether it's a brand redesign or your next big startup — let's make it happen.</h2>
                         <div class="list-item">
                             <li class="list-item-link">
-                                <span><img src="https://newpullzonel.b-cdn.net/linkedin-i.png" alt="linkedin"></span>
-                                <a href="https://linkedin.com/in/lawrence-t-b73006261" target="_blank">Lawrence Tendenilla</a>
-                            </li>
-                            <li class="list-item-link">
-                                <span><img src="https://newpullzonel.b-cdn.net/outlook-i.png" alt="outlook"></span>
+                                <h3>Email: </h3>
                                 <a href="mailto:lawrencetendenilla@outlook.com" target="_blank">lawrencetendenilla83@gmail.com</a>
                             </li>
                             <li class="list-item-link">
-                                <span><img src="https://newpullzonel.b-cdn.net/whatsapp-i.png" alt="whatsapp"></span>
-                                <a href="https://wa.me/+639623424669" target="_blank">Let's chat on WhatsApp</a>
+                                <h3>LinkedIn: </h3>
+                                <a href="https://linkedin.com/in/lawrence-t-b73006261" target="_blank">@LawrenceTendenilla</a>
+                            </li>
+                            <li class="list-item-link">
+                                <h3>WhatsApp: </h3>
+                                <a href="https://wa.me/+639623424669" target="_blank">@lawrencetendenilla</a>
                             </li>
                         </div>
                     </div>
