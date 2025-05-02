@@ -104,11 +104,21 @@ body{
 }
 
 .nav-text{
-    font-size: 12px;
+    font-size: 14px;
     font-family: 'Namdhinggo', sans-serif;
     opacity: 0;
     font-style: italic;
     transform: translateY(50px);
+}
+
+.nav-text a{
+    color: #525252;
+    transition: color .4s;
+}
+
+.nav-text a:hover{
+    color: #262626;
+    transition: color .4s;
 }
 
 .scroll-down-a{
@@ -243,6 +253,7 @@ body{
 }
 
 .fade-left-info-holder-i h2{
+width: 70%;
     margin-bottom: 15px;
     font-size: 32px;
 }
@@ -297,9 +308,17 @@ body{
     margin-top: 15px;
 }
 
+.image-header1 {
+    padding-top: unset;
+}
+
 .image-header1, .image-header2, .image-header3{
     background: #fafafa;
     padding: 30px 0;
+}
+
+.image-header2, .image-header3{
+    padding: 60px 0 30px 0;
 }
 
 @keyframes pulseGlow {
@@ -550,10 +569,10 @@ textarea:hover{
         font-weight: 400;
     }
 
-    .nav-text{
-        font-size: 10px;
-        font-family: 'Namdhinggo', sans-serif;
+    .nav-text {
         opacity: 0;
+        font-family: Namdhinggo, sans-serif;
+        font-size: 14px;
         font-style: italic;
         transform: translateY(50px);
     }
@@ -662,6 +681,7 @@ textarea:hover{
     }
 
     .fade-left-info-holder-i h2{
+        width: 100%;
         margin-bottom: 15px;
         font-size: 32px;
     }
@@ -841,6 +861,7 @@ textarea:hover{
     }
 
     .fade-left-info-holder-i h2{
+        width: 100%;
         margin-bottom: 15px;
         font-size: 32px;
     }
@@ -1007,6 +1028,7 @@ textarea:hover{
     }
 
     .fade-left-info-holder-i h2{
+        width: 100%;
         margin-bottom: 15px;
         font-size: 32px;
     }
@@ -1175,6 +1197,7 @@ textarea:hover{
     }
 
     .fade-left-info-holder-i h2{
+        width: 100%;
         margin-bottom: 15px;
         font-size: 32px;
     }
