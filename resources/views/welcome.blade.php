@@ -490,8 +490,12 @@
             <div class="fade-in-viewc">
                 <h1 class="contact-tag">Let's Work Together</h1>
                 <div class="main-info-container">
+                    <p class="contact-links-header">Have an idea, a vision, or a blank canvas? I’d love to hear from you. Whether it's a brand redesign or your next big startup, let's make it happen.</p>  
+                </div>
+                <div class="main-info-container">
+                    
                     <div class="fade-left-info-holder">
-                        <h2 class="contact-links-header">Have an idea, a vision, or a blank canvas? I’d love to hear from you. Whether it's a brand redesign or your next big startup — let's make it happen.</h2>
+                        
                         <div class="list-item">
                             <li class="list-item-link">
                                 <h3>Email: </h3>
@@ -510,9 +514,6 @@
                     
                     <div class="fade-right-info-holder">
                         <div class="contact-us-form">
-                            <div class="contact-header">
-                                <h2>You’re also welcome to send me a message.</h2>
-                            </div>
                             <div class="form-container">
                             <form id="contactForm" method="POST" action="{{ route('contact.us.store') }}" class="main-form">
                                 @csrf
@@ -529,33 +530,19 @@
 
                                         @endif
                                     </div>
-                                    <div class="email-input">
-                                        <label for="email">Email address</label>
- 
-                                        <input type="text" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
-                                        <span id="emailError" class="text-danger"></span>
-
-                                        @if ($errors->has('email'))
-
-                                            <span class="text-danger">{{ $errors->first('email') }}</span>
-
-                                        @endif
-                                    </div>
                                 </div>
                                 <div class="group-input">
                                     <div class="name-input">
-                                        <label for="phone">Phone Number</label>
- 
-                                        
-                                        <input type="tel" id="phone" name="phone" class="" placeholder="Phone" value="{{ old('phone') }}">
-                                        <span id="phoneError" class="text-danger"></span>
+                                            <label for="email">Email address</label>
+    
+                                            <input type="text" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
+                                            <span id="emailError" class="text-danger"></span>
 
-                                        @if ($errors->has('phone'))
+                                            @if ($errors->has('email'))
 
-                                            <span class="text-danger">{{ $errors->first('phone') }}</span>
+                                                <span class="text-danger">{{ $errors->first('email') }}</span>
 
-                                        @endif
-                                        
+                                            @endif
                                     </div>
                                 </div>
                                 <div class="message-input">

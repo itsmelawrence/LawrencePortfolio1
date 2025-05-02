@@ -412,6 +412,9 @@ body{
     font-size: 14px;
     display: block;
     position: relative;
+}
+
+.main-form label{
     margin: 25px 0;
 }
 
@@ -420,7 +423,11 @@ body{
 }
 
 
-
+p.contact-links-header {
+    margin-bottom: 20px;
+    font-size: 19px;
+    font-family: Namdhinggo, sans-serif;
+}
 
 .main-form input{
     width: 100%;
@@ -446,8 +453,8 @@ body{
     margin-left: auto;
 }
 
-.group-input div {
-    width: 45%;
+.group-input div, .message-input {
+    width: 55%;
 }
 
 textarea{
@@ -707,6 +714,13 @@ textarea:hover{
         margin: 50px 20px;
     }
 
+    .group-input div, .message-input {
+        width: 100%;
+    }
+
+    .group-input div, .message-input {
+        width: 100%;
+    }
 
 }
 
@@ -874,10 +888,14 @@ textarea:hover{
         margin: 50px 20px;
     }
 
+    .group-input div, .message-input {
+        width: 100%;
+    }
+
 }
 
 @media screen and (min-width: 550px) and (max-width: 700px) {
-        .about{
+    .about{
         height: 100vh;
         display: block;
     }
@@ -1031,6 +1049,10 @@ textarea:hover{
         scroll-snap-align: start;
         flex-shrink: 0;
         margin: 50px 20px;
+    }
+
+    .group-input div, .message-input {
+        width: 100%;
     }
 
 }
@@ -1194,6 +1216,10 @@ textarea:hover{
         margin: 50px 20px;
     }
 
+    .group-input div, .message-input {
+        width: 100%;
+    }
+
 }
 
 @media screen and (min-width: 850px) and (max-width: 1000px){
@@ -1201,16 +1227,19 @@ textarea:hover{
         width: 500px;
         margin: auto;
     }
-    
 
     .image-handler img {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
+    }
       
-      .image-handler img:hover {
+    .image-handler img:hover {
         transform: scale(1.03);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      }
+    }
+
+    .group-input div, .message-input {
+        width: 100%;
+    }
 
    
 }
