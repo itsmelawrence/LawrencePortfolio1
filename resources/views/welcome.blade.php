@@ -9,13 +9,13 @@
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-        <link href="https://fonts.cdnfonts.com/css/noto-serif-jp" rel="stylesheet">
-        <link href="https://fonts.cdnfonts.com/css/manjari-2" rel="stylesheet">
+        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="preconnect" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="preconnect">
+        <link href="https://fonts.cdnfonts.com/css/noto-serif-jp" rel="preconnect">
+        <link href="https://fonts.cdnfonts.com/css/manjari-2" rel="preconnect">
 
         <!-- Styles / Scripts -->
-        <link href="https://fonts.cdnfonts.com/css/timesnow" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/timesnow" rel="stylpreconnectesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
         <!-- Add AOS styles -->
         <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
