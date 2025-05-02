@@ -20,7 +20,15 @@
         <!-- Add AOS styles -->
         <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJMBH392TG"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
+        gtag('config', 'G-ZJMBH392TG');
+        </script>
         
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -535,7 +543,7 @@
                                         <div class="name-input">
                                             <label for="email">Email address</label>
     
-                                            <input type="text" name="email" class="form-control email-address" placeholder="Email" value="{{ old('email') }}">
+                                            <input type="text" name="email" class="form-control email-address  placeholder="Email" value="{{ old('email') }}">
                                             <span id="emailError" class="text-danger"></span>
 
                                             @if ($errors->has('email'))
