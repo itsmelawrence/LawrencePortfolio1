@@ -88,8 +88,6 @@ body{
     font-size: 25px;
     font-weight: 400;
 }
-
-
                                                 
 .navigation-row{
     width: fit-content;
@@ -111,29 +109,28 @@ body{
     transform: translateY(50px);
 }
 
-.nav-text a{
+.nav-text a, .scroll-down-a{
     color: #525252;
     transition: color .4s;
 }
 
-.nav-text a:hover{
+.nav-text a:hover, .scroll-down-a:hover{
     color: #262626;
     transition: color .4s;
 }
 
-.scroll-down-a{
-    inset: auto 0% 6%;
-    position: absolute;
-    display: block;
-    margin: auto;
-    width: 300px;
+.scroll-down-a {
     text-align: center;
     opacity: 0;
-    font-size: 12px;
-    font-family: 'Manjari', sans-serif;
+    width: 300px;
+    margin: auto;
+    font-family: Namdhinggo, sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    display: block;
+    position: absolute;
+    inset: auto 0% 6%;
 }
-
-
 
 .scroll-down-arrow{
     inset: auto 0% 3%;
@@ -144,7 +141,14 @@ body{
     width: 300px;
     text-align: center;
     opacity: 0;
+    transition: inset .4s;
 }
+
+.scroll-down-a:hover ~ .scroll-down-arrow{
+    inset: auto 0% 2%;
+    transition: inset .4s;
+}
+
 
 /** -HEADER **/
 
