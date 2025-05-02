@@ -531,18 +531,19 @@ textarea:hover{
 
 .footer-card {
     text-align: center;
-    background: #2a1106;
+    background: #343434;
     padding: 10px;
+    margin-top: 25px;
     display: block;
 }
 
 .footer-card p {
-    color: #fff;
+    color: #ffffff;
     font-family: Product Sans, sans-serif;
     font-size: 10px;
+    font-style: italic;
     font-weight: 600;
 }
-
 
 .footer-card h2 {
     color: #000000;
