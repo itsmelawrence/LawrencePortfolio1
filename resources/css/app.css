@@ -449,11 +449,11 @@ p.contact-links-header {
     display: flex;
 }
 
-.group-input div:nth-child(2) {
-    margin-left: auto;
+.group-input div {
+    width: 90%;
 }
 
-.group-input div, .message-input {
+.message-input {
     width: 55%;
 }
 
@@ -714,11 +714,15 @@ textarea:hover{
         margin: 50px 20px;
     }
 
-    .group-input div, .message-input {
-        width: 100%;
+    .group-input {
+        display: block;
     }
 
-    .group-input div, .message-input {
+    .group-input {
+        display: block;
+    }
+
+.group-input div, .message-input {
         width: 100%;
     }
 
@@ -888,7 +892,11 @@ textarea:hover{
         margin: 50px 20px;
     }
 
-    .group-input div, .message-input {
+    .group-input {
+        display: block;
+    }
+
+.group-input div, .message-input {
         width: 100%;
     }
 
@@ -1051,7 +1059,11 @@ textarea:hover{
         margin: 50px 20px;
     }
 
-    .group-input div, .message-input {
+    .group-input {
+        display: block;
+    }
+
+.group-input div, .message-input {
         width: 100%;
     }
 
@@ -1216,7 +1228,11 @@ textarea:hover{
         margin: 50px 20px;
     }
 
-    .group-input div, .message-input {
+    .group-input {
+        display: block;
+    }
+
+.group-input div, .message-input {
         width: 100%;
     }
 
@@ -1237,7 +1253,11 @@ textarea:hover{
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
-    .group-input div, .message-input {
+    .group-input {
+        display: block;
+    }
+
+.group-input div, .message-input {
         width: 100%;
     }
 

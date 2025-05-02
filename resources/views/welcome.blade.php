@@ -518,24 +518,24 @@
                             <form id="contactForm" method="POST" action="{{ route('contact.us.store') }}" class="main-form">
                                 @csrf
                                 <div class="group-input">
-                                    <div class="name-input">
+                                    <div class="group-input">
+                                        <div class="name-input">
                                         <label for="name">Full Name</label>
- 
-                                        <input type="text" name="name" class="form-control" placeholder="Name" value="{{ old('name') }}">
-                                        <span id="nameError" class="text-danger"></span>
+                                            <input type="text" name="name" class="form-control full-name" placeholder="Name" value="{{ old('name') }}">
+                                            <span id="nameError" class="text-danger"></span>
 
-                                        @if ($errors->has('name'))
+                                            @if ($errors->has('name'))
 
-                                            <span class="text-danger">{{ $errors->first('name') }}</span>
+                                                <span class="text-danger">{{ $errors->first('name') }}</span>
 
-                                        @endif
+                                            @endif
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="group-input">
-                                    <div class="name-input">
+                                    <div class="group-input">
+                                        <div class="name-input">
                                             <label for="email">Email address</label>
     
-                                            <input type="text" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
+                                            <input type="text" name="email" class="form-control email-address" placeholder="Email" value="{{ old('email') }}">
                                             <span id="emailError" class="text-danger"></span>
 
                                             @if ($errors->has('email'))
@@ -543,8 +543,10 @@
                                                 <span class="text-danger">{{ $errors->first('email') }}</span>
 
                                             @endif
-                                    </div>
+                                        </div>
                                 </div>
+                                </div>
+                                
                                 <div class="message-input">
                                     <label for="message">Your Message</label>
 
