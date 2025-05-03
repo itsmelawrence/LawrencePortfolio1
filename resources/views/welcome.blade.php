@@ -7,6 +7,8 @@
 
         <title>Lawrence's Portfolio</title>
 
+        <link rel="icon" href="https://newpullzone02.b-cdn.net/Lawrence%20Logo.ico" type="image/x-icon">
+
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="preconnect" />
@@ -41,6 +43,11 @@
 
     </head>
     <body>
+    <div id="loader">
+        <video autoplay loop muted playsinline>
+            <source src="https://newpullzone02.b-cdn.net/LoadingSpinning.mp4" type="video/mp4" />
+        </video>
+    </div>
        <div id="top" class="main-container">
             <div class="center-text">
                 <div class="typedjs fade-out-container">
@@ -688,7 +695,21 @@
         <script src="https://unpkg.com/@popperjs/core@2"></script>
         <script src="https://unpkg.com/tippy.js@6"></script>
 
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+                const loader = document.getElementById('loader');
 
+                // Add slight delay to make it look intentional
+                setTimeout(() => {
+                    loader.classList.add('fade-out');
+
+                    // Optional: Remove the loader from DOM entirely after fade
+                    setTimeout(() => {
+                    loader.remove();
+                    }, 600); // Match this to your CSS transition duration
+                }, 500); // Initial wait before fading out (optional)
+            });
+        </script>
 
         <!-- PENDING CHANGES -->
 
@@ -848,24 +869,24 @@
 
     <script>
         //Get the button
-    const backToTopBtn = document.getElementById("backToTopBtn");
+        const backToTopBtn = document.getElementById("backToTopBtn");
 
-    // When the user scrolls down 300px from the top, show the button
-    window.onscroll = function() {
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            backToTopBtn.style.display = "block";
-        } else {
-            backToTopBtn.style.display = "none";
-        }
-    };
+        // When the user scrolls down 300px from the top, show the button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
 
-    // When the user clicks the button, scroll to the top smoothly
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+        // When the user clicks the button, scroll to the top smoothly
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
-    });
     </script>
     </body>
 </html>

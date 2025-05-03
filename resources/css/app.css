@@ -10,6 +10,24 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #000; /* or transparent if video has background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.6s ease; /* fade effect */
+    pointer-events: all;
+}
+
+#loader.fade-out {
+opacity: 0;
+pointer-events: none;
+}
+
 #backToTopBtn {
     position: fixed;
     bottom: 20px;    /* Space from the bottom */
