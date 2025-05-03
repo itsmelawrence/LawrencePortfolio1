@@ -10,6 +10,10 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+h3{
+    font-family: 'Product Sans', sans-serif;
+}
+
 #loader {
     position: fixed;
     inset: 0;
