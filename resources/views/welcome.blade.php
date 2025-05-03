@@ -868,23 +868,27 @@
     </button>
 
     <script>
-        //Get the button
         const backToTopBtn = document.getElementById("backToTopBtn");
 
-        // When the user scrolls down 300px from the top, show the button
-        window.onscroll = function() {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                backToTopBtn.style.display = "block";
-            } else {
-                backToTopBtn.style.display = "none";
-            }
-        };
+        window.addEventListener("scroll", () => {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = (scrollTop / scrollHeight) * 100;
 
-        // When the user clicks the button, scroll to the top smoothly
-        backToTopBtn.addEventListener('click', () => {
+            if (scrollPercent > 5) {
+                backToTopBtn.classList.add("show");
+            } else {
+                backToTopBtn.classList.remove("show");
+            }
+
+            // Update background with scroll-based conic-gradient
+            backToTopBtn.style.background = `conic-gradient(#7b4f2d ${scrollPercent}%, #2a2a2a ${scrollPercent}%)`;
+        });
+
+        backToTopBtn.addEventListener("click", () => {
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth'
+                behavior: "smooth"
             });
         });
     </script>
