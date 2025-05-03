@@ -102,7 +102,7 @@
             <div class="info-holder">
                 <div class="left-info-holder">
                     <div class="left-info-holder-i">
-                        <img src="https://newpullzonel.b-cdn.net/headimg.png" alt="">
+                        <img src="https://newpullzone02.b-cdn.net/headimg.png" alt="">
                     </div>
                 </div>
                 <div class="right-info-holder">
@@ -230,7 +230,7 @@
                         <div class="content-holder">
                             <div class="video-container">
                                 <video autoplay loop muted playsinline>
-                                    <source src="https://newpullzonel.b-cdn.net/catalogtemplate.mp4" type="video/mp4">
+                                    <source src="https://newpullzone02.b-cdn.net/catalogtemplate.mp4" type="video/mp4">
                                 </video>
                             </div>
                         </div>
@@ -251,7 +251,7 @@
                         <div class="content-holder">
                             <div class="video-container">
                                 <video autoplay loop muted playsinline>
-                                    <source src="https://newpullzonel.b-cdn.net/socialmedia.mp4" type="video/mp4">
+                                    <source src="https://newpullzone02.b-cdn.net/socialmedia.mp4" type="video/mp4">
                                 </video>
                             </div>
                         </div>
@@ -271,7 +271,7 @@
                         <div class="content-holder">
                             <div class="video-container">
                                 <video autoplay loop muted playsinline>
-                                    <source src="https://newpullzonel.b-cdn.net/websiteinfographics.mp4" type="video/mp4">
+                                    <source src="https://newpullzone02.b-cdn.net/websiteinfographics.mp4" type="video/mp4">
                                 </video>
                             </div>
                         </div>
@@ -291,8 +291,8 @@
                                 <div class="image-block-container"> <!-- 1 IMAGE BLOCK -->
                                 <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <a href="https://newpullzonel.b-cdn.net/vesaro1.png" data-lightbox="portfolio" data-title="Template 1">
-                                            <img src="https://newpullzonel.b-cdn.net/vesaro1.png" alt="Vesaro 1">
+                                        <a href="https://newpullzone02.b-cdn.net/vesaro1.png" data-lightbox="portfolio" data-title="Template 1">
+                                            <img src="https://newpullzone02.b-cdn.net/vesaro1.png" alt="Vesaro 1">
                                         </a>
                                     </div>
                                     <div class="image-text">
@@ -302,8 +302,8 @@
 
                                 <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <a href="https://newpullzonel.b-cdn.net/vesaro2.png" data-lightbox="portfolio" data-title="Template 2">
-                                            <img src="https://newpullzonel.b-cdn.net/vesaro2.png" alt="Vesaro 2">
+                                        <a href="https://newpullzone02.b-cdn.net/vesaro2.png" data-lightbox="portfolio" data-title="Template 2">
+                                            <img src="https://newpullzone02.b-cdn.net/vesaro2.png" alt="Vesaro 2">
                                         </a>
                                     </div>
                                     <div class="image-text">
@@ -313,8 +313,8 @@
 
                                 <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <a href="https://newpullzonel.b-cdn.net/vesaro3.png" data-lightbox="portfolio" data-title="Template 3">
-                                            <img src="https://newpullzonel.b-cdn.net/vesaro3.png" alt="Vesaro 3">
+                                        <a href="https://newpullzone02.b-cdn.net/vesaro3.png" data-lightbox="portfolio" data-title="Template 3">
+                                            <img src="https://newpullzone02.b-cdn.net/vesaro3.png" alt="Vesaro 3">
                                         </a>
                                     </div>
                                     <div class="image-text">
@@ -324,8 +324,8 @@
 
                                 <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <a href="https://newpullzonel.b-cdn.net/vesaro4.png" data-lightbox="portfolio" data-title="Template 4">
-                                            <img src="https://newpullzonel.b-cdn.net/vesaro4.png" alt="Vesaro 4">
+                                        <a href="https://newpullzone02.b-cdn.net/vesaro4.png" data-lightbox="portfolio" data-title="Template 4">
+                                            <img src="https://newpullzone02.b-cdn.net/vesaro4.png" alt="Vesaro 4">
                                         </a>
                                     </div>
                                     <div class="image-text">
@@ -340,8 +340,8 @@
                                 <div class="image-block-container"> <!-- 1 IMAGE BLOCK -->
                                 <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <a href="https://newpullzonel.b-cdn.net/social1.png" data-lightbox="portfolio" data-title="Social 1">
-                                            <img src="https://newpullzonel.b-cdn.net/social1.png" alt="Social 1">
+                                        <a href="https://newpullzone02.b-cdn.net/social1.png" data-lightbox="portfolio" data-title="Social 1">
+                                            <img src="https://newpullzone02.b-cdn.net/social1.png" alt="Social 1">
                                         </a>
                                     </div>
                                     <div class="image-text">
@@ -351,8 +351,8 @@
 
                                 <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <a href="https://newpullzonel.b-cdn.net/social2.png" data-lightbox="portfolio" data-title="Social 2">
-                                            <img src="https://newpullzonel.b-cdn.net/social2.png" alt="Social 2">
+                                        <a href="https://newpullzone02.b-cdn.net/social2.png" data-lightbox="portfolio" data-title="Social 2">
+                                            <img src="https://newpullzone02.b-cdn.net/social2.png" alt="Social 2">
                                         </a>
                                     </div>
                                     <div class="image-text">
@@ -362,8 +362,8 @@
 
                                 <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <a href="https://newpullzonel.b-cdn.net/social3.png" data-lightbox="portfolio" data-title="Social 3">
-                                            <img src="https://newpullzonel.b-cdn.net/social3.png" alt="Social 3">
+                                        <a href="https://newpullzone02.b-cdn.net/social3.png" data-lightbox="portfolio" data-title="Social 3">
+                                            <img src="https://newpullzone02.b-cdn.net/social3.png" alt="Social 3">
                                         </a>
                                     </div>
                                     <div class="image-text">
@@ -373,8 +373,8 @@
 
                                 <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <a href="https://newpullzonel.b-cdn.net/social4.png" data-lightbox="portfolio" data-title="Social 4">
-                                            <img src="https://newpullzonel.b-cdn.net/social4.png" alt="Social 4">
+                                        <a href="https://newpullzone02.b-cdn.net/social4.png" data-lightbox="portfolio" data-title="Social 4">
+                                            <img src="https://newpullzone02.b-cdn.net/social4.png" alt="Social 4">
                                         </a>
                                     </div>
                                     <div class="image-text">
@@ -384,8 +384,8 @@
 
                                 <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <a href="https://newpullzonel.b-cdn.net/social5.png" data-lightbox="portfolio" data-title="Social 5">
-                                            <img src="https://newpullzonel.b-cdn.net/social5.png" alt="Social 5">
+                                        <a href="https://newpullzone02.b-cdn.net/social5.png" data-lightbox="portfolio" data-title="Social 5">
+                                            <img src="https://newpullzone02.b-cdn.net/social5.png" alt="Social 5">
                                         </a>
                                     </div>
                                     <div class="image-text">
@@ -395,8 +395,8 @@
 
                                 <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <a href="https://newpullzonel.b-cdn.net/social6.png" data-lightbox="portfolio" data-title="Social 6">
-                                            <img src="https://newpullzonel.b-cdn.net/social6.png" alt="Social 6">
+                                        <a href="https://newpullzone02.b-cdn.net/social6.png" data-lightbox="portfolio" data-title="Social 6">
+                                            <img src="https://newpullzone02.b-cdn.net/social6.png" alt="Social 6">
                                         </a>
                                     </div>
                                     <div class="image-text">
@@ -406,8 +406,8 @@
 
                                 <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <a href="https://newpullzonel.b-cdn.net/social7.png" data-lightbox="portfolio" data-title="Social 7">
-                                            <img src="https://newpullzonel.b-cdn.net/social7.png" alt="Social 7">
+                                        <a href="https://newpullzone02.b-cdn.net/social7.png" data-lightbox="portfolio" data-title="Social 7">
+                                            <img src="https://newpullzone02.b-cdn.net/social7.png" alt="Social 7">
                                         </a>
                                     </div>
                                     <div class="image-text">
@@ -417,8 +417,8 @@
 
                                 <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <a href="https://newpullzonel.b-cdn.net/social8.png" data-lightbox="portfolio" data-title="Social 8">
-                                            <img src="https://newpullzonel.b-cdn.net/social8.png" alt="Social 8">
+                                        <a href="https://newpullzone02.b-cdn.net/social8.png" data-lightbox="portfolio" data-title="Social 8">
+                                            <img src="https://newpullzone02.b-cdn.net/social8.png" alt="Social 8">
                                         </a>
                                     </div>
                                     <div class="image-text">
@@ -428,8 +428,8 @@
 
                                 <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <a href="https://newpullzonel.b-cdn.net/social9.png" data-lightbox="portfolio" data-title="Social 9">
-                                            <img src="https://newpullzonel.b-cdn.net/social9.png" alt="Social 9">
+                                        <a href="https://newpullzone02.b-cdn.net/social9.png" data-lightbox="portfolio" data-title="Social 9">
+                                            <img src="https://newpullzone02.b-cdn.net/social9.png" alt="Social 9">
                                         </a>
                                     </div>
                                     <div class="image-text">
@@ -444,8 +444,8 @@
                                 <div class="image-block-container"> <!-- 1 IMAGE BLOCK -->
                                 <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <a href="https://newpullzonel.b-cdn.net/webdesign1.png" data-lightbox="portfolio" data-title="WebDesign 1">
-                                            <img src="https://newpullzonel.b-cdn.net/WebDesign1.png" alt="WebDesign 1">
+                                        <a href="https://newpullzone02.b-cdn.net/webdesign1.png" data-lightbox="portfolio" data-title="WebDesign 1">
+                                            <img src="https://newpullzone02.b-cdn.net/WebDesign1.png" alt="WebDesign 1">
                                         </a>
                                     </div>
                                     <div class="image-text">
@@ -455,8 +455,8 @@
 
                                 <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <a href="https://newpullzonel.b-cdn.net/webdesign2.png" data-lightbox="portfolio" data-title="WebDesign 2">
-                                            <img src="https://newpullzonel.b-cdn.net/webdesign2.png" alt="Web Design 2">
+                                        <a href="https://newpullzone02.b-cdn.net/webdesign2.png" data-lightbox="portfolio" data-title="WebDesign 2">
+                                            <img src="https://newpullzone02.b-cdn.net/webdesign2.png" alt="Web Design 2">
                                         </a>
                                     </div>
                                     <div class="image-text">
@@ -466,8 +466,8 @@
 
                                 <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <a href="https://newpullzonel.b-cdn.net/webdesign3.png" data-lightbox="portfolio" data-title="WebDesign 3">
-                                            <img src="https://newpullzonel.b-cdn.net/webdesign3.png" alt="Web Design 3">
+                                        <a href="https://newpullzone02.b-cdn.net/webdesign3.png" data-lightbox="portfolio" data-title="WebDesign 3">
+                                            <img src="https://newpullzone02.b-cdn.net/webdesign3.png" alt="Web Design 3">
                                         </a>
                                     </div>
                                     <div class="image-text">
@@ -477,8 +477,8 @@
 
                                 <div class="image-handler-block"> <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                     <div class="image-handler">
-                                        <a href="https://newpullzonel.b-cdn.net/webdesign4.png" data-lightbox="portfolio" data-title="WebDesign 4">
-                                            <img src="https://newpullzonel.b-cdn.net/webdesign4.png" alt="Web Design 4">
+                                        <a href="https://newpullzone02.b-cdn.net/webdesign4.png" data-lightbox="portfolio" data-title="WebDesign 4">
+                                            <img src="https://newpullzone02.b-cdn.net/webdesign4.png" alt="Web Design 4">
                                         </a>
                                     </div>
                                     <div class="image-text">
