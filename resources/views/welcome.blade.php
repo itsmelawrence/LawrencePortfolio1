@@ -452,7 +452,7 @@
                                 <div class="image-handler" id="imageContainer">
                                     <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/webdesign1.png" data-lightbox="portfolio"
                                         data-title="WebDesign 1">
-                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/WebDesign1.png" alt="WebDesign 1">
+                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/webdesign1.png" alt="WebDesign 1">
                                     </a>
                                 </div>
                                 <div class="image-text">
