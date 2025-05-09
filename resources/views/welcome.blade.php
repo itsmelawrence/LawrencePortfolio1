@@ -199,7 +199,7 @@
                 <div class="content-holder">
                     <div class="video-container">
                         <video autoplay loop muted playsinline>
-                            <source src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/videos/catalogtemplate.mp4" type="video/mp4">
+                            <source src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/catalogtemplate.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
