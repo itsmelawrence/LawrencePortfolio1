@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -6,12 +6,13 @@
 @source '../**/*.js';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
 }
 
-h3{
-    font-family: 'Product Sans', sans-serif;
+h3 {
+    font-family: "Product Sans", sans-serif;
 }
 
 #loader {
@@ -28,8 +29,8 @@ h3{
 }
 
 #loader.fade-out {
-opacity: 0;
-pointer-events: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 #backToTopBtn {
@@ -39,14 +40,17 @@ pointer-events: none;
     z-index: 9999;
     width: 50px;
     height: 50px;
-    background: conic-gradient(#7b4f2d 0%, #4b2e1e 0%); /* Will be updated dynamically */
+    background: conic-gradient(
+        #7b4f2d 0%,
+        #4b2e1e 0%
+    ); /* Will be updated dynamically */
     color: white;
     border: none;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
@@ -60,20 +64,21 @@ pointer-events: none;
 
 #backToTopBtn:hover {
     transform: scale(1.15);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
 #backToTopBtn i {
     font-size: 20px;
 }
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
 }
 
 #backToTopBtn {
-    margin-bottom: 0;  /* Ensure no extra bottom margin */
+    margin-bottom: 0; /* Ensure no extra bottom margin */
 }
 
 body {
@@ -81,15 +86,17 @@ body {
 }
 /** HEADER **/
 
-h1, h2{
-    font-family: 'Namdhinggo', sans-serif;
+h1,
+h2 {
+    font-family: "Namdhinggo", sans-serif;
 }
 
-.darkmode-layer, .darkmode-toggle {
-  z-index: 500;
+.darkmode-layer,
+.darkmode-toggle {
+    z-index: 500;
 }
 
-body{
+body {
     background: #fafafa;
 }
 
@@ -98,7 +105,7 @@ body{
     height: 0;
 }
 
-            body{
+body {
     padding: 0;
 }
 
@@ -108,7 +115,7 @@ body{
     display: flex;
 }
 
-.center-text{
+.center-text {
     width: 100%;
     height: fit-content;
     margin: auto;
@@ -116,12 +123,12 @@ body{
 
 .typedjs {
     text-align: center;
-    font-family: 'Namdhinggo', sans-serif;    
+    font-family: "Namdhinggo", sans-serif;
     font-size: 25px;
     font-weight: 400;
 }
-                                                
-.navigation-row{
+
+.navigation-row {
     width: fit-content;
     margin: auto;
     padding: 15px 0;
@@ -129,26 +136,28 @@ body{
     display: flex;
 }
 
-.navigation-row li{
+.navigation-row li {
     margin: 20px;
 }
 
-.nav-text{
+.nav-text {
     font-size: 14px;
-    font-family: 'Namdhinggo', sans-serif;
+    font-family: "Namdhinggo", sans-serif;
     opacity: 0;
     font-style: italic;
     transform: translateY(50px);
 }
 
-.nav-text a, .scroll-down-a{
+.nav-text a,
+.scroll-down-a {
     color: #525252;
-    transition: color .4s;
+    transition: color 0.4s;
 }
 
-.nav-text a:hover, .scroll-down-a:hover{
+.nav-text a:hover,
+.scroll-down-a:hover {
     color: #262626;
-    transition: color .4s;
+    transition: color 0.4s;
 }
 
 .scroll-down-a {
@@ -164,7 +173,7 @@ body{
     inset: auto 0% 6%;
 }
 
-.scroll-down-arrow{
+.scroll-down-arrow {
     inset: auto 0% 3%;
     font-size: 12px;
     position: absolute;
@@ -173,45 +182,44 @@ body{
     width: 300px;
     text-align: center;
     opacity: 0;
-    transition: inset .4s ease;
+    transition: inset 0.4s ease;
 }
 
-.scroll-down-a:hover ~ .scroll-down-arrow{
+.scroll-down-a:hover ~ .scroll-down-arrow {
     inset: auto 0% 2%;
-    transition: inset .4s ease;
+    transition: inset 0.4s ease;
 }
-
 
 /** -HEADER **/
 
 /** ABOUT **/
 
-.about{
+.about {
     height: 100vh;
     display: flex;
 }
 
-.info-holder{
+.info-holder {
     margin: auto;
     display: flex;
     width: 100%;
 }
 
-.left-info-holder{
+.left-info-holder {
     width: 30%;
 }
 
-.left-info-holder-i{
+.left-info-holder-i {
     display: flex;
 }
 
-.left-info-holder-i img{
+.left-info-holder-i img {
     margin: auto;
     width: 300px;
     z-index: 501;
 }
 
-.right-info-holder{
+.right-info-holder {
     width: 70%;
     display: flex;
 }
@@ -219,109 +227,103 @@ body{
 .right-info-holder span {
     margin: auto;
     font-size: 14px;
-    font-family: 'Product Sans', sans-serif;
+    font-family: "Product Sans", sans-serif;
     font-weight: 400;
     color: #d7d7d7;
     max-width: 900px;
 }
 
-.desc-text{
+.desc-text {
     transition: color 0.3s ease;
 }
 
-.desc-group{
+.desc-group {
     margin: auto;
     max-width: 900px;
 }
 
 .highlighted {
-  background-color: yellow;
+    background-color: yellow;
 }
 
 /** -ABOUT **/
 
 /** GALLERY **/
 
-.gallery{
+.gallery {
     margin-top: 50px;
 }
 
-.container{
+.container {
     background: #6d6d6d;
     height: 300px;
     width: 100%;
 }
 
-.fade-in-viewc{
+.fade-in-viewc {
     width: 100%;
     opacity: 0;
     display: block;
     width: 100%;
     margin-top: 200px;
-    
 }
 
-.fade-in-viewc h1{
-    
+.fade-in-viewc h1 {
     font-size: 35px;
     width: 80%;
     margin: auto;
     margin-bottom: 200px;
 }
 
-.main-info-container{
+.main-info-container {
     width: 80%;
     margin: auto;
     display: flex;
 }
 
-.fade-left-info-holder{
+.fade-left-info-holder {
     width: 30%;
     display: block;
 }
-.fade-right-info-holder{
+.fade-right-info-holder {
     width: 70%;
     display: flex;
 }
 
-.fade-left-info-holder-i{
+.fade-left-info-holder-i {
     display: block;
 }
 
-.fade-left-info-holder-i h2{
-width: 70%;
+.fade-left-info-holder-i h2 {
+    width: 70%;
     margin-bottom: 15px;
     font-size: 32px;
 }
 
-.fade-left-info-holder-i p{
+.fade-left-info-holder-i p {
     font-size: 13px;
-    font-family: 'Product Sans', sans-serif;
+    font-family: "Product Sans", sans-serif;
 }
 
-.content-holder{
+.content-holder {
     z-index: 501 !important;
 }
 
-.main-image-container{
+.main-image-container {
     width: 80%;
     margin: auto auto 200px;
 }
 
-
-.main-image-container h2{
+.main-image-container h2 {
     font-size: 30px;
 }
 
-.image-block-container{
+.image-block-container {
     display: flex;
     flex-wrap: wrap;
     box-shadow: inset -4px 0 10px rgba(0, 0, 0, 0.03),
-              inset 4px 0 10px rgba(0, 0, 0, 0.03),
-              0 10px 25px rgba(0, 0, 0, 0.06);
+        inset 4px 0 10px rgba(0, 0, 0, 0.03), 0 10px 25px rgba(0, 0, 0, 0.06);
 }
-
-
 
 .image-handler-block {
     width: 33%;
@@ -334,7 +336,7 @@ width: 70%;
     margin: auto;
 }
 
-.image-text{
+.image-text {
     display: flex;
 }
 
@@ -348,35 +350,32 @@ width: 70%;
     padding-top: unset;
 }
 
-.image-header1, .image-header2, .image-header3{
+.image-header1,
+.image-header2,
+.image-header3 {
     background: #fafafa;
     padding: 30px 0;
 }
 
-.image-header2, .image-header3{
+.image-header2,
+.image-header3 {
     padding: 60px 0 30px 0;
 }
 
 @keyframes pulseGlow {
     0% {
-        box-shadow:
-            0 12px 24px rgba(0, 0, 0, 0.3),
-            0 0 20px rgba(181, 101, 29, 0.6),
-            0 0 40px rgba(210, 140, 60, 0.4),
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3),
+            0 0 20px rgba(181, 101, 29, 0.6), 0 0 40px rgba(210, 140, 60, 0.4),
             0 0 60px rgba(255, 220, 150, 0.3);
     }
     50% {
-        box-shadow:
-            0 16px 32px rgba(0, 0, 0, 0.35),
-            0 0 30px rgba(181, 101, 29, 0.7),
-            0 0 60px rgba(210, 140, 60, 0.5),
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35),
+            0 0 30px rgba(181, 101, 29, 0.7), 0 0 60px rgba(210, 140, 60, 0.5),
             0 0 80px rgba(255, 220, 150, 0.4);
     }
     100% {
-        box-shadow:
-            0 12px 24px rgba(0, 0, 0, 0.3),
-            0 0 20px rgba(181, 101, 29, 0.6),
-            0 0 40px rgba(210, 140, 60, 0.4),
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3),
+            0 0 20px rgba(181, 101, 29, 0.6), 0 0 40px rgba(210, 140, 60, 0.4),
             0 0 60px rgba(255, 220, 150, 0.3);
     }
 }
@@ -387,13 +386,9 @@ width: 70%;
 }
 
 .image-handler img:hover {
-    
     transform: scale(1.08) rotate3d(1, 1, 0, 5deg) rotate(1deg);
-    box-shadow:
-        0 12px 24px rgba(0, 0, 0, 0.3),
-        0 0 20px rgba(181, 101, 29, 0.6),
-        0 0 40px rgba(210, 140, 60, 0.4),
-        0 0 60px rgba(255, 220, 150, 0.3);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 0 20px rgba(181, 101, 29, 0.6),
+        0 0 40px rgba(210, 140, 60, 0.4), 0 0 60px rgba(255, 220, 150, 0.3);
     animation: pulseGlow 2s infinite alternate;
 }
 
@@ -408,14 +403,12 @@ width: 70%;
     opacity: 1;
 }
 
-
 /** GALLERY **/
 
 /** CONTACT **/
 
-.list-item{
+.list-item {
     list-style-type: none;
-    
 }
 
 .list-item li {
@@ -423,7 +416,6 @@ width: 70%;
     display: flex;
     flex-wrap: wrap;
 }
-
 
 .list-item-link span {
     width: 40px;
@@ -436,40 +428,41 @@ width: 70%;
     margin: auto;
     margin-left: 10px;
     font-size: 15px;
-    font-family: 'Product Sans', sans-serif;
+    font-family: "Product Sans", sans-serif;
 }
 
 .list-item-link a:hover {
     color: #0661a7;
     text-decoration: underline;
-    transition: color .4s, text-decoration .4s;
+    transition: color 0.4s, text-decoration 0.4s;
 }
 
-.list-item-link h3{
+.list-item-link h3 {
     color: #353535;
     font-weight: 600;
 }
 
-.contact-tag{
+.contact-tag {
     margin-bottom: 80px !important;
 }
 
-.contact-us-form{
+.contact-us-form {
     margin-left: 70px;
     width: 100%;
 }
 
-.contact-header h2{
+.contact-header h2 {
     height: 60px;
 }
 
-.main-form, .main-form label{
+.main-form,
+.main-form label {
     font-size: 14px;
     display: block;
     position: relative;
 }
 
-.main-form label{
+.main-form label {
     margin: 25px 0;
 }
 
@@ -477,30 +470,29 @@ width: 70%;
     margin-bottom: 15px;
 }
 
-
 p.contact-links-header {
     margin-bottom: 20px;
     font-size: 19px;
     font-family: Namdhinggo, sans-serif;
 }
 
-.main-form input{
+.main-form input {
     width: 100%;
     text-indent: 10px;
     border: 2px solid gainsboro;
     border-radius: 5px;
     height: 40px;
     color: black;
-    transition: border .4s, color .4s;
+    transition: border 0.4s, color 0.4s;
 }
 
 .main-form input:hover {
     color: black;
     border: 2px solid #8c7070;
-    transition: border .4s, color .4s;
+    transition: border 0.4s, color 0.4s;
 }
 
-.group-input{
+.group-input {
     display: flex;
 }
 
@@ -512,23 +504,23 @@ p.contact-links-header {
     width: 55%;
 }
 
-textarea{
+textarea {
     width: 100%;
     border: 2px solid gainsboro;
     border-radius: 5px;
     padding: 10px;
-    transition: border .4s;
+    transition: border 0.4s;
 }
 
-textarea:hover{
+textarea:hover {
     border: 2px solid #8c7070;
-    transition: border .4s;
+    transition: border 0.4s;
 }
 
-#submitButton:hover{
+#submitButton:hover {
     color: white;
     background: #8c7070;
-    transition: background .4s;
+    transition: background 0.4s;
 }
 
 .text-danger {
@@ -541,13 +533,13 @@ textarea:hover{
     color: #c10000;
 }
 
-.success-message{
+.success-message {
     margin: auto;
     margin-left: 30px;
     color: #194019;
 }
 
-.button-container{
+.button-container {
     display: flex;
 }
 
@@ -556,13 +548,12 @@ textarea:hover{
     color: white;
 }
 
-
 /** -CONTACT **/
 
 /** FOOTER **/
 
-.contact-card{
-    font-family: 'Product Sans', sans-serif;
+.contact-card {
+    font-family: "Product Sans", sans-serif;
 }
 
 .footer-card {
@@ -585,11 +576,11 @@ textarea:hover{
     color: #000000;
     width: fit-content;
     margin: auto;
-    font-family: 'Product Sans', sans-serif;
+    font-family: "Product Sans", sans-serif;
     font-size: 11px;
 }
 
-.button-container input{
+.button-container input {
     width: 200px;
     margin: 20px 0;
     height: 40px;
@@ -600,20 +591,19 @@ textarea:hover{
 
 @media screen and (max-width: 350px) {
     .image-block {
-      display: block;
-      overflow: hidden;
+        display: block;
+        overflow: hidden;
     }
-  
+
     .image-handler-block {
-      margin: 20px auto;
+        margin: 20px auto;
     }
-  }
+}
 
-@media screen and (max-width: 450px){
-
+@media screen and (max-width: 450px) {
     .typedjs {
         text-align: center;
-        font-family: 'Namdhinggo', sans-serif;
+        font-family: "Namdhinggo", sans-serif;
         font-size: 16px;
         font-weight: 400;
     }
@@ -625,13 +615,13 @@ textarea:hover{
         font-style: italic;
         transform: translateY(50px);
     }
-        
-    .about{
+
+    .about {
         height: 100vh;
         display: block;
     }
 
-    .info-holder{
+    .info-holder {
         margin: auto;
         display: block;
         width: 100%;
@@ -642,11 +632,11 @@ textarea:hover{
         width: 300px;
     }
 
-    .left-info-holder-i{
+    .left-info-holder-i {
         display: flex;
     }
 
-    .left-info-holder-i img{
+    .left-info-holder-i img {
         margin: auto;
         width: 300px;
         z-index: 501;
@@ -657,59 +647,56 @@ textarea:hover{
         display: block;
         margin: auto;
         margin-top: 40px;
-
     }
 
     .right-info-holder span {
         margin: auto;
         font-size: 14px;
-        font-family: 'Product Sans', sans-serif;
+        font-family: "Product Sans", sans-serif;
         font-weight: 400;
         color: #d7d7d7;
     }
 
-    .desc-text{
+    .desc-text {
         transition: color 0.3s ease;
     }
 
-    .desc-group{
+    .desc-group {
         margin: auto;
         width: 100%;
         display: block;
     }
 
     .highlighted {
-    background-color: yellow;
+        background-color: yellow;
     }
 
-    .card-info-container{
-    margin-top: 50px;
+    .card-info-container {
+        margin-top: 50px;
     }
 
-    .container{
+    .container {
         background: #6d6d6d;
         height: 300px;
         width: 100%;
     }
 
-    .fade-in-viewc{
+    .fade-in-viewc {
         width: 100%;
         opacity: 0;
         display: block;
         width: 100%;
         margin-top: 200px;
-        
     }
 
-    .fade-in-viewc h1{
-        
+    .fade-in-viewc h1 {
         font-size: 35px;
         width: 80%;
         margin: auto;
         margin-bottom: 100px;
     }
 
-    .main-info-container{
+    .main-info-container {
         width: 80%;
         margin: auto;
         display: block;
@@ -719,29 +706,28 @@ textarea:hover{
         width: 100%;
         display: block;
     }
-    .fade-right-info-holder{
+    .fade-right-info-holder {
         width: 100%;
         display: flex;
         margin-top: 40px;
     }
 
-    .fade-left-info-holder-i{
+    .fade-left-info-holder-i {
         display: block;
     }
 
-    .fade-left-info-holder-i h2{
+    .fade-left-info-holder-i h2 {
         width: 100%;
         margin-bottom: 15px;
         font-size: 32px;
     }
 
-    .fade-left-info-holder-i p{
-
+    .fade-left-info-holder-i p {
         font-size: 13px;
-        font-family: 'Product Sans', sans-serif;
+        font-family: "Product Sans", sans-serif;
     }
 
-    .content-holder{
+    .content-holder {
         z-index: 501 !important;
     }
 
@@ -754,8 +740,6 @@ textarea:hover{
         flex: none;
         display: flex;
         position: relative;
-        
-        
     }
 
     .image-handler img {
@@ -768,12 +752,18 @@ textarea:hover{
         font-size: 15px;
     }
 
-    .image-block{
+    .image-block {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
-        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+        mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%
+        );
     }
 
     .image-handler-block {
@@ -791,27 +781,26 @@ textarea:hover{
         display: block;
     }
 
-.group-input div, .message-input {
+    .group-input div,
+    .message-input {
         width: 100%;
     }
-
 }
 
-@media screen and (min-width: 450px) and (max-width: 550px){
-    
+@media screen and (min-width: 450px) and (max-width: 550px) {
     .typedjs {
         text-align: center;
-        font-family: 'Namdhinggo', sans-serif;
+        font-family: "Namdhinggo", sans-serif;
         font-size: 20px;
         font-weight: 400;
     }
-        
-    .about{
+
+    .about {
         height: 100vh;
         display: block;
     }
 
-    .info-holder{
+    .info-holder {
         margin: auto;
         display: block;
         width: 100%;
@@ -822,11 +811,11 @@ textarea:hover{
         width: 300px;
     }
 
-    .left-info-holder-i{
+    .left-info-holder-i {
         display: flex;
     }
 
-    .left-info-holder-i img{
+    .left-info-holder-i img {
         margin: auto;
         width: 300px;
         z-index: 501;
@@ -837,59 +826,56 @@ textarea:hover{
         display: block;
         margin: auto;
         margin-top: 40px;
-
     }
 
     .right-info-holder span {
         margin: auto;
         font-size: 14px;
-        font-family: 'Product Sans', sans-serif;
+        font-family: "Product Sans", sans-serif;
         font-weight: 400;
         color: #d7d7d7;
     }
 
-    .desc-text{
+    .desc-text {
         transition: color 0.3s ease;
     }
 
-    .desc-group{
+    .desc-group {
         margin: auto;
         width: 100%;
         display: block;
     }
 
     .highlighted {
-    background-color: yellow;
+        background-color: yellow;
     }
 
-    .card-info-container{
-    margin-top: 50px;
+    .card-info-container {
+        margin-top: 50px;
     }
 
-    .container{
+    .container {
         background: #6d6d6d;
         height: 300px;
         width: 100%;
     }
 
-    .fade-in-viewc{
+    .fade-in-viewc {
         width: 100%;
         opacity: 0;
         display: block;
         width: 100%;
         margin-top: 200px;
-        
     }
 
-    .fade-in-viewc h1{
-        
+    .fade-in-viewc h1 {
         font-size: 35px;
         width: 80%;
         margin: auto;
         margin-bottom: 100px;
     }
 
-    .main-info-container{
+    .main-info-container {
         width: 80%;
         margin: auto;
         display: block;
@@ -899,28 +885,28 @@ textarea:hover{
         width: 100%;
         display: block;
     }
-    .fade-right-info-holder{
+    .fade-right-info-holder {
         width: 100%;
         display: flex;
         margin-top: 40px;
     }
 
-    .fade-left-info-holder-i{
+    .fade-left-info-holder-i {
         display: block;
     }
 
-    .fade-left-info-holder-i h2{
+    .fade-left-info-holder-i h2 {
         width: 100%;
         margin-bottom: 15px;
         font-size: 32px;
     }
 
-    .fade-left-info-holder-i p{
+    .fade-left-info-holder-i p {
         font-size: 13px;
-        font-family: 'Product Sans', sans-serif;
+        font-family: "Product Sans", sans-serif;
     }
 
-    .content-holder{
+    .content-holder {
         z-index: 501 !important;
     }
 
@@ -933,8 +919,6 @@ textarea:hover{
         flex: none;
         display: flex;
         position: relative;
-        
-        
     }
 
     .image-handler img {
@@ -947,12 +931,18 @@ textarea:hover{
         font-size: 15px;
     }
 
-    .image-block{
+    .image-block {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
-        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+        mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%
+        );
     }
 
     .image-handler-block {
@@ -966,19 +956,19 @@ textarea:hover{
         display: block;
     }
 
-.group-input div, .message-input {
+    .group-input div,
+    .message-input {
         width: 100%;
     }
-
 }
 
 @media screen and (min-width: 550px) and (max-width: 700px) {
-    .about{
+    .about {
         height: 100vh;
         display: block;
     }
 
-    .info-holder{
+    .info-holder {
         margin: auto;
         display: block;
         width: 100%;
@@ -989,11 +979,11 @@ textarea:hover{
         width: 300px;
     }
 
-    .left-info-holder-i{
+    .left-info-holder-i {
         display: flex;
     }
 
-    .left-info-holder-i img{
+    .left-info-holder-i img {
         margin: auto;
         width: 300px;
         z-index: 501;
@@ -1004,59 +994,56 @@ textarea:hover{
         display: block;
         margin: auto;
         margin-top: 40px;
-
     }
 
     .right-info-holder span {
         margin: auto;
         font-size: 14px;
-        font-family: 'Product Sans', sans-serif;
+        font-family: "Product Sans", sans-serif;
         font-weight: 400;
         color: #d7d7d7;
     }
 
-    .desc-text{
+    .desc-text {
         transition: color 0.3s ease;
     }
 
-    .desc-group{
+    .desc-group {
         margin: auto;
         width: 100%;
         display: block;
     }
 
     .highlighted {
-    background-color: yellow;
+        background-color: yellow;
     }
 
-    .card-info-container{
-    margin-top: 50px;
+    .card-info-container {
+        margin-top: 50px;
     }
 
-    .container{
+    .container {
         background: #6d6d6d;
         height: 300px;
         width: 100%;
     }
 
-    .fade-in-viewc{
+    .fade-in-viewc {
         width: 100%;
         opacity: 0;
         display: block;
         width: 100%;
         margin-top: 200px;
-        
     }
 
-    .fade-in-viewc h1{
-        
+    .fade-in-viewc h1 {
         font-size: 35px;
         width: 80%;
         margin: auto;
         margin-bottom: 100px;
     }
 
-    .main-info-container{
+    .main-info-container {
         width: 80%;
         margin: auto;
         display: block;
@@ -1066,28 +1053,28 @@ textarea:hover{
         width: 100%;
         display: block;
     }
-    .fade-right-info-holder{
+    .fade-right-info-holder {
         width: 100%;
         display: flex;
         margin-top: 40px;
     }
 
-    .fade-left-info-holder-i{
+    .fade-left-info-holder-i {
         display: block;
     }
 
-    .fade-left-info-holder-i h2{
+    .fade-left-info-holder-i h2 {
         width: 100%;
         margin-bottom: 15px;
         font-size: 32px;
     }
 
-    .fade-left-info-holder-i p{
+    .fade-left-info-holder-i p {
         font-size: 13px;
-        font-family: 'Product Sans', sans-serif;
+        font-family: "Product Sans", sans-serif;
     }
 
-    .content-holder{
+    .content-holder {
         z-index: 501 !important;
     }
 
@@ -1096,13 +1083,10 @@ textarea:hover{
         margin-left: 0;
     }
 
-
     .image-block-container {
         flex: none;
         display: flex;
         position: relative;
-        
-        
     }
 
     .image-handler img {
@@ -1115,12 +1099,18 @@ textarea:hover{
         font-size: 15px;
     }
 
-    .image-block{
+    .image-block {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
-        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+        mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%
+        );
     }
 
     .image-handler-block {
@@ -1134,20 +1124,19 @@ textarea:hover{
         display: block;
     }
 
-.group-input div, .message-input {
+    .group-input div,
+    .message-input {
         width: 100%;
     }
-
 }
 
 @media screen and (min-width: 700px) and (max-width: 850px) {
-
-    .about{
+    .about {
         height: 100vh;
         display: block;
     }
 
-    .info-holder{
+    .info-holder {
         margin: auto;
         display: block;
         width: 100%;
@@ -1158,11 +1147,11 @@ textarea:hover{
         width: 300px;
     }
 
-    .left-info-holder-i{
+    .left-info-holder-i {
         display: flex;
     }
 
-    .left-info-holder-i img{
+    .left-info-holder-i img {
         margin: auto;
         width: 300px;
         z-index: 501;
@@ -1173,59 +1162,56 @@ textarea:hover{
         display: block;
         margin: auto;
         margin-top: 40px;
-
     }
 
     .right-info-holder span {
         margin: auto;
         font-size: 14px;
-        font-family: 'Product Sans', sans-serif;
+        font-family: "Product Sans", sans-serif;
         font-weight: 400;
         color: #d7d7d7;
     }
 
-    .desc-text{
+    .desc-text {
         transition: color 0.3s ease;
     }
 
-    .desc-group{
+    .desc-group {
         margin: auto;
         width: 100%;
         display: block;
     }
 
     .highlighted {
-    background-color: yellow;
+        background-color: yellow;
     }
 
-    .card-info-container{
-    margin-top: 50px;
+    .card-info-container {
+        margin-top: 50px;
     }
 
-    .container{
+    .container {
         background: #6d6d6d;
         height: 300px;
         width: 100%;
     }
 
-    .fade-in-viewc{
+    .fade-in-viewc {
         width: 100%;
         opacity: 0;
         display: block;
         width: 100%;
         margin-top: 200px;
-        
     }
 
-    .fade-in-viewc h1{
-        
+    .fade-in-viewc h1 {
         font-size: 35px;
         width: 80%;
         margin: auto;
         margin-bottom: 100px;
     }
 
-    .main-info-container{
+    .main-info-container {
         width: 80%;
         margin: auto;
         display: block;
@@ -1235,28 +1221,28 @@ textarea:hover{
         width: 100%;
         display: block;
     }
-    .fade-right-info-holder{
+    .fade-right-info-holder {
         width: 100%;
         display: flex;
         margin-top: 40px;
     }
 
-    .fade-left-info-holder-i{
+    .fade-left-info-holder-i {
         display: block;
     }
 
-    .fade-left-info-holder-i h2{
+    .fade-left-info-holder-i h2 {
         width: 100%;
         margin-bottom: 15px;
         font-size: 32px;
     }
 
-    .fade-left-info-holder-i p{
+    .fade-left-info-holder-i p {
         font-size: 13px;
-        font-family: 'Product Sans', sans-serif;
+        font-family: "Product Sans", sans-serif;
     }
 
-    .content-holder{
+    .content-holder {
         z-index: 501 !important;
     }
 
@@ -1265,14 +1251,10 @@ textarea:hover{
         margin-left: 0;
     }
 
-
-    
-
     .image-block-container {
         flex: none;
         display: flex;
         position: relative;
-        
     }
 
     .image-handler img {
@@ -1285,12 +1267,18 @@ textarea:hover{
         font-size: 15px;
     }
 
-    .image-block{
+    .image-block {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
-        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+        mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%
+        );
     }
 
     .image-handler-block {
@@ -1304,14 +1292,14 @@ textarea:hover{
         display: block;
     }
 
-.group-input div, .message-input {
+    .group-input div,
+    .message-input {
         width: 100%;
     }
-
 }
 
-@media screen and (min-width: 850px) and (max-width: 1000px){
-    .desc-group{
+@media screen and (min-width: 850px) and (max-width: 1000px) {
+    .desc-group {
         width: 500px;
         margin: auto;
     }
@@ -1319,7 +1307,7 @@ textarea:hover{
     .image-handler img {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-      
+
     .image-handler img:hover {
         transform: scale(1.03);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -1329,29 +1317,28 @@ textarea:hover{
         display: block;
     }
 
-.group-input div, .message-input {
+    .group-input div,
+    .message-input {
         width: 100%;
     }
-
-   
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1300px){
-    .desc-group{
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+    .desc-group {
         width: 700px;
         margin: auto;
     }
 }
 
-@media screen and (min-width: 1300px) and (max-width: 1500px){
-    .desc-group{
+@media screen and (min-width: 1300px) and (max-width: 1500px) {
+    .desc-group {
         width: 800px;
         margin: auto;
     }
 }
 
-@media screen and (min-width: 1500px){
-    .desc-group{
+@media screen and (min-width: 1500px) {
+    .desc-group {
         width: 1000px;
         margin: auto;
     }
