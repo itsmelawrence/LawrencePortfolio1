@@ -132,6 +132,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
     lightbox.option({
         disableScrolling: true,
+        resizeDuration: 200,
+        wrapAround: true,
     });
 });
 

@@ -8,7 +8,8 @@
 
     <title>Lawrence's Portfolio</title>
 
-    <link rel="icon" href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/Lawrence%20Logo.ico" type="image/x-icon">
+    <link rel="icon" href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/Lawrence%20Logo.ico"
+        type="image/x-icon">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -23,7 +24,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- Add AOS styles -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJMBH392TG"></script>
     <script>
@@ -44,7 +44,8 @@
 <body>
     <div id="loader">
         <video autoplay loop muted playsinline>
-            <source src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/LoadingSpinning.mp4" type="video/mp4" />
+            <source src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/LoadingSpinning.mp4"
+                type="video/mp4" />
         </video>
     </div>
     <div id="top" class="main-container">
@@ -185,72 +186,77 @@
 
     <div id="gallery" class="card-info-container">
         <div class="fade-in-viewc">
-        <h1>GALLERY</h1>
-        <div class="main-info-container" data-aos="fade-up">
-            <!-- First Video -->
-            <div class="fade-left-info-holder">
-                <div class="fade-left-info-holder-i">
-                    <h2>VESARO</h2>
-                    <p>+ Catalog Template</p>
-                    <p>+ Made in Canva</p>
+            <h1>GALLERY</h1>
+            <div class="main-info-container" data-aos="fade-up">
+                <!-- First Video -->
+                <div class="fade-left-info-holder">
+                    <div class="fade-left-info-holder-i">
+                        <h2>VESARO</h2>
+                        <p>+ Catalog Template</p>
+                        <p>+ Made in Canva</p>
+                    </div>
                 </div>
-            </div>
-            <div class="fade-right-info-holder">
-                <div class="content-holder">
-                    <div class="video-container">
-                        <video autoplay loop muted playsinline>
-                            <source src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/catalogtemplate.mp4" type="video/mp4">
-                        
+                <div class="fade-right-info-holder">
+                    <div class="content-holder">
+                        <div class="video-container">
+                            <video autoplay loop muted playsinline>
+                                <source
+                                    src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/catalogtemplate.mp4"
+                                    type="video/mp4">
+
                             </video>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Second Video -->
-    <div class="fade-in-viewc">
-        <div class="main-info-container" data-aos="fade-up">
-            <div class="fade-left-info-holder">
-                <div class="fade-left-info-holder-i">
-                    <h2>SOCIAL MEDIA TEMPLATE</h2>
-                    <p>+ Templates For Social Media</p>
-                    <p>+ Made in Canva</p>
+        <!-- Second Video -->
+        <div class="fade-in-viewc">
+            <div class="main-info-container" data-aos="fade-up">
+                <div class="fade-left-info-holder">
+                    <div class="fade-left-info-holder-i">
+                        <h2>SOCIAL MEDIA TEMPLATE</h2>
+                        <p>+ Templates For Social Media</p>
+                        <p>+ Made in Canva</p>
+                    </div>
                 </div>
-            </div>
-            <div class="fade-right-info-holder">
-                <div class="content-holder">
-                    <div class="video-container">
-                        <video autoplay loop muted playsinline>
-                            <source src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/socialmedia.mp4" type="video/mp4">
-                        </video>
+                <div class="fade-right-info-holder">
+                    <div class="content-holder">
+                        <div class="video-container">
+                            <video autoplay loop muted playsinline>
+                                <source src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/socialmedia.mp4"
+                                    type="video/mp4">
+                            </video>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Third Video -->
-    <div class="fade-in-viewc">
-        <div class="main-info-container" data-aos="fade-up">
-            <div class="fade-left-info-holder">
-                <div class="fade-left-info-holder-i">
-                    <h2>WEBSITE DESIGN INFOGRAPHICS</h2>
-                    <p>+ Infographics Template</p>
-                    <p>+ Made in Canva</p>
+        <!-- Third Video -->
+        <div class="fade-in-viewc">
+            <div class="main-info-container" data-aos="fade-up">
+                <div class="fade-left-info-holder">
+                    <div class="fade-left-info-holder-i">
+                        <h2>WEBSITE DESIGN INFOGRAPHICS</h2>
+                        <p>+ Infographics Template</p>
+                        <p>+ Made in Canva</p>
+                    </div>
                 </div>
-            </div>
-            <div class="fade-right-info-holder">
-                <div class="content-holder">
-                    <div class="video-container">
-                        <video autoplay loop muted playsinline>
-                            <source src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/websiteinfographics.mp4" type="video/mp4">
-                        </video>
+                <div class="fade-right-info-holder">
+                    <div class="content-holder">
+                        <div class="video-container">
+                            <video autoplay loop muted playsinline>
+                                <source
+                                    src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/websiteinfographics.mp4"
+                                    type="video/mp4">
+                            </video>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
         <div class="fade-in-viewc" data-aos="fade-up">
             <div class="images-container">
@@ -267,9 +273,10 @@
                             <div class="image-handler-block">
                                 <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                 <div class="image-handler" id="imageContainer">
-                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/vesaro1.png" data-lightbox="portfolio"
-                                        data-title="Template 1">
-                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/vesaro1.png" alt="Vesaro 1">
+                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/vesaro1.png"
+                                        data-lightbox="portfolio" data-title="Template 1">
+                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/vesaro1.png"
+                                            alt="Vesaro 1">
                                     </a>
                                 </div>
                                 <div class="image-text">
@@ -280,9 +287,10 @@
                             <div class="image-handler-block">
                                 <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                 <div class="image-handler" id="imageContainer">
-                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/vesaro2.png" data-lightbox="portfolio"
-                                        data-title="Template 2">
-                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/vesaro2.png" alt="Vesaro 2">
+                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/vesaro2.png"
+                                        data-lightbox="portfolio" data-title="Template 2">
+                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/vesaro2.png"
+                                            alt="Vesaro 2">
                                     </a>
                                 </div>
                                 <div class="image-text">
@@ -293,9 +301,10 @@
                             <div class="image-handler-block">
                                 <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                 <div class="image-handler" id="imageContainer">
-                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/vesaro3.png" data-lightbox="portfolio"
-                                        data-title="Template 3">
-                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/vesaro3.png" alt="Vesaro 3">
+                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/vesaro3.png"
+                                        data-lightbox="portfolio" data-title="Template 3">
+                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/vesaro3.png"
+                                            alt="Vesaro 3">
                                     </a>
                                 </div>
                                 <div class="image-text">
@@ -306,9 +315,10 @@
                             <div class="image-handler-block">
                                 <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                 <div class="image-handler" id="imageContainer">
-                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/vesaro4.png" data-lightbox="portfolio"
-                                        data-title="Template 4">
-                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/vesaro4.png" alt="Vesaro 4">
+                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/vesaro4.png"
+                                        data-lightbox="portfolio" data-title="Template 4">
+                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/vesaro4.png"
+                                            alt="Vesaro 4">
                                     </a>
                                 </div>
                                 <div class="image-text">
@@ -326,9 +336,10 @@
                             <div class="image-handler-block">
                                 <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                 <div class="image-handler" id="imageContainer">
-                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social1.png" data-lightbox="portfolio"
-                                        data-title="Social 1">
-                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social1.png" alt="Social 1">
+                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social1.png"
+                                        data-lightbox="portfolio" data-title="Social 1">
+                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social1.png"
+                                            alt="Social 1">
                                     </a>
                                 </div>
                                 <div class="image-text">
@@ -339,9 +350,10 @@
                             <div class="image-handler-block">
                                 <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                 <div class="image-handler" id="imageContainer">
-                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social2.png" data-lightbox="portfolio"
-                                        data-title="Social 2">
-                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social2.png" alt="Social 2">
+                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social2.png"
+                                        data-lightbox="portfolio" data-title="Social 2">
+                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social2.png"
+                                            alt="Social 2">
                                     </a>
                                 </div>
                                 <div class="image-text">
@@ -352,9 +364,10 @@
                             <div class="image-handler-block">
                                 <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                 <div class="image-handler" id="imageContainer">
-                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social3.png" data-lightbox="portfolio"
-                                        data-title="Social 3">
-                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social3.png" alt="Social 3">
+                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social3.png"
+                                        data-lightbox="portfolio" data-title="Social 3">
+                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social3.png"
+                                            alt="Social 3">
                                     </a>
                                 </div>
                                 <div class="image-text">
@@ -365,9 +378,10 @@
                             <div class="image-handler-block">
                                 <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                 <div class="image-handler" id="imageContainer">
-                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social4.png" data-lightbox="portfolio"
-                                        data-title="Social 4">
-                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social4.png" alt="Social 4">
+                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social4.png"
+                                        data-lightbox="portfolio" data-title="Social 4">
+                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social4.png"
+                                            alt="Social 4">
                                     </a>
                                 </div>
                                 <div class="image-text">
@@ -378,9 +392,10 @@
                             <div class="image-handler-block">
                                 <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                 <div class="image-handler" id="imageContainer">
-                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social5.png" data-lightbox="portfolio"
-                                        data-title="Social 5">
-                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social5.png" alt="Social 5">
+                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social5.png"
+                                        data-lightbox="portfolio" data-title="Social 5">
+                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social5.png"
+                                            alt="Social 5">
                                     </a>
                                 </div>
                                 <div class="image-text">
@@ -391,9 +406,10 @@
                             <div class="image-handler-block">
                                 <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                 <div class="image-handler" id="imageContainer">
-                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social6.png" data-lightbox="portfolio"
-                                        data-title="Social 6">
-                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social6.png" alt="Social 6">
+                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social6.png"
+                                        data-lightbox="portfolio" data-title="Social 6">
+                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social6.png"
+                                            alt="Social 6">
                                     </a>
                                 </div>
                                 <div class="image-text">
@@ -404,9 +420,10 @@
                             <div class="image-handler-block">
                                 <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                 <div class="image-handler" id="imageContainer">
-                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social7.png" data-lightbox="portfolio"
-                                        data-title="Social 7">
-                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social7.png" alt="Social 7">
+                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social7.png"
+                                        data-lightbox="portfolio" data-title="Social 7">
+                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social7.png"
+                                            alt="Social 7">
                                     </a>
                                 </div>
                                 <div class="image-text">
@@ -417,9 +434,10 @@
                             <div class="image-handler-block">
                                 <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                 <div class="image-handler" id="imageContainer">
-                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social8.png" data-lightbox="portfolio"
-                                        data-title="Social 8">
-                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social8.png" alt="Social 8">
+                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social8.png"
+                                        data-lightbox="portfolio" data-title="Social 8">
+                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social8.png"
+                                            alt="Social 8">
                                     </a>
                                 </div>
                                 <div class="image-text">
@@ -430,9 +448,10 @@
                             <div class="image-handler-block">
                                 <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                 <div class="image-handler" id="imageContainer">
-                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social9.png" data-lightbox="portfolio"
-                                        data-title="Social 9">
-                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social9.png" alt="Social 9">
+                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social9.png"
+                                        data-lightbox="portfolio" data-title="Social 9">
+                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/social9.png"
+                                            alt="Social 9">
                                     </a>
                                 </div>
                                 <div class="image-text">
@@ -450,9 +469,10 @@
                             <div class="image-handler-block">
                                 <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                 <div class="image-handler" id="imageContainer">
-                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/webdesign1.png" data-lightbox="portfolio"
-                                        data-title="WebDesign 1">
-                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/webdesign1.png" alt="WebDesign 1">
+                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/webdesign1.png"
+                                        data-lightbox="portfolio" data-title="WebDesign 1">
+                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/webdesign1.png"
+                                            alt="WebDesign 1">
                                     </a>
                                 </div>
                                 <div class="image-text">
@@ -463,9 +483,10 @@
                             <div class="image-handler-block">
                                 <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                 <div class="image-handler" id="imageContainer">
-                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/webdesign2.png" data-lightbox="portfolio"
-                                        data-title="WebDesign 2">
-                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/webdesign2.png" alt="Web Design 2">
+                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/webdesign2.png"
+                                        data-lightbox="portfolio" data-title="WebDesign 2">
+                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/webdesign2.png"
+                                            alt="Web Design 2">
                                     </a>
                                 </div>
                                 <div class="image-text">
@@ -476,9 +497,10 @@
                             <div class="image-handler-block">
                                 <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                 <div class="image-handler" id="imageContainer">
-                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/webdesign3.png" data-lightbox="portfolio"
-                                        data-title="WebDesign 3">
-                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/webdesign3.png" alt="Web Design 3">
+                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/webdesign3.png"
+                                        data-lightbox="portfolio" data-title="WebDesign 3">
+                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/webdesign3.png"
+                                            alt="Web Design 3">
                                     </a>
                                 </div>
                                 <div class="image-text">
@@ -489,9 +511,10 @@
                             <div class="image-handler-block">
                                 <!-- 1 IMAGE & TEXT WRAP BLOCK -->
                                 <div class="image-handler" id="imageContainer">
-                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/webdesign4.png" data-lightbox="portfolio"
-                                        data-title="WebDesign 4">
-                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/webdesign4.png" alt="Web Design 4">
+                                    <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/webdesign4.png"
+                                        data-lightbox="portfolio" data-title="WebDesign 4">
+                                        <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/webdesign4.png"
+                                            alt="Web Design 4">
                                     </a>
                                 </div>
                                 <div class="image-text">
@@ -553,9 +576,7 @@
                                             <span id="nameError" class="text-danger"></span>
 
                                             @if ($errors->has('name'))
-
-                                            <span class="text-danger">{{ $errors->first('name') }}</span>
-
+                                                <span class="text-danger">{{ $errors->first('name') }}</span>
                                             @endif
                                         </div>
                                     </div>
@@ -569,9 +590,7 @@
                                             <span id="emailError" class="text-danger"></span>
 
                                             @if ($errors->has('email'))
-
-                                            <span class="text-danger">{{ $errors->first('email') }}</span>
-
+                                                <span class="text-danger">{{ $errors->first('email') }}</span>
                                             @endif
                                         </div>
                                     </div>
@@ -580,14 +599,11 @@
                                 <div class="message-input">
                                     <label for="message">Your Message</label>
 
-                                    <textarea name="message" rows="3"
-                                        class="form-control">{{ old('message') }}</textarea>
+                                    <textarea name="message" rows="3" class="form-control">{{ old('message') }}</textarea>
                                     <span id="messageError" class="text-danger"></span>
 
                                     @if ($errors->has('message'))
-
-                                    <span class="text-danger">{{ $errors->first('message') }}</span>
-
+                                        <span class="text-danger">{{ $errors->first('message') }}</span>
                                     @endif
                                 </div>
 
@@ -604,10 +620,10 @@
                     </div>
                 </div>
             </div>
-            @if(session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
             @endif
         </div>
     </div>
@@ -621,15 +637,20 @@
     </button>
 
     <!-- External libraries you must keep in HTML -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="{{ asset('js/lightbox-plus-jquery.js') }}"></script>
+
+    <script src="{{ asset('js/lightbox-plus-jquery.min.js') }}" ></script>
+    <script src="{{ asset('js/lightbox.js') }}" ></script>
+    <script src="{{ asset('js/lightbox.min.js') }}" ></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
