@@ -1,4 +1,3 @@
-
 <div id="contact" class="card-info-container contact-card">
     <div class="fade-in-viewc">
         <h1 class="contact-tag">Let's Work Together</h1>
@@ -14,7 +13,8 @@
                 <div class="list-item">
                     <li class="list-item-link">
                         <h3>Email:</h3>
-                        <a href="mailto:lawrencetendenilla@outlook.com" target="_blank">lawrencetendenilla83@gmail.com</a>
+                        <a href="mailto:lawrencetendenilla@outlook.com"
+                            target="_blank">lawrencetendenilla83@gmail.com</a>
                     </li>
                     <li class="list-item-link">
                         <h3>LinkedIn:</h3>
@@ -30,21 +30,28 @@
             <div class="fade-right-info-holder">
                 <div class="contact-us-form">
                     <div class="form-container">
-                        <form id="contactForm" method="POST" action="{{ route('contact.us.store') }}" class="main-form">
+                        <form id="contactForm" method="POST" action="{{ route('contact.us.store') }}"
+                            class="main-form">
                             @csrf
                             <div class="group-input">
                                 <div class="name-input">
                                     <label for="name">Full Name</label>
-                                    <input type="text" name="name" class="form-control full-name" placeholder="Name" value="{{ old('name') }}">
+                                    <input type="text" name="name" class="form-control full-name"
+                                        placeholder="Name" value="{{ old('name') }}">
                                     <span id="nameError" class="text-danger"></span>
-                                    @error('name')<span class="text-danger">{{ $message }}</span>@enderror
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
 
                                 <div class="name-input">
                                     <label for="email">Email address</label>
-                                    <input type="text" name="email" class="form-control email-address" placeholder="Email" value="{{ old('email') }}">
+                                    <input type="text" name="email" class="form-control email-address"
+                                        placeholder="Email" value="{{ old('email') }}">
                                     <span id="emailError" class="text-danger"></span>
-                                    @error('email')<span class="text-danger">{{ $message }}</span>@enderror
+                                    @error('email')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -52,8 +59,14 @@
                                 <label for="message">Your Message</label>
                                 <textarea name="message" rows="3" class="form-control">{{ old('message') }}</textarea>
                                 <span id="messageError" class="text-danger"></span>
-                                @error('message')<span class="text-danger">{{ $message }}</span>@enderror
+                                @error('message')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
+                            <div class="g-recaptcha" data-sitekey="6LcnYI0rAAAAAKCxKZzwuRRc9OJgE673YPmaOCEo"></div>
+                            @if ($errors->has('g-recaptcha-response'))
+                                <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
+                            @endif
 
                             <div class="button-container">
                                 <input type="submit" name="submit" value="Send Message" id="submitButton">

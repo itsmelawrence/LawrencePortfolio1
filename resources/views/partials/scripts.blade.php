@@ -6,6 +6,7 @@
     gtag('config', 'G-ZJMBH392TG');
 </script>
 
+
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -32,3 +33,6 @@
 
 <!-- Typed.js -->
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+

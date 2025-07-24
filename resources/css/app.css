@@ -499,10 +499,12 @@ p.contact-links-header {
 
 .group-input div {
     width: 90%;
+    margin: 0 1rem;
 }
 
 .message-input {
     width: 55%;
+    margin: 0 1rem;
 }
 
 textarea {
@@ -542,6 +544,7 @@ textarea:hover {
 
 .button-container {
     display: flex;
+    margin: 0 1rem;
 }
 
 .button-container input:active {
