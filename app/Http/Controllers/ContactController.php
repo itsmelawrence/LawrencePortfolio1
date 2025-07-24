@@ -8,7 +8,7 @@ class ContactController extends Controller
 {
     public function index()
     {
-        return view('welcome');  // Your form view
+        return view('home');  // Your form view
     }
 
     /**

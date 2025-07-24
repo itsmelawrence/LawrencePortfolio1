@@ -75,14 +75,24 @@ $("#contactForm").on("submit", function (e) {
 });
 
 // --- Typed.js Intro + GSAP Animations ---
-var typed = new Typed("#intro", {
-    strings: ["Hey. Thanks for dropping by. I&apos;m Lawrence."],
-    typeSpeed: 30,
-    showCursor: false,
-    onComplete: function () {
-        runEaseUpAnimation();
-        runEaseInAnimation();
-    },
+document.addEventListener("DOMContentLoaded", function () {
+    var introElement = document.getElementById("intro");
+
+    if (introElement) {
+        var typed = new Typed("#intro", {
+            strings: ["Hey. Thanks for dropping by. I&apos;m Lawrence."],
+            typeSpeed: 30,
+            showCursor: false,
+            onComplete: function () {
+                runEaseUpAnimation();
+                runEaseInAnimation();
+            },
+        });
+    } else {
+        console.warn(
+            "Typed.js initialization skipped: #intro element not found."
+        );
+    }
 });
 
 function runEaseUpAnimation() {
