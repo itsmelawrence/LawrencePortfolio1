@@ -63,7 +63,7 @@
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
-                            <div class="g-recaptcha" data-sitekey="6LcnYI0rAAAAAKCxKZzwuRRc9OJgE673YPmaOCEo"></div>
+                            <div class="g-recaptcha" data-sitekey="6LcnYI0rAAAAAKCxKZzwuRRc9OJgE673YPmaOCEo"style="margin: 0 1rem;"></div>
                             @if ($errors->has('g-recaptcha-response'))
                                 <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
                             @endif
