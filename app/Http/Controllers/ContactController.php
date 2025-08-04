@@ -19,10 +19,11 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
+       
+        
         $validated = $request->validate([
             'name' => 'required',
             'email' => 'required|email',
-            'phone' => 'required|numeric',
             'message' => 'required',
             'g-recaptcha-response' => 'required'
         ]);

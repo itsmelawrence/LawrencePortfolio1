@@ -46,7 +46,7 @@
 
                                 <div class="name-input">
                                     <label for="email">Email address</label>
-                                    <input type="text" name="email" class="form-control email-address"
+                                    <input type="email" name="email" class="form-control email-address"
                                         placeholder="Email" value="{{ old('email') }}">
                                     <span id="emailError" class="text-danger"></span>
                                     @error('email')
