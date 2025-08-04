@@ -35,7 +35,8 @@ function initContactForm() {
         responseMessage.classList.remove('text-danger', 'text-success');
 
         ['nameError', 'emailError', 'messageError'].forEach(id => {
-            document.getElementById(id).innerText = '';
+            const el = document.getElementById(id);
+            if (el) el.innerText = '';
         });
 
         const formData = new FormData(form);
@@ -50,7 +51,14 @@ function initContactForm() {
                 body: formData
             });
 
-            const data = await response.json();
+            const rawText = await response.text();
+            let data;
+
+            try {
+                data = JSON.parse(rawText);
+            } catch {
+                data = { message: rawText }; // fallback for plain text response
+            }
 
             if (response.ok) {
                 responseMessage.classList.add('text-success');
@@ -58,7 +66,7 @@ function initContactForm() {
                 form.reset();
                 grecaptcha.reset();
                 isCooldown = true;
-                setTimeout(() => isCooldown = false, 5000); // Cooldown period
+                setTimeout(() => isCooldown = false, 5000);
             } else if (response.status === 422) {
                 const errors = data.errors || {};
 
@@ -71,10 +79,11 @@ function initContactForm() {
                 responseMessage.classList.add('text-danger');
             } else {
                 responseMessage.classList.add('text-danger');
-                responseMessage.innerText = 'Something went wrong. Please try again.';
+                responseMessage.innerText = data.message || 'Something went wrong. Please try again.';
             }
+
         } catch (error) {
-            console.error('Error:', error);
+            console.error('Unexpected error:', error);
             responseMessage.classList.add('text-danger');
             responseMessage.innerText = 'Network error. Please check your connection.';
         } finally {
@@ -82,6 +91,7 @@ function initContactForm() {
         }
     });
 }
+
 
 // ==========================
 // SECTION: TYPED INTRO + GSAP

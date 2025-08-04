@@ -30,7 +30,7 @@ class ContactController extends Controller
 
         // Verify reCAPTCHA with Google
         $response = \Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
-            'secret' => '6LcnYI0rAAAAADcnPyKCh4bNOEXPvG4KMVXGg29-',
+            'secret' => env("GOOGLE_RECAPTCHA_SECRET_KEY"),
             'response' => $request->input('g-recaptcha-response'),
             'remoteip' => $request->ip()
         ]);
