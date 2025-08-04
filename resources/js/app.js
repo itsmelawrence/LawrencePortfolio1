@@ -25,15 +25,16 @@ function initContactForm() {
 
     if (!form || !submitButton || !responseMessage) return;
 
-    form.addEventListener('submit', async function (e) {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
-
         if (isCooldown) return;
 
+        // UI: Reset state
         submitButton.disabled = true;
         responseMessage.innerText = '';
         responseMessage.classList.remove('text-danger', 'text-success');
 
+        // Clear field-specific errors
         ['nameError', 'emailError', 'messageError'].forEach(id => {
             const el = document.getElementById(id);
             if (el) el.innerText = '';
@@ -51,16 +52,17 @@ function initContactForm() {
                 body: formData
             });
 
-            const rawText = await response.text();
+            const raw = await response.text();
             let data;
 
             try {
-                data = JSON.parse(rawText);
+                data = JSON.parse(raw);
             } catch {
-                data = { message: rawText }; // fallback for plain text response
+                data = { message: raw.trim() }; // Defensive fallback
             }
 
             if (response.ok) {
+                // ✅ Success
                 responseMessage.classList.add('text-success');
                 responseMessage.innerText = data.message || 'Message sent successfully.';
                 form.reset();
@@ -68,21 +70,24 @@ function initContactForm() {
                 isCooldown = true;
                 setTimeout(() => isCooldown = false, 5000);
             } else if (response.status === 422) {
+                // ⚠ Validation errors
                 const errors = data.errors || {};
 
-                if (errors.name) document.getElementById('nameError').innerText = errors.name[0];
-                if (errors.email) document.getElementById('emailError').innerText = errors.email[0];
-                if (errors.message) document.getElementById('messageError').innerText = errors.message[0];
+                if (errors.name) document.getElementById('nameError')?.innerText = errors.name[0];
+                if (errors.email) document.getElementById('emailError')?.innerText = errors.email[0];
+                if (errors.message) document.getElementById('messageError')?.innerText = errors.message[0];
                 if (errors['g-recaptcha-response']) responseMessage.innerText = errors['g-recaptcha-response'][0];
                 if (errors['captcha']) responseMessage.innerText = errors['captcha'][0];
 
                 responseMessage.classList.add('text-danger');
             } else {
+                // ❌ Server-side error
                 responseMessage.classList.add('text-danger');
                 responseMessage.innerText = data.message || 'Something went wrong. Please try again.';
             }
 
         } catch (error) {
+            // 🔥 Catch unexpected network or parsing failures
             console.error('Unexpected error:', error);
             responseMessage.classList.add('text-danger');
             responseMessage.innerText = 'Network error. Please check your connection.';
@@ -91,6 +96,7 @@ function initContactForm() {
         }
     });
 }
+
 
 
 // ==========================
