@@ -8,6 +8,7 @@
                     <p>{{ $line }}</p>
                 @endforeach
                 
+                
             </div>
         </div>
         <div class="fade-right-info-holder">
