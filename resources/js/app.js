@@ -5,7 +5,6 @@ let isCooldown = false;
 
 // --- DOMContentLoaded Master Handler ---
 document.addEventListener("DOMContentLoaded", function () {
-    initContactForm();
     initTypedIntro();
     initLoaderAndAOS();
     initScrollMagicHighlights();
@@ -60,14 +59,6 @@ function runEaseInAnimation() {
 // SECTION: LOADER + AOS + TIPPY + LIGHTBOX
 // ==========================
 function initLoaderAndAOS() {
-    const loader = document.getElementById("loader");
-    if (loader) {
-        setTimeout(() => {
-            loader.classList.add("fade-out");
-            setTimeout(() => loader.remove(), 600);
-        }, 500);
-    }
-
     tippy(".links-container-icons", {
         animation: "fade",
         placement: "top",
