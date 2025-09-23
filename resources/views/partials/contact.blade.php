@@ -46,7 +46,7 @@
 
                                 <div class="name-input">
                                     <label for="email">Email address</label>
-                                    <input type="text" name="email" class="form-control email-address"
+                                    <input type="email" name="email" class="form-control email-address"
                                         placeholder="Email" value="{{ old('email') }}">
                                     <span id="emailError" class="text-danger"></span>
                                     @error('email')
@@ -63,7 +63,7 @@
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
-                            <div class="g-recaptcha" data-sitekey="6LcnYI0rAAAAAKCxKZzwuRRc9OJgE673YPmaOCEo"style="margin: 0 1rem;"></div>
+                            <div class="g-recaptcha" data-sitekey="6LeCoporAAAAAIZxE-8pcR1zw90AoFjI_e9WSUCp"style="margin: 0 1rem;"></div>
                             @if ($errors->has('g-recaptcha-response'))
                                 <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
                             @endif
