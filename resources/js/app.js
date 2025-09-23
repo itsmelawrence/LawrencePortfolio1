@@ -4,7 +4,7 @@ import "./bootstrap";
 let isCooldown = false;
 
 // --- DOMContentLoaded Master Handler ---
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
     initContactForm();
     initTypedIntro();
     initLoaderAndAOS();
@@ -18,86 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // ==========================
 // SECTION: CONTACT FORM HANDLER
 // ==========================
-function initContactForm() {
-    const form = document.getElementById('contactForm');
-    const submitButton = document.getElementById('submitButton');
-    const responseMessage = document.getElementById('responseMessage');
-
-    if (!form || !submitButton || !responseMessage) return;
-
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        if (isCooldown) return;
-
-        // UI: Reset state
-        submitButton.disabled = true;
-        responseMessage.innerText = '';
-        responseMessage.classList.remove('text-danger', 'text-success');
-
-        // Clear field-specific errors
-        ['nameError', 'emailError', 'messageError'].forEach(id => {
-            const el = document.getElementById(id);
-            if (el) el.innerText = '';
-        });
-
-        const formData = new FormData(form);
-
-        try {
-            const response = await fetch(form.action, {
-                method: 'POST',
-                headers: {
-                    'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
-                    'Accept': 'application/json'
-                },
-                body: formData
-            });
-
-            const raw = await response.text();
-            let data;
-
-            try {
-                data = JSON.parse(raw);
-            } catch {
-                data = { message: raw.trim() }; // Defensive fallback
-            }
-
-            if (response.ok) {
-                // ✅ Success
-                responseMessage.classList.add('text-success');
-                responseMessage.innerText = data.message || 'Message sent successfully.';
-                form.reset();
-                grecaptcha.reset();
-                isCooldown = true;
-                setTimeout(() => isCooldown = false, 5000);
-            } else if (response.status === 422) {
-                // ⚠ Validation errors
-                const errors = data.errors || {};
-
-                if (errors.name) document.getElementById('nameError')?.innerText = errors.name[0];
-                if (errors.email) document.getElementById('emailError')?.innerText = errors.email[0];
-                if (errors.message) document.getElementById('messageError')?.innerText = errors.message[0];
-                if (errors['g-recaptcha-response']) responseMessage.innerText = errors['g-recaptcha-response'][0];
-                if (errors['captcha']) responseMessage.innerText = errors['captcha'][0];
-
-                responseMessage.classList.add('text-danger');
-            } else {
-                // ❌ Server-side error
-                responseMessage.classList.add('text-danger');
-                responseMessage.innerText = data.message || 'Something went wrong. Please try again.';
-            }
-
-        } catch (error) {
-            // 🔥 Catch unexpected network or parsing failures
-            console.error('Unexpected error:', error);
-            responseMessage.classList.add('text-danger');
-            responseMessage.innerText = 'Network error. Please check your connection.';
-        } finally {
-            submitButton.disabled = false;
-        }
-    });
-}
-
-
 
 // ==========================
 // SECTION: TYPED INTRO + GSAP
@@ -113,7 +33,7 @@ function initTypedIntro() {
         onComplete: function () {
             runEaseUpAnimation();
             runEaseInAnimation();
-        }
+        },
     });
 }
 
@@ -123,7 +43,7 @@ function runEaseUpAnimation() {
         opacity: 1,
         y: 0,
         stagger: 0.3,
-        ease: "power2.out"
+        ease: "power2.out",
     });
 }
 
@@ -132,7 +52,7 @@ function runEaseInAnimation() {
         duration: 2,
         opacity: 1,
         y: 0,
-        stagger: 0.3
+        stagger: 0.3,
     });
 }
 
@@ -151,18 +71,18 @@ function initLoaderAndAOS() {
     tippy(".links-container-icons", {
         animation: "fade",
         placement: "top",
-        delay: [100, 50]
+        delay: [100, 50],
     });
 
     AOS.init({
         duration: 1000,
-        once: true
+        once: true,
     });
 
     lightbox.option({
         disableScrolling: true,
         resizeDuration: 200,
-        wrapAround: true
+        wrapAround: true,
     });
 }
 
@@ -179,20 +99,21 @@ function initScrollMagicHighlights() {
         new ScrollMagic.Scene({
             triggerElement: section,
             triggerHook: 0.8,
-            duration: "50%"
+            duration: "50%",
         })
-        .on("progress", (event) => {
-            const scrollProgress = event.progress;
-            words.forEach((word, index) => {
-                const wordProgress = (index + 1) / totalWords;
-                gsap.to(word, {
-                    opacity: 1,
-                    color: scrollProgress >= wordProgress ? "#000" : "#d7d7d7",
-                    duration: 0.2
+            .on("progress", (event) => {
+                const scrollProgress = event.progress;
+                words.forEach((word, index) => {
+                    const wordProgress = (index + 1) / totalWords;
+                    gsap.to(word, {
+                        opacity: 1,
+                        color:
+                            scrollProgress >= wordProgress ? "#000" : "#d7d7d7",
+                        duration: 0.2,
+                    });
                 });
-            });
-        })
-        .addTo(controller);
+            })
+            .addTo(controller);
     });
 }
 
@@ -211,21 +132,25 @@ function initScrollTriggerFades() {
             start: "top 10%",
             end: "top 50%",
             scrub: 1,
-            markers: false
-        }
+            markers: false,
+        },
     });
 
     gsap.utils.toArray(".fade-in-viewc").forEach((el) => {
-        gsap.fromTo(el, { opacity: 0 }, {
-            opacity: 1,
-            scrollTrigger: {
-                trigger: el,
-                start: "top 80%",
-                end: "top 30%",
-                scrub: true,
-                toggleActions: "play none none reverse"
+        gsap.fromTo(
+            el,
+            { opacity: 0 },
+            {
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 80%",
+                    end: "top 30%",
+                    scrub: true,
+                    toggleActions: "play none none reverse",
+                },
             }
-        });
+        );
     });
 }
 
@@ -234,10 +159,10 @@ function initScrollTriggerFades() {
 // ==========================
 function initSmoothAnchorScroll() {
     function getSamePageAnchor(link) {
-        return (link.protocol === window.location.protocol &&
-                link.host === window.location.host &&
-                link.pathname === window.location.pathname &&
-                link.search === window.location.search)
+        return link.protocol === window.location.protocol &&
+            link.host === window.location.host &&
+            link.pathname === window.location.pathname &&
+            link.search === window.location.search
             ? link.hash
             : false;
     }
@@ -249,13 +174,15 @@ function initSmoothAnchorScroll() {
             gsap.to(window, {
                 scrollTo: elem,
                 duration: 2.5,
-                ease: "power2.out"
+                ease: "power2.out",
             });
         }
     }
 
     document.querySelectorAll("a[href]").forEach((a) => {
-        a.addEventListener("click", (e) => scrollToHash(getSamePageAnchor(a), e));
+        a.addEventListener("click", (e) =>
+            scrollToHash(getSamePageAnchor(a), e)
+        );
     });
 
     scrollToHash(window.location.hash);
@@ -269,8 +196,11 @@ function initBackToTopButton() {
     if (!backToTopBtn) return;
 
     window.addEventListener("scroll", () => {
-        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollTop =
+            document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight =
+            document.documentElement.scrollHeight -
+            document.documentElement.clientHeight;
         const scrollPercent = (scrollTop / scrollHeight) * 100;
 
         if (scrollPercent > 5) {
