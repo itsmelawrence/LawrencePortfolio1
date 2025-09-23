@@ -3,9 +3,11 @@
         <div class="fade-left-info-holder">
             <div class="fade-left-info-holder-i">
                 <h2>{{ $title }}</h2>
+                <p class="gallery-link-web"><a href="{{ $link }}" target="_blank">{{ $link }}</a></p>
                 @foreach ($description as $line)
                     <p>{{ $line }}</p>
                 @endforeach
+                
             </div>
         </div>
         <div class="fade-right-info-holder">

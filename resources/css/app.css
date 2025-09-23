@@ -482,6 +482,11 @@ body {
     opacity: 1;
 }
 
+.gallery-link-web {
+    color: #0661a7;
+    padding-bottom: 1rem;
+}
+
 /** GALLERY **/
 
 /** CONTACT **/
