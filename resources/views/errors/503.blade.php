@@ -104,6 +104,6 @@
     <div class="progress-bar">
         <div class="progress"></div>
     </div>
-    <footer>© {{ date('Y') }} LawrenceMadeIt — Built by one, made for many.</footer>
+    <footer>© {{ date('Y') }} LawrenceMadeIt — One mind at work.</footer>
 </body>
 </html>
