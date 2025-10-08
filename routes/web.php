@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/maintenance', function () {
-    return view('errors.504');
+    return view('errors.503');
 })->name('site-down');
 
 Route::post('/', [ContactController::class, 'store'])->name('contact.us.store');
