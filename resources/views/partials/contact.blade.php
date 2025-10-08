@@ -13,8 +13,7 @@
                 <div class="list-item">
                     <li class="list-item-link">
                         <h3>Email:</h3>
-                        <a href="mailto:lawrencetendenilla@outlook.com"
-                            target="_blank">lawrencetendenilla83@gmail.com</a>
+                        <a href="mailto:lawrencetendenilla@outlook.com" target="_blank">lawrencetendenilla83@gmail.com</a>
                     </li>
                     <li class="list-item-link">
                         <h3>LinkedIn:</h3>
@@ -30,14 +29,13 @@
             <div class="fade-right-info-holder">
                 <div class="contact-us-form">
                     <div class="form-container">
-                        <form id="contactForm" method="POST" action="{{ route('contact.us.store') }}"
-                            class="main-form">
+                        <form id="contactForm" method="POST" action="{{ route('contact.us.store') }}" class="main-form">
                             @csrf
+
                             <div class="group-input">
                                 <div class="name-input">
                                     <label for="name">Full Name</label>
-                                    <input type="text" name="name" class="form-control full-name"
-                                        placeholder="Name" value="{{ old('name') }}">
+                                    <input type="text" name="name" class="form-control full-name" placeholder="Name" value="{{ old('name') }}">
                                     <span id="nameError" class="text-danger"></span>
                                     @error('name')
                                         <span class="text-danger">{{ $message }}</span>
@@ -46,8 +44,7 @@
 
                                 <div class="name-input">
                                     <label for="email">Email address</label>
-                                    <input type="email" name="email" class="form-control email-address"
-                                        placeholder="Email" value="{{ old('email') }}">
+                                    <input type="email" name="email" class="form-control email-address" placeholder="Email" value="{{ old('email') }}">
                                     <span id="emailError" class="text-danger"></span>
                                     @error('email')
                                         <span class="text-danger">{{ $message }}</span>
@@ -63,9 +60,16 @@
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
-                            <div class="g-recaptcha" data-sitekey="6LeCoporAAAAAIZxE-8pcR1zw90AoFjI_e9WSUCp"style="margin: 0 1rem;"></div>
-                            @if ($errors->has('g-recaptcha-response'))
-                                <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
+
+                            {{-- ✅ Cloudflare Turnstile Widget --}}
+                            <div class="cf-turnstile" 
+                                 data-sitekey="{{ env('CLOUDFLARE_TURNSTILE_SITE_KEY') }}" 
+                                 data-theme="light"
+                                 style="margin: 0 1rem;">
+                            </div>
+
+                            @if ($errors->has('cf-turnstile-response'))
+                                <span class="text-danger">{{ $errors->first('cf-turnstile-response') }}</span>
                             @endif
 
                             <div class="button-container">
@@ -84,3 +88,6 @@
         @endif
     </div>
 </div>
+
+{{-- ✅ Include the Turnstile JS API --}}
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>

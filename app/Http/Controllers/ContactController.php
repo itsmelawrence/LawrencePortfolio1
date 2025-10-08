@@ -28,39 +28,75 @@ class ContactController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'message' => 'required|string|max:1000',
-            'g-recaptcha-response' => 'required'
+            'cf-turnstile-response' => 'required',
         ]);
 
-        // Step 2: Verify reCAPTCHA with Google
+        // Step 2: Verify Turnstile (Cloudflare)
+        $secretKey = env('CLOUDFLARE_TURNSTILE_SECRET_KEY');
+        $token = $request->input('cf-turnstile-response');
+
+        // Detect the user's real IP (Cloudflare-aware)
+        $remoteIp = $request->server('HTTP_CF_CONNECTING_IP')
+            ?? $request->server('HTTP_X_FORWARDED_FOR')
+            ?? $request->ip();
+
+        $url = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
+        $data = [
+            'secret' => $secretKey,
+            'response' => $token,
+            'remoteip' => $remoteIp,
+        ];
+
+        $options = [
+            'http' => [
+                'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+                'method' => 'POST',
+                'content' => http_build_query($data),
+                'timeout' => 5,
+            ],
+        ];
+
         try {
-            $recaptchaResponse = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
-                'secret'   => env('GOOGLE_RECAPTCHA_SECRET_KEY'),
-                'response' => $request->input('g-recaptcha-response'),
-                'remoteip' => $request->ip()
-            ]);
+            $context = stream_context_create($options);
+            $response = file_get_contents($url, false, $context);
 
-            $recaptchaResult = $recaptchaResponse->json();
-
-            if (!($recaptchaResult['success'] ?? false)) {
-                return response()->json([
-                    'message' => 'Captcha verification failed.',
-                    'errors' => ['captcha' => 'Failed captcha verification.']
-                ], 422);
+            if ($response === false) {
+                throw new \Exception('No response from Turnstile API');
             }
+
+            $validation = json_decode($response, true);
         } catch (\Exception $e) {
-            Log::error('reCAPTCHA error: ' . $e->getMessage());
+            Log::error('Turnstile API error: ' . $e->getMessage());
 
             return response()->json([
                 'message' => 'Captcha verification could not be completed.',
-                'errors' => ['captcha' => 'Captcha service unavailable. Please try again later.']
+                'errors' => ['captcha' => 'Captcha service unavailable. Please try again later.'],
             ], 422);
         }
 
-        // Step 3: Store the message
-        Contact::create($validated);
+        // Step 3: Check validation result
+        if (!($validation['success'] ?? false)) {
+            Log::warning('Turnstile validation failed', [
+                'errors' => $validation['error-codes'] ?? [],
+                'ip' => $remoteIp,
+            ]);
 
-        // Step 4: Return success
+            return response()->json([
+                'message' => 'Captcha verification failed.',
+                'errors' => ['captcha' => 'Failed captcha verification.'],
+            ], 422);
+        }
+
+        // Step 4: Store the message
+        Contact::create([
+            'name' => $validated['name'],
+            'email' => $validated['email'],
+            'message' => $validated['message'],
+        ]);
+
+        // Step 5: Return success
         return response()->json(['message' => 'Message sent successfully.']);
     }
+
 
 }
