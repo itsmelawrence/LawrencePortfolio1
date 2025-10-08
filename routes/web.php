@@ -14,7 +14,7 @@ Route::get('/maintenance', function () {
 Route::post('/', [ContactController::class, 'store'])->name('contact.us.store');
 
 // Redirect all routes to maintenance page if under construction
-if (app()->environment('production') && env('SITE_UNDER_CONSTRUCTION', false)) {
+if (app()->environment('production') && env('SITE_UNDER_CONSTRUCTION', true)) {
     Route::get('{any}', function () {
         return redirect()->route('site-down');
     })->where('any', '^(?!maintenance).*'); // exclude the maintenance route
