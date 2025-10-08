@@ -116,8 +116,10 @@ body {
     display: flex;
 }
 
-.center-text {
-    width: 100%;
+.center-text,
+.center-content {
+    width: 80%;
+    max-width: 1500px;
     height: fit-content;
     margin: auto;
 }
@@ -196,7 +198,7 @@ body {
 /** ABOUT **/
 
 .about {
-    height: 100vh;
+    height: fit-content;
     display: flex;
     flex-direction: column;
 }
@@ -216,7 +218,6 @@ body {
 }
 
 .left-info-holder-i img {
-    margin: auto;
     width: 300px;
     z-index: 501;
 }
@@ -340,22 +341,27 @@ body {
 }
 
 .fade-in-viewc {
-    width: 100%;
+    width: 80%;
+    max-width: 1500px;
     opacity: 0;
     display: block;
-    width: 100%;
-    margin-top: 200px;
+    margin: 10rem auto;
+}
+
+.card-info-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .fade-in-viewc h1 {
     font-size: 35px;
-    width: 80%;
+    width: 100%;
     margin: auto;
     margin-bottom: 200px;
 }
 
 .main-info-container {
-    width: 80%;
+    width: 100%;
     margin: auto;
     display: flex;
 }
@@ -367,6 +373,7 @@ body {
 .fade-right-info-holder {
     width: 70%;
     display: flex;
+    justify-content: flex-end;
 }
 
 .fade-left-info-holder-i {
@@ -388,8 +395,13 @@ body {
     z-index: 501 !important;
 }
 
+.video-container video {
+    max-width: 700px;
+    width: 100%;
+}
+
 .main-image-container {
-    width: 80%;
+    width: 100%;
     margin: auto auto 200px;
 }
 
@@ -770,22 +782,20 @@ textarea:hover {
     }
 
     .fade-in-viewc {
-        width: 100%;
         opacity: 0;
         display: block;
-        width: 100%;
-        margin-top: 200px;
+        width: 80%;
+        margin: 10rem auto;
     }
 
     .fade-in-viewc h1 {
         font-size: 35px;
-        width: 80%;
+        width: 100%;
         margin: auto;
         margin-bottom: 100px;
     }
 
     .main-info-container {
-        width: 80%;
         margin: auto;
         display: block;
     }
@@ -950,11 +960,10 @@ textarea:hover {
     }
 
     .fade-in-viewc {
-        width: 100%;
+        width: 80%;
         opacity: 0;
         display: block;
-        width: 100%;
-        margin-top: 200px;
+        margin: 10rem auto;
     }
 
     .fade-in-viewc h1 {
@@ -965,7 +974,6 @@ textarea:hover {
     }
 
     .main-info-container {
-        width: 80%;
         margin: auto;
         display: block;
     }
@@ -1119,11 +1127,10 @@ textarea:hover {
     }
 
     .fade-in-viewc {
-        width: 100%;
+        width: 80%;
         opacity: 0;
         display: block;
-        width: 100%;
-        margin-top: 200px;
+        margin: 10rem auto;
     }
 
     .fade-in-viewc h1 {
@@ -1134,7 +1141,6 @@ textarea:hover {
     }
 
     .main-info-container {
-        width: 80%;
         margin: auto;
         display: block;
     }
@@ -1288,11 +1294,10 @@ textarea:hover {
     }
 
     .fade-in-viewc {
-        width: 100%;
+        width: 80%;
         opacity: 0;
         display: block;
-        width: 100%;
-        margin-top: 200px;
+        margin: 10rem auto;
     }
 
     .fade-in-viewc h1 {
@@ -1303,7 +1308,6 @@ textarea:hover {
     }
 
     .main-info-container {
-        width: 80%;
         margin: auto;
         display: block;
     }
