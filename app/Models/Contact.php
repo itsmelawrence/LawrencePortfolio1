@@ -1,32 +1,28 @@
 <?php
 
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Mail;
-use App\Mail\ContactMail;
 
 class Contact extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'email', 'phone', 'message'];
+    // Only include what your form actually sends
+    protected $fillable = ['name', 'email', 'message'];
 
     /**
-     * Write code on Method
-     *
-     * @return response()
+     * Model boot method.
+     * Currently, no email notifications or extra logic on creation.
      */
+    protected static function boot()
+    {
+        parent::boot();
 
-     public static function boot()
-     {
-         parent::boot();
-     
-         static::created(function ($item) {
-             // No email sending logic here anymore
-             // The item is created and saved to the database, but no email is sent
-         });
-     }
+        static::created(function ($item) {
+            // Intentionally left blank — no email logic here
+            // Can be extended later (e.g., send a notification or webhook)
+        });
+    }
 }

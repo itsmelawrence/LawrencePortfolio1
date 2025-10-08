@@ -31,7 +31,23 @@ class ContactController extends Controller
             'cf-turnstile-response' => 'required',
         ]);
 
-        // Step 2: Verify Turnstile (Cloudflare)
+        // Step 2: Skip verification in development
+        if (app()->environment(['local', 'development'])) {
+            Log::info('Turnstile verification skipped in local environment.');
+
+            // Store and return success
+            Contact::create([
+                'name' => $validated['name'],
+                'email' => $validated['email'],
+                'message' => $validated['message'],
+            ]);
+
+            return response()->json([
+                'message' => 'Message sent successfully (dev mode - captcha skipped).'
+            ]);
+        }
+
+        // Step 3: Verify Turnstile in production
         $secretKey = env('CLOUDFLARE_TURNSTILE_SECRET_KEY');
         $token = $request->input('cf-turnstile-response');
 
@@ -74,7 +90,7 @@ class ContactController extends Controller
             ], 422);
         }
 
-        // Step 3: Check validation result
+        // Step 4: Check validation result
         if (!($validation['success'] ?? false)) {
             Log::warning('Turnstile validation failed', [
                 'errors' => $validation['error-codes'] ?? [],
@@ -87,16 +103,17 @@ class ContactController extends Controller
             ], 422);
         }
 
-        // Step 4: Store the message
+        // Step 5: Store message
         Contact::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
             'message' => $validated['message'],
         ]);
 
-        // Step 5: Return success
+        // Step 6: Return success
         return response()->json(['message' => 'Message sent successfully.']);
     }
+
 
 
 }
