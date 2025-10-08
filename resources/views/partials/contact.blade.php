@@ -63,7 +63,7 @@
 
                             {{-- ✅ Cloudflare Turnstile Widget --}}
                             <div class="cf-turnstile" 
-                                 data-sitekey="{{ env('CLOUDFLARE_TURNSTILE_SITE_KEY') }}" 
+                                 data-sitekey="0x4AAAAAAB5a-O9PNBLq5lzC" 
                                  data-theme="light"
                                  style="margin: 0 1rem;">
                             </div>
@@ -89,5 +89,4 @@
     </div>
 </div>
 
-{{-- ✅ Include the Turnstile JS API --}}
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
