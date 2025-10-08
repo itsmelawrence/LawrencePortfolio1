@@ -7,7 +7,6 @@
     <title>@yield('title', "Lawrence's Portfolio")</title>
     <link rel="icon" href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/Lawrence%20Logo.ico" type="image/x-icon">
 
-    {{-- Fonts and external styles --}}
     @include('partials.fonts')
     @include('partials.styles')
 

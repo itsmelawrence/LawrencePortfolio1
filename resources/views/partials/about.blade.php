@@ -118,16 +118,13 @@
                         <span class="desc-text">{{ $word }}</span>
                     @endforeach
                 </p>
-                {{-- TECH STACK SECTION --}}
 
             </div>
 
         </div>
-        {{-- TECH STACK ICONS --}}
         <div class="tech-stack-section" data-aos="fade-up">
             <h2 class="tech-stack-header">Tech Stack</h2>
             <div class="tech-icons">
-                {{-- Frontend --}}
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
                     title="HTML5" data-aos="fade-up">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
@@ -138,25 +135,20 @@
                     title="jQuery" data-aos="fade-up">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
                     alt="Bootstrap" title="Bootstrap" data-aos="fade-up">
-
-                {{-- Backend --}}
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"
                     title="PHP" data-aos="fade-up">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
                     alt="Laravel" title="Laravel" data-aos="fade-up">
-
-
-                {{-- Database --}}
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
                     title="MySQL" data-aos="fade-up">
-
-                {{-- Tools --}}
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
                     alt="Photoshop" title="Photoshop" data-aos="fade-up">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg"
                     alt="Illustrator" title="Illustrator" data-aos="fade-up">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-plain.svg"
                     alt="Premiere Pro" title="Premiere Pro" data-aos="fade-up">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-plain.svg"
+                    alt="After Effects" title="After Effects" data-aos="fade-up">
                 <img src="https://img.icons8.com/color/48/canva.png" alt="Canva" title="Canva" data-aos="fade-up">
             </div>
         </div>
