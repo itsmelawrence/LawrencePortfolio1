@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
-
 class ContactController extends Controller
 {
     public function index()
@@ -32,62 +31,43 @@ class ContactController extends Controller
         ]);
 
         // Step 2: Skip verification in development
-        if (app()->environment(['local', 'development'])) {
-            Log::info('Turnstile verification skipped in local environment.');
+        if (app()->environment('production')) {
+            $token = $request->input('cf-turnstile-response');
+            $secretKey = '0x4AAAAAAB5a-LIzDwuQzJMaKLYPHJWbv9o';
+            $remoteIp = $request->ip();
 
-            // Store and return success
-            Contact::create([
-                'name' => $validated['name'],
-                'email' => $validated['email'],
-                'message' => $validated['message'],
-            ]);
+            try {
+                $response = Http::asForm()->post('https://challenges.cloudflare.com/turnstile/v0/siteverify', [
+                    'secret' => $secretKey,
+                    'response' => $token,
+                    'remoteip' => $remoteIp,
+                ]);
 
-            return response()->json([
-                'message' => 'Message sent successfully (dev mode - captcha skipped).'
-            ]);
-        }
+                $validation = $response->json();
 
-        // Step 3: Verify Turnstile in production
-        $secretKey = env('CLOUDFLARE_TURNSTILE_SECRET_KEY');
-        $token = $request->input('cf-turnstile-response');
+                if (!($validation['success'] ?? false)) {
+                    Log::error('Turnstile validation failed', [
+                        'errors' => $validation['error-codes'] ?? [],
+                    ]);
 
-        // Detect the user's real IP (Cloudflare-aware)
-        $remoteIp = $request->server('HTTP_CF_CONNECTING_IP')
-            ?? $request->server('HTTP_X_FORWARDED_FOR')
-            ?? $request->ip();
-
-        $url = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
-        $data = [
-            'secret' => $secretKey,
-            'response' => $token,
-            'remoteip' => $remoteIp,
-        ];
-
-        $options = [
-            'http' => [
-                'header' => "Content-type: application/x-www-form-urlencoded\r\n",
-                'method' => 'POST',
-                'content' => http_build_query($data),
-                'timeout' => 5,
-            ],
-        ];
-
-        try {
-            $context = stream_context_create($options);
-            $response = file_get_contents($url, false, $context);
-
-            if ($response === false) {
-                throw new \Exception('No response from Turnstile API');
+                    return response()->json(
+                        [
+                            'message' => 'Captcha verification could not be completed.',
+                            'errors' => ['captcha' => 'Captcha verification failed. Please try again.'],
+                        ],
+                        422,
+                    );
+                }
+            } catch (\Exception $e) {
+                Log::error('Turnstile request failed: ' . $e->getMessage());
+                return response()->json(
+                    [
+                        'message' => 'Captcha verification could not be completed.',
+                        'errors' => ['captcha' => 'Captcha service unavailable. Please try again later.'],
+                    ],
+                    422,
+                );
             }
-
-            $validation = json_decode($response, true);
-        } catch (\Exception $e) {
-            Log::error('Turnstile API error: ' . $e->getMessage());
-
-            return response()->json([
-                'message' => 'Captcha verification could not be completed.',
-                'errors' => ['captcha' => 'Captcha service unavailable. Please try again later.'],
-            ], 422);
         }
 
         // Step 4: Check validation result
@@ -97,10 +77,13 @@ class ContactController extends Controller
                 'ip' => $remoteIp,
             ]);
 
-            return response()->json([
-                'message' => 'Captcha verification failed.',
-                'errors' => ['captcha' => 'Failed captcha verification.'],
-            ], 422);
+            return response()->json(
+                [
+                    'message' => 'Captcha verification failed.',
+                    'errors' => ['captcha' => 'Failed captcha verification.'],
+                ],
+                422,
+            );
         }
 
         // Step 5: Store message
@@ -113,7 +96,4 @@ class ContactController extends Controller
         // Step 6: Return success
         return response()->json(['message' => 'Message sent successfully.']);
     }
-
-
-
 }
