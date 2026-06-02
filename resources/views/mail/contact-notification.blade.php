@@ -26,7 +26,7 @@
         <div class="message-box">{{ $contact->message }}</div>
 
         <div class="footer">
-            Submitted on {{ $contact->created_at->format('F j, Y \a\t g:i A') }} &mdash; Lawrence Portfolio
+            Submitted on {{ $contact->created_at->setTimezone('Asia/Manila')->format('F j, Y \a\t g:i A') }} PHT &mdash; Lawrence Portfolio
         </div>
     </div>
 </body>
