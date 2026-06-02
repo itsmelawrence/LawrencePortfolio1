@@ -18,4 +18,4 @@ Route::get('/maintenance', function () {
     return response()->view('errors.503', [], 503);
 })->name('site-down');
 
-Route::post('/', [ContactController::class, 'store'])->name('contact.us.store');
+Route::post('/', [ContactController::class, 'store'])->name('contact.us.store')->middleware('throttle:5,1');

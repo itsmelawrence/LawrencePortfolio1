@@ -251,6 +251,7 @@ function initContactForm() {
             responseEl.className = "success-message";
             form.reset();
 
+            if (window.gtag) gtag("event", "contact_form_submit", { event_category: "Contact", event_label: "Contact Form" });
             if (window.turnstile) window.turnstile.reset();
 
             isCooldown = true;
@@ -262,7 +263,10 @@ function initContactForm() {
             if (errors.email) document.getElementById("emailError").textContent = errors.email;
             if (errors.message) document.getElementById("messageError").textContent = errors.message;
 
-            const general = errors.captcha || err.response?.data?.message || "Something went wrong. Please try again.";
+            const status = err.response?.status;
+            const general = status === 429
+                ? "Too many attempts. Please wait a minute before trying again."
+                : errors.captcha || err.response?.data?.message || "Something went wrong. Please try again.";
             responseEl.textContent = general;
             responseEl.className = "success-message alert-danger";
 
