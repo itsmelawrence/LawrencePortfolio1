@@ -7,13 +7,17 @@
     --color-text-nav-hover: #262626;
     --color-text-desc: #d7d7d7;
     --color-text-desc-active: #000000;
+    --color-text-heading: #333333;
+    --color-text-label: #353535;
     --color-border: gainsboro;
     --color-border-hover: #8c7070;
     --color-footer-bg: #343434;
     --color-footer-text: #ffffff;
+    --color-footer-h2: #000000;
     --color-input-bg: #ffffff;
     --color-input-text: #000000;
     --color-textarea-bg: #ffffff;
+    --color-gallery-header-bg: #fafafa;
 }
 
 [data-theme="dark"] {
@@ -21,15 +25,19 @@
     --color-text-primary: #f0f0f0;
     --color-text-muted: #b0b0b0;
     --color-text-nav-hover: #e0e0e0;
-    --color-text-desc: #444444;
+    --color-text-desc: #555555;
     --color-text-desc-active: #ffffff;
+    --color-text-heading: #e0e0e0;
+    --color-text-label: #c0c0c0;
     --color-border: #333333;
     --color-border-hover: #9e8888;
     --color-footer-bg: #1a1a1a;
     --color-footer-text: #cccccc;
+    --color-footer-h2: #cccccc;
     --color-input-bg: #1e1e1e;
     --color-input-text: #f0f0f0;
     --color-textarea-bg: #1e1e1e;
+    --color-gallery-header-bg: #1a1a1a;
 }
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -187,7 +195,7 @@ h2 {
     font-size: 13px;
     font-family: "Namdhinggo", sans-serif;
     font-style: italic;
-    color: #525252;
+    color: var(--color-text-muted);
 }
 
 .status-dot {
@@ -382,7 +390,7 @@ body {
 
 .tech-stack-header {
     font-size: 32px;
-    color: #333;
+    color: var(--color-text-heading);
     margin-bottom: 1rem;
 }
 
@@ -567,7 +575,7 @@ body {
 .image-header1,
 .image-header2,
 .image-header3 {
-    background: #fafafa;
+    background: var(--color-gallery-header-bg);
     padding: 30px 0;
 }
 
@@ -657,7 +665,7 @@ body {
 }
 
 .list-item-link h3 {
-    color: #353535;
+    color: var(--color-text-label);
     font-weight: 600;
 }
 
@@ -798,7 +806,7 @@ textarea:hover {
 }
 
 .footer-card h2 {
-    color: #000000;
+    color: var(--color-footer-h2);
     width: fit-content;
     margin: auto;
     font-family: "Product Sans", sans-serif;
@@ -880,7 +888,7 @@ textarea:hover {
         font-size: 14px;
         font-family: "Product Sans", sans-serif;
         font-weight: 400;
-        color: #d7d7d7;
+        color: var(--color-text-desc);
     }
 
     .desc-text {
@@ -1058,7 +1066,7 @@ textarea:hover {
         font-size: 14px;
         font-family: "Product Sans", sans-serif;
         font-weight: 400;
-        color: #d7d7d7;
+        color: var(--color-text-desc);
     }
 
     .desc-text {
@@ -1225,7 +1233,7 @@ textarea:hover {
         font-size: 14px;
         font-family: "Product Sans", sans-serif;
         font-weight: 400;
-        color: #d7d7d7;
+        color: var(--color-text-desc);
     }
 
     .desc-text {
@@ -1392,7 +1400,7 @@ textarea:hover {
         font-size: 14px;
         font-family: "Product Sans", sans-serif;
         font-weight: 400;
-        color: #d7d7d7;
+        color: var(--color-text-desc);
     }
 
     .desc-text {
