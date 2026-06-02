@@ -4,21 +4,29 @@
     <meta charset="utf-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title', "Lawrence's Portfolio")</title>
-    <meta name="description" content="@yield('description', 'Lawrence Tendenilla — Web & graphic designer crafting clean, purposeful digital experiences. Available for freelance projects.')">
+
+    @php
+        $pageTitle = $__env->yieldContent('title', "Lawrence's Portfolio");
+        $pageDesc  = $__env->yieldContent('description', 'Lawrence Tendenilla — Web & graphic designer crafting clean, purposeful digital experiences. Available for freelance projects.');
+        $ogImage   = 'https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/Lawrence%20Logo.ico';
+    @endphp
+
+    <title>{{ $pageTitle }}</title>
+    <meta name="description" content="{{ $pageDesc }}">
+    <link rel="canonical" href="{{ url()->current() }}">
 
     {{-- Open Graph --}}
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ config('app.url') }}">
-    <meta property="og:title" content="@yield('title', "Lawrence's Portfolio")">
-    <meta property="og:description" content="@yield('description', 'Lawrence Tendenilla — Web & graphic designer crafting clean, purposeful digital experiences. Available for freelance projects.')">
-    <meta property="og:image" content="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/Lawrence%20Logo.ico">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="{{ $pageTitle }}">
+    <meta property="og:description" content="{{ $pageDesc }}">
+    <meta property="og:image" content="{{ $ogImage }}">
 
     {{-- Twitter Card --}}
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="@yield('title', "Lawrence's Portfolio")">
-    <meta name="twitter:description" content="@yield('description', 'Lawrence Tendenilla — Web & graphic designer crafting clean, purposeful digital experiences. Available for freelance projects.')">
-    <meta name="twitter:image" content="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/Lawrence%20Logo.ico">
+    <meta name="twitter:title" content="{{ $pageTitle }}">
+    <meta name="twitter:description" content="{{ $pageDesc }}">
+    <meta name="twitter:image" content="{{ $ogImage }}">
 
     <link rel="icon" href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/Lawrence%20Logo.ico" type="image/x-icon">
 
