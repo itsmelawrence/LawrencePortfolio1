@@ -13,7 +13,7 @@
                 <div class="list-item">
                     <li class="list-item-link">
                         <h3>Email:</h3>
-                        <a href="mailto:lawrencetendenilla@outlook.com" target="_blank">lawrencetendenilla83@gmail.com</a>
+                        <a href="mailto:lawrencetendenilla83@gmail.com" target="_blank">lawrencetendenilla83@gmail.com</a>
                     </li>
                     <li class="list-item-link">
                         <h3>LinkedIn:</h3>
