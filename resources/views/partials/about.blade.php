@@ -2,9 +2,7 @@
     <div class="center-content">
         <div class="info-holder">
             <div class="left-info-holder">
-                <div class="left-info-holder-i">
-                    <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/headimg.png" alt="">
-                </div>
+                <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/headimg.png" alt="Lawrence">
             </div>
             <div class="right-info-holder">
                 <p class="desc-group">

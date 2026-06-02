@@ -368,7 +368,7 @@ body {
 }
 
 .right-info-holder {
-    width: 70%;
+    width: 100%;
     display: flex;
 }
 
@@ -396,8 +396,7 @@ body {
 
 .tech-stack-section {
     text-align: center;
-    margin: 4.5rem auto;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -1123,13 +1122,6 @@ textarea:hover {
         z-index: 501;
     }
 
-    .right-info-holder {
-        width: 350px;
-        display: block;
-        margin: auto;
-        margin-top: 40px;
-    }
-
     .right-info-holder span {
         margin: auto;
         font-size: 14px;
@@ -1283,13 +1275,6 @@ textarea:hover {
         z-index: 501;
     }
 
-    .right-info-holder {
-        width: 500px;
-        display: block;
-        margin: auto;
-        margin-top: 40px;
-    }
-
     .right-info-holder span {
         margin: auto;
         font-size: 14px;
@@ -1440,13 +1425,6 @@ textarea:hover {
         margin: auto;
         width: 300px;
         z-index: 501;
-    }
-
-    .right-info-holder {
-        width: 650px;
-        display: block;
-        margin: auto;
-        margin-top: 40px;
     }
 
     .right-info-holder span {
