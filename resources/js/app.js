@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     initSmoothAnchorScroll();
     initBackToTopButton();
     initContextMenuBlock();
+    initContactForm();
 });
 
 // ==========================
@@ -209,6 +210,66 @@ function initContextMenuBlock() {
     document.addEventListener("contextmenu", (e) => {
         if (e.target.closest("video") || e.target.tagName === "IMG") {
             e.preventDefault();
+        }
+    });
+}
+
+// ==========================
+// SECTION: CONTACT FORM
+// ==========================
+function initContactForm() {
+    const form = document.getElementById("contactForm");
+    if (!form) return;
+
+    const submitBtn = document.getElementById("submitButton");
+    const responseEl = document.getElementById("responseMessage");
+
+    const clearErrors = () => {
+        ["nameError", "emailError", "messageError"].forEach((id) => {
+            const el = document.getElementById(id);
+            if (el) el.textContent = "";
+        });
+        responseEl.textContent = "";
+        responseEl.className = "success-message";
+    };
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        if (isCooldown) return;
+
+        clearErrors();
+        submitBtn.disabled = true;
+        submitBtn.value = "Sending...";
+
+        try {
+            const response = await window.axios.post(form.action, new FormData(form), {
+                headers: { "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').content },
+            });
+
+            responseEl.textContent = response.data.message || "Message sent successfully.";
+            responseEl.className = "success-message";
+            form.reset();
+
+            if (window.turnstile) window.turnstile.reset();
+
+            isCooldown = true;
+            setTimeout(() => { isCooldown = false; }, 5000);
+        } catch (err) {
+            const errors = err.response?.data?.errors || {};
+
+            if (errors.name) document.getElementById("nameError").textContent = errors.name;
+            if (errors.email) document.getElementById("emailError").textContent = errors.email;
+            if (errors.message) document.getElementById("messageError").textContent = errors.message;
+
+            const general = errors.captcha || err.response?.data?.message || "Something went wrong. Please try again.";
+            responseEl.textContent = general;
+            responseEl.className = "success-message alert-danger";
+
+            if (window.turnstile) window.turnstile.reset();
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.value = "Send Message";
         }
     });
 }
