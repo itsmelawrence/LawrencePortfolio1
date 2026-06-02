@@ -493,7 +493,11 @@ body {
     opacity: 0;
     display: block;
     margin: auto;
-    padding: 100px 20px;
+    padding: 100px 40px;
+}
+
+.fade-in-viewc ~ .fade-in-viewc {
+    padding-top: 0;
 }
 
 .card-info-container {
@@ -966,6 +970,10 @@ textarea:hover {
     .fade-in-viewc {
         opacity: 0;
         padding: 80px 20px;
+    }
+
+    .fade-in-viewc ~ .fade-in-viewc {
+        padding-top: 0;
     }
 
     .fade-in-viewc h1 {
