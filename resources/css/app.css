@@ -488,11 +488,12 @@ body {
 }
 
 .fade-in-viewc {
-    width: 80%;
-    max-width: 1500px;
+    width: 100%;
+    max-width: 1400px;
     opacity: 0;
     display: block;
-    margin: 10rem auto;
+    margin: auto;
+    padding: 100px 20px;
 }
 
 .card-info-container {
@@ -898,7 +899,6 @@ textarea:hover {
     }
 
     .about {
-        height: 100vh;
         display: flex;
         flex-direction: column;
     }
@@ -965,9 +965,7 @@ textarea:hover {
 
     .fade-in-viewc {
         opacity: 0;
-        display: block;
-        width: 80%;
-        margin: 10rem auto;
+        padding: 80px 20px;
     }
 
     .fade-in-viewc h1 {
@@ -1156,13 +1154,6 @@ textarea:hover {
         width: 100%;
     }
 
-    .fade-in-viewc {
-        width: 80%;
-        opacity: 0;
-        display: block;
-        margin: 10rem auto;
-    }
-
     .fade-in-viewc h1 {
         font-size: 35px;
         width: 80%;
@@ -1323,18 +1314,10 @@ textarea:hover {
         width: 100%;
     }
 
-    .fade-in-viewc {
-        width: 80%;
-        opacity: 0;
-        display: block;
-        margin: 10rem auto;
-    }
-
     .fade-in-viewc h1 {
         font-size: 35px;
         width: 80%;
-        margin: auto;
-        margin-bottom: 100px;
+        margin: auto 0 100px;
     }
 
     .main-info-container {
@@ -1490,18 +1473,10 @@ textarea:hover {
         width: 100%;
     }
 
-    .fade-in-viewc {
-        width: 80%;
-        opacity: 0;
-        display: block;
-        margin: 10rem auto;
-    }
-
     .fade-in-viewc h1 {
         font-size: 35px;
         width: 80%;
-        margin: auto;
-        margin-bottom: 100px;
+        margin: auto 0 100px;
     }
 
     .main-info-container {
