@@ -1,5 +1,37 @@
 @import "tailwindcss";
 
+:root {
+    --bg-body: #fafafa;
+    --color-text-primary: #000000;
+    --color-text-muted: #525252;
+    --color-text-nav-hover: #262626;
+    --color-text-desc: #d7d7d7;
+    --color-text-desc-active: #000000;
+    --color-border: gainsboro;
+    --color-border-hover: #8c7070;
+    --color-footer-bg: #343434;
+    --color-footer-text: #ffffff;
+    --color-input-bg: #ffffff;
+    --color-input-text: #000000;
+    --color-textarea-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+    --bg-body: #111111;
+    --color-text-primary: #f0f0f0;
+    --color-text-muted: #b0b0b0;
+    --color-text-nav-hover: #e0e0e0;
+    --color-text-desc: #444444;
+    --color-text-desc-active: #ffffff;
+    --color-border: #333333;
+    --color-border-hover: #9e8888;
+    --color-footer-bg: #1a1a1a;
+    --color-footer-text: #cccccc;
+    --color-input-bg: #1e1e1e;
+    --color-input-text: #f0f0f0;
+    --color-textarea-bg: #1e1e1e;
+}
+
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
@@ -84,6 +116,20 @@ html {
 body {
     overflow-x: hidden;
 }
+/** SCROLL PROGRESS BAR **/
+
+#scrollProgressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(to right, #7b4f2d, #c88a5a);
+    z-index: 10000;
+    pointer-events: none;
+    transition: width 0.05s linear;
+}
+
 /** HEADER **/
 
 h1,
@@ -96,8 +142,71 @@ h2 {
     z-index: 500;
 }
 
+.darkmode-toggle {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #2a2a2a;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.darkmode-toggle.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, background 0.3s, transform 0.3s;
+}
+
+.darkmode-toggle:hover {
+    transform: scale(1.1);
+}
+
+[data-theme="dark"] .darkmode-toggle {
+    background: #f0e6d3;
+    color: #333;
+}
+
+/** AVAILABLE FOR WORK BADGE **/
+
+.availability-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-family: "Namdhinggo", sans-serif;
+    font-style: italic;
+    color: #525252;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+    animation: statusPulse 2s infinite;
+}
+
+@keyframes statusPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+    50%       { box-shadow: 0 0 0 5px rgba(34, 197, 94, 0); }
+}
+
 body {
-    background: #fafafa;
+    background: var(--bg-body);
 }
 
 ::-webkit-scrollbar {
@@ -152,13 +261,28 @@ body {
 
 .nav-text a,
 .scroll-down-a {
-    color: #525252;
+    color: var(--color-text-muted);
     transition: color 0.4s;
+}
+
+.book-call-link {
+    background: #7b4f2d;
+    color: #fff !important;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-style: normal;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.book-call-link:hover {
+    background: #5a3820 !important;
+    color: #fff !important;
 }
 
 .nav-text a:hover,
 .scroll-down-a:hover {
-    color: #262626;
+    color: var(--color-text-nav-hover);
     transition: color 0.4s;
 }
 
@@ -231,7 +355,7 @@ body {
     font-size: 14px;
     font-family: "Product Sans", sans-serif;
     font-weight: 400;
-    color: #d7d7d7;
+    color: var(--color-text-desc);
     max-width: 900px;
 }
 
@@ -574,16 +698,17 @@ p.contact-links-header {
 .main-form input {
     width: 100%;
     text-indent: 10px;
-    border: 2px solid gainsboro;
+    border: 2px solid var(--color-border);
     border-radius: 5px;
     height: 40px;
-    color: black;
+    color: var(--color-input-text);
+    background: var(--color-input-bg);
     transition: border 0.4s, color 0.4s;
 }
 
 .main-form input:hover {
-    color: black;
-    border: 2px solid #8c7070;
+    color: var(--color-input-text);
+    border: 2px solid var(--color-border-hover);
     transition: border 0.4s, color 0.4s;
 }
 
@@ -603,14 +728,16 @@ p.contact-links-header {
 
 textarea {
     width: 100%;
-    border: 2px solid gainsboro;
+    border: 2px solid var(--color-border);
     border-radius: 5px;
     padding: 10px;
+    background: var(--color-textarea-bg);
+    color: var(--color-input-text);
     transition: border 0.4s;
 }
 
 textarea:hover {
-    border: 2px solid #8c7070;
+    border: 2px solid var(--color-border-hover);
     transition: border 0.4s;
 }
 
@@ -656,14 +783,14 @@ textarea:hover {
 
 .footer-card {
     text-align: center;
-    background: #343434;
+    background: var(--color-footer-bg);
     padding: 10px;
     margin-top: 25px;
     display: block;
 }
 
 .footer-card p {
-    color: #ffffff;
+    color: var(--color-footer-text);
     font-family: Product Sans, sans-serif;
     font-size: 10px;
     font-style: italic;

@@ -37,6 +37,12 @@
 </head>
 <body>
 
+    <div id="scrollProgressBar"></div>
+
+    <button id="darkModeToggle" class="darkmode-toggle" aria-label="Toggle dark mode">
+        <i id="darkModeIcon" class="fa-solid fa-moon"></i>
+    </button>
+
     @yield('content')
 
     @include('partials.footer')

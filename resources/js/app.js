@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     initBackToTopButton();
     initContextMenuBlock();
     initContactForm();
+    initDarkMode();
 });
 
 // ==========================
@@ -94,10 +95,12 @@ function initScrollMagicHighlights() {
                 const scrollProgress = event.progress;
                 words.forEach((word, index) => {
                     const wordProgress = (index + 1) / totalWords;
+                    const isDark = document.documentElement.getAttribute("data-theme") === "dark";
                     gsap.to(word, {
                         opacity: 1,
-                        color:
-                            scrollProgress >= wordProgress ? "#000" : "#d7d7d7",
+                        color: scrollProgress >= wordProgress
+                            ? (isDark ? "#ffffff" : "#000000")
+                            : (isDark ? "#444444" : "#d7d7d7"),
                         duration: 0.2,
                     });
                 });
@@ -196,6 +199,9 @@ function initBackToTopButton() {
         }
 
         backToTopBtn.style.background = `conic-gradient(#7b4f2d ${scrollPercent}%, #2a2a2a ${scrollPercent}%)`;
+
+        const progressBar = document.getElementById("scrollProgressBar");
+        if (progressBar) progressBar.style.width = scrollPercent + "%";
     });
 
     backToTopBtn.addEventListener("click", () => {
@@ -275,5 +281,37 @@ function initContactForm() {
             submitBtn.disabled = false;
             submitBtn.value = "Send Message";
         }
+    });
+}
+
+// ==========================
+// SECTION: DARK MODE
+// ==========================
+function initDarkMode() {
+    const toggle = document.getElementById("darkModeToggle");
+    const icon   = document.getElementById("darkModeIcon");
+    if (!toggle) return;
+
+    const apply = (theme) => {
+        document.documentElement.setAttribute("data-theme", theme);
+        if (icon) icon.className = theme === "dark" ? "fa-solid fa-sun" : "fa-solid fa-moon";
+        localStorage.setItem("theme", theme);
+    };
+
+    apply(localStorage.getItem("theme") || "light");
+
+    window.addEventListener("scroll", () => {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        if ((scrollTop / scrollHeight) * 100 > 5) {
+            toggle.classList.add("show");
+        } else {
+            toggle.classList.remove("show");
+        }
+    });
+
+    toggle.addEventListener("click", () => {
+        const current = document.documentElement.getAttribute("data-theme");
+        apply(current === "dark" ? "light" : "dark");
     });
 }
