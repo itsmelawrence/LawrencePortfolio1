@@ -867,6 +867,21 @@ textarea:hover {
 }
 
 @media screen and (max-width: 450px) {
+    .navigation-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navigation-row li {
+        margin: 6px 10px;
+    }
+
+    .book-call-link {
+        padding: 4px 12px;
+        font-size: 12px;
+    }
+
     .typedjs {
         text-align: center;
         font-family: "Namdhinggo", sans-serif;
@@ -1053,6 +1068,21 @@ textarea:hover {
 }
 
 @media screen and (min-width: 450px) and (max-width: 550px) {
+    .navigation-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navigation-row li {
+        margin: 6px 10px;
+    }
+
+    .book-call-link {
+        padding: 4px 12px;
+        font-size: 12px;
+    }
+
     .typedjs {
         text-align: center;
         font-family: "Namdhinggo", sans-serif;

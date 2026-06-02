@@ -35,7 +35,7 @@
                             <div class="group-input">
                                 <div class="name-input">
                                     <label for="name">Full Name</label>
-                                    <input type="text" name="name" class="form-control full-name" placeholder="Name" value="{{ old('name') }}">
+                                    <input type="text" id="name" name="name" class="form-control full-name" placeholder="Name" value="{{ old('name') }}">
                                     <span id="nameError" class="text-danger"></span>
                                     @error('name')
                                         <span class="text-danger">{{ $message }}</span>
@@ -44,7 +44,7 @@
 
                                 <div class="name-input">
                                     <label for="email">Email address</label>
-                                    <input type="email" name="email" class="form-control email-address" placeholder="Email" value="{{ old('email') }}">
+                                    <input type="email" id="email" name="email" class="form-control email-address" placeholder="Email" value="{{ old('email') }}">
                                     <span id="emailError" class="text-danger"></span>
                                     @error('email')
                                         <span class="text-danger">{{ $message }}</span>
@@ -54,14 +54,13 @@
 
                             <div class="message-input">
                                 <label for="message">Your Message</label>
-                                <textarea name="message" rows="3" class="form-control">{{ old('message') }}</textarea>
+                                <textarea id="message" name="message" rows="3" class="form-control">{{ old('message') }}</textarea>
                                 <span id="messageError" class="text-danger"></span>
                                 @error('message')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
 
-                            {{-- ✅ Cloudflare Turnstile Widget --}}
                             <div class="cf-turnstile" 
                                  data-sitekey="0x4AAAAAAB5a-O9PNBLq5lzC" 
                                  data-theme="light"
