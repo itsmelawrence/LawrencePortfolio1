@@ -14,7 +14,7 @@
             <li class="nav-text"><a href="#gallery"><span>Gallery</span></a></li>
             <li class="nav-text"><a href="#contact"><span>Contact</span></a></li>
             <li class="nav-text">
-                <a class="book-call-link" data-cal-link="YOUR-CAL-USERNAME/30min" data-cal-config='{"layout":"month_view"}'>
+                <a class="book-call-link" data-cal-link="https://cal.com/lawrence-tendenilla-my4blt/15min" data-cal-config='{"layout":"month_view"}'>
                     Book a Call
                 </a>
             </li>
