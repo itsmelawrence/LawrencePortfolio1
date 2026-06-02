@@ -3,6 +3,16 @@ import "./bootstrap";
 // --- Global State ---
 let isCooldown = false;
 
+// --- Loader ---
+window.addEventListener("load", function () {
+    const loader = document.getElementById("loader");
+    if (!loader) return;
+    setTimeout(() => {
+        loader.classList.add("fade-out");
+        setTimeout(() => { loader.style.display = "none"; }, 700);
+    }, 1800);
+});
+
 // --- DOMContentLoaded Master Handler ---
 document.addEventListener("DOMContentLoaded", function () {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);

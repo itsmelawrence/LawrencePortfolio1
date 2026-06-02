@@ -59,19 +59,59 @@ h3 {
 #loader {
     position: fixed;
     inset: 0;
-    background: #000; /* or transparent if video has background */
+    background: #0d0d0d;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 99999;
     opacity: 1;
-    transition: opacity 0.6s ease; /* fade effect */
+    transition: opacity 0.7s ease;
     pointer-events: all;
 }
 
 #loader.fade-out {
     opacity: 0;
     pointer-events: none;
+}
+
+.loader-svg {
+    width: 140px;
+    height: 84px;
+    overflow: visible;
+}
+
+.loader-line {
+    stroke: #7b4f2d;
+    stroke-width: 3.5;
+    stroke-linecap: round;
+    fill: none;
+}
+
+#l-vert {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: drawLine 0.5s ease forwards 0.2s;
+}
+#l-horiz {
+    stroke-dasharray: 27;
+    stroke-dashoffset: 27;
+    animation: drawLine 0.3s ease forwards 0.7s;
+}
+#t-horiz {
+    stroke-dasharray: 47;
+    stroke-dashoffset: 47;
+    animation: drawLine 0.4s ease forwards 1s;
+}
+#t-vert {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: drawLine 0.5s ease forwards 1.3s;
+}
+
+@keyframes drawLine {
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 #backToTopBtn {
@@ -530,7 +570,7 @@ div#about.main-container .info-holder {
     font-size: 35px;
     width: 100%;
     margin: auto;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
 }
 
 .main-info-container {
@@ -575,7 +615,6 @@ div#about.main-container .info-holder {
 
 .main-image-container {
     width: 100%;
-    margin: auto auto 200px;
 }
 
 .main-image-container h2 {
@@ -583,23 +622,22 @@ div#about.main-container .info-holder {
 }
 
 .image-block-container {
-    display: flex;
-    flex-wrap: wrap;
-    box-shadow:
-        inset -4px 0 10px rgba(0, 0, 0, 0.03),
-        inset 4px 0 10px rgba(0, 0, 0, 0.03),
-        0 10px 25px rgba(0, 0, 0, 0.06);
+    columns: 3;
+    column-gap: 1.5rem;
+    padding: 1.5rem;
 }
 
 .image-handler-block {
-    width: 33%;
-    margin-top: 70px;
-    margin-bottom: 70px;
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    width: 100%;
 }
 
 .image-handler img {
-    width: 200px;
-    margin: auto;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
 }
 
 .image-text {
@@ -882,13 +920,8 @@ textarea:hover {
 /** -FOOTER **/
 
 @media screen and (max-width: 350px) {
-    .image-block {
-        display: block;
-        overflow: hidden;
-    }
-
-    .image-handler-block {
-        margin: 20px auto;
+    .image-block-container {
+        columns: 1;
     }
 }
 
@@ -995,7 +1028,6 @@ textarea:hover {
         font-size: 35px;
         width: 100%;
         margin: auto;
-        margin-bottom: 100px;
     }
 
     .main-info-container {
@@ -1038,40 +1070,14 @@ textarea:hover {
     }
 
     .image-block-container {
-        flex: none;
-        display: flex;
-        position: relative;
-    }
-
-    .image-handler img {
-        width: 200px;
-        margin: auto;
+        columns: 2;
+        column-gap: 0.75rem;
+        padding: 1rem;
     }
 
     .image-text h3 {
-        margin: 15px auto auto;
-        font-size: 15px;
-    }
-
-    .image-block {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        mask-image: linear-gradient(
-            to right,
-            transparent 0%,
-            black 10%,
-            black 90%,
-            transparent 100%
-        );
-    }
-
-    .image-handler-block {
-        width: unset;
-        scroll-snap-align: start;
-        flex-shrink: 0;
-        margin: 50px 20px;
+        margin: 10px auto auto;
+        font-size: 14px;
     }
 
     .group-input {
@@ -1168,7 +1174,6 @@ textarea:hover {
         font-size: 35px;
         width: 80%;
         margin: auto;
-        margin-bottom: 100px;
     }
 
     .main-info-container {
@@ -1211,40 +1216,14 @@ textarea:hover {
     }
 
     .image-block-container {
-        flex: none;
-        display: flex;
-        position: relative;
-    }
-
-    .image-handler img {
-        width: 200px;
-        margin: auto;
+        columns: 2;
+        column-gap: 0.75rem;
+        padding: 1rem;
     }
 
     .image-text h3 {
-        margin: 15px auto auto;
-        font-size: 15px;
-    }
-
-    .image-block {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        mask-image: linear-gradient(
-            to right,
-            transparent 0%,
-            black 10%,
-            black 90%,
-            transparent 100%
-        );
-    }
-
-    .image-handler-block {
-        width: unset;
-        scroll-snap-align: start;
-        flex-shrink: 0;
-        margin: 50px 20px;
+        margin: 10px auto auto;
+        font-size: 14px;
     }
 
     .group-input {
@@ -1314,7 +1293,6 @@ textarea:hover {
     .fade-in-viewc h1 {
         font-size: 35px;
         width: 80%;
-        margin: auto 0 100px;
     }
 
     .main-info-container {
@@ -1357,40 +1335,8 @@ textarea:hover {
     }
 
     .image-block-container {
-        flex: none;
-        display: flex;
-        position: relative;
-    }
-
-    .image-handler img {
-        width: 300px;
-        margin: auto;
-    }
-
-    .image-text h3 {
-        margin: 15px auto auto;
-        font-size: 15px;
-    }
-
-    .image-block {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        mask-image: linear-gradient(
-            to right,
-            transparent 0%,
-            black 10%,
-            black 90%,
-            transparent 100%
-        );
-    }
-
-    .image-handler-block {
-        width: unset;
-        scroll-snap-align: start;
-        flex-shrink: 0;
-        margin: 50px 20px;
+        columns: 2;
+        padding: 1rem;
     }
 
     .group-input {
@@ -1460,7 +1406,6 @@ textarea:hover {
     .fade-in-viewc h1 {
         font-size: 35px;
         width: 80%;
-        margin: auto 0 100px;
     }
 
     .main-info-container {
@@ -1503,40 +1448,8 @@ textarea:hover {
     }
 
     .image-block-container {
-        flex: none;
-        display: flex;
-        position: relative;
-    }
-
-    .image-handler img {
-        width: 400px;
-        margin: auto;
-    }
-
-    .image-text h3 {
-        margin: 15px auto auto;
-        font-size: 15px;
-    }
-
-    .image-block {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        mask-image: linear-gradient(
-            to right,
-            transparent 0%,
-            black 10%,
-            black 90%,
-            transparent 100%
-        );
-    }
-
-    .image-handler-block {
-        width: unset;
-        scroll-snap-align: start;
-        flex-shrink: 0;
-        margin: 50px 20px;
+        columns: 2;
+        padding: 1.5rem;
     }
 
     .group-input {
@@ -1594,5 +1507,153 @@ textarea:hover {
     .desc-group {
         width: 1000px;
         margin: auto;
+    }
+}
+
+/** SERVICES **/
+
+.services-section {
+    width: 100%;
+}
+
+.services-inner {
+    margin: auto;
+}
+
+.services-heading {
+    font-size: 35px;
+    margin-bottom: 60px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.service-card {
+    padding: 2rem 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    transition:
+        border-color 0.3s,
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+.service-card:hover {
+    border-color: #7b4f2d;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(123, 79, 45, 0.12);
+}
+
+.service-icon {
+    font-size: 28px;
+    color: #7b4f2d;
+    margin-bottom: 1.25rem;
+}
+
+.service-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-family: "Namdhinggo", sans-serif;
+    color: var(--color-text-primary);
+}
+
+.service-desc {
+    font-size: 13px;
+    font-family: "Product Sans", sans-serif;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+@media screen and (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-heading {
+        font-size: 28px;
+    }
+}
+
+/** TESTIMONIAL **/
+
+.testimonial-section {
+    width: 100%;
+    padding: 0 40px 80px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-inner {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.testimonial-quote-mark {
+    font-size: 100px;
+    line-height: 0.6;
+    color: #7b4f2d;
+    font-family: Georgia, serif;
+    opacity: 0.25;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.testimonial-text {
+    font-size: 15px;
+    font-family: "Product Sans", sans-serif;
+    line-height: 1.9;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0 0 2rem;
+    border: none;
+    padding: 0;
+}
+
+.testimonial-attribution {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.testimonial-attribution::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background: #7b4f2d;
+}
+
+.testimonial-company {
+    font-size: 13px;
+    font-family: "Namdhinggo", sans-serif;
+    color: #7b4f2d;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 550px) {
+    .testimonial-section {
+        padding: 0 20px 60px 20px;
+    }
+
+    .testimonial-text {
+        font-size: 14px;
+    }
+
+    .testimonial-quote-mark {
+        font-size: 70px;
     }
 }
