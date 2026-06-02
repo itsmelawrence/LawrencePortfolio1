@@ -15,7 +15,6 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 
@@ -27,7 +26,6 @@
 
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <script type="text/javascript">
 (function (C, A, L) {
