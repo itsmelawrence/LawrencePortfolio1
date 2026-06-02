@@ -13,6 +13,7 @@
 
     <title>{!! $pageTitle !!}</title>
     <meta name="description" content="{{ $pageDesc }}">
+    <meta name="author" content="Lawrence Tendenilla">
     <link rel="canonical" href="{{ url()->current() }}">
 
     {{-- Open Graph --}}

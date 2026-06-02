@@ -20,7 +20,7 @@
             </li>
         </div>
         <div class="scroll-down fade-out-container">
-            <a href="#contact" class="scroll-down-t scroll-down-a">Scroll to bottom</a>
+            <a href="#about" class="scroll-down-t scroll-down-a">Scroll to explore</a>
             <span class="scroll-down-t scroll-down-arrow">&#8595</span>
         </div>
     </div>

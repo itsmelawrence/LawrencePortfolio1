@@ -13,15 +13,15 @@
                 <div class="list-item">
                     <li class="list-item-link">
                         <h3>Email:</h3>
-                        <a href="mailto:lawrencetendenilla83@gmail.com" target="_blank">lawrencetendenilla83@gmail.com</a>
+                        <a href="mailto:lawrencetendenilla83@gmail.com" target="_blank" rel="noopener noreferrer">lawrencetendenilla83@gmail.com</a>
                     </li>
                     <li class="list-item-link">
                         <h3>LinkedIn:</h3>
-                        <a href="https://linkedin.com/in/lawrence-t-b73006261" target="_blank">@LawrenceTendenilla</a>
+                        <a href="https://linkedin.com/in/lawrence-t-b73006261" target="_blank" rel="noopener noreferrer">@LawrenceTendenilla</a>
                     </li>
                     <li class="list-item-link">
                         <h3>WhatsApp:</h3>
-                        <a href="https://wa.me/+639623424669" target="_blank">@lawrencetendenilla</a>
+                        <a href="https://wa.me/+639623424669" target="_blank" rel="noopener noreferrer">@lawrencetendenilla</a>
                     </li>
                 </div>
             </div>
