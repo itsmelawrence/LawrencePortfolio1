@@ -11,7 +11,7 @@
         $ogImage   = 'https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/Lawrence%20Logo.ico';
     @endphp
 
-    <title>{{ $pageTitle }}</title>
+    <title>{!! $pageTitle !!}</title>
     <meta name="description" content="{{ $pageDesc }}">
     <link rel="canonical" href="{{ url()->current() }}">
 

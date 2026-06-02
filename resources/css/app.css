@@ -215,6 +215,7 @@ h2 {
 
 body {
     background: var(--bg-body);
+    color: var(--color-text-primary);
 }
 
 ::-webkit-scrollbar {
