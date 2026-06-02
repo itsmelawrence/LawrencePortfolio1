@@ -5,6 +5,7 @@ let isCooldown = false;
 
 // --- DOMContentLoaded Master Handler ---
 document.addEventListener("DOMContentLoaded", function () {
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
     initTypedIntro();
     initLoaderAndAOS();
     initScrollMagicHighlights();
@@ -13,10 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
     initBackToTopButton();
     initContextMenuBlock();
 });
-
-// ==========================
-// SECTION: CONTACT FORM HANDLER
-// ==========================
 
 // ==========================
 // SECTION: TYPED INTRO + GSAP
@@ -112,8 +109,6 @@ function initScrollMagicHighlights() {
 // SECTION: SCROLLTRIGGER FADE-IN/OUT
 // ==========================
 function initScrollTriggerFades() {
-    gsap.registerPlugin(ScrollTrigger);
-
     gsap.to(".fade-out-container", {
         opacity: 0,
         stagger: 0.8,
@@ -138,7 +133,6 @@ function initScrollTriggerFades() {
                     start: "top 80%",
                     end: "top 30%",
                     scrub: true,
-                    toggleActions: "play none none reverse",
                 },
             }
         );
