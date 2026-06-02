@@ -242,13 +242,15 @@ body {
 
 div#top.main-container,
 div#about.main-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     max-width: 1400px;
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin: auto;
+    padding: 100px 40px 100px 40px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -262,6 +264,10 @@ div#about.main-container {
     div#top.main-container,
     div#about.main-container {
         padding: 60px 20px;
+    }
+
+    div#about.main-container .info-holder {
+        flex-direction: column;
     }
 }
 
@@ -426,7 +432,7 @@ div#about.main-container .info-holder {
 .tech-icons {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 1.5rem;
     align-items: center;
 }
@@ -922,12 +928,6 @@ textarea:hover {
         flex-direction: column;
     }
 
-    .info-holder {
-        margin-top: auto;
-        display: block;
-        width: 100%;
-    }
-
     .left-info-holder {
         margin: auto;
         width: 300px;
@@ -1117,12 +1117,6 @@ textarea:hover {
         flex-direction: column;
     }
 
-    .info-holder {
-        margin-top: auto;
-        display: block;
-        width: 100%;
-    }
-
     .left-info-holder {
         margin: auto;
         width: 300px;
@@ -1270,12 +1264,6 @@ textarea:hover {
         flex-direction: column;
     }
 
-    .info-holder {
-        margin-top: auto;
-        display: block;
-        width: 100%;
-    }
-
     .left-info-holder {
         margin: auto;
         width: 300px;
@@ -1420,12 +1408,6 @@ textarea:hover {
         height: 100vh;
         display: flex;
         flex-direction: column;
-    }
-
-    .info-holder {
-        margin-top: auto;
-        display: block;
-        width: 100%;
     }
 
     .left-info-holder {
