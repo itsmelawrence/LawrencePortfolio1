@@ -13,7 +13,7 @@
 }
 
 :root {
-    --font-namdhinggo: "Namdhinggo", sans-serif;
+    --font-global: "Namdhinggo", sans-serif;
     --font-product-sans: "Product Sans", sans-serif;
     --color-bg: #fafafa;
     --color-text-muted: #d7d7d7;
@@ -119,7 +119,7 @@ body {
 
 h1,
 h2 {
-    font-family: var(--font-namdhinggo);
+    font-family: var(--font-global);
 }
 
 .darkmode-layer,
@@ -160,7 +160,7 @@ body {
 
 .typedjs {
     text-align: center;
-    font-family: var(--font-namdhinggo);
+    font-family: var(--font-global);
     font-size: 25px;
     font-weight: 400;
 }
@@ -178,7 +178,7 @@ body {
 
 .nav-text {
     font-size: 14px;
-    font-family: var(--font-namdhinggo);
+    font-family: var(--font-global);
     opacity: 0;
     font-style: italic;
     transform: translateY(50px);
@@ -201,7 +201,7 @@ body {
     opacity: 0;
     width: 300px;
     margin: auto;
-    font-family: var(--font-namdhinggo);
+    font-family: var(--font-global);
     font-size: 14px;
     font-style: italic;
     display: block;
