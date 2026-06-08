@@ -2,9 +2,7 @@
     <div class="center-content">
         <div class="info-holder">
             <div class="left-info-holder">
-                <div class="left-info-holder-i">
-                    <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/headimg.png" alt="">
-                </div>
+                <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/headimg.png" alt="">
             </div>
             <div class="right-info-holder">
                 <p class="desc-group">
@@ -118,40 +116,41 @@
                         <span class="desc-text">{{ $word }}</span>
                     @endforeach
                 </p>
-
+                <div class="tech-stack-section" data-aos="fade-up">
+                    <span class="tech-stack-title">Tech Stack</span>
+                    <div class="tech-icons">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML5" title="HTML5" data-aos="fade-up">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                            alt="CSS3" title="CSS3" data-aos="fade-up">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript" title="JavaScript" data-aos="fade-up">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg"
+                            alt="jQuery" title="jQuery" data-aos="fade-up">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                            alt="Bootstrap" title="Bootstrap" data-aos="fade-up">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                            alt="PHP" title="PHP" data-aos="fade-up">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
+                            alt="Laravel" title="Laravel" data-aos="fade-up">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                            alt="MySQL" title="MySQL" data-aos="fade-up">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
+                            alt="Photoshop" title="Photoshop" data-aos="fade-up">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg"
+                            alt="Illustrator" title="Illustrator" data-aos="fade-up">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-plain.svg"
+                            alt="Premiere Pro" title="Premiere Pro" data-aos="fade-up">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-plain.svg"
+                            alt="After Effects" title="After Effects" data-aos="fade-up">
+                        <img src="https://img.icons8.com/color/48/canva.png" alt="Canva" title="Canva"
+                            data-aos="fade-up">
+                    </div>
+                </div>
             </div>
 
         </div>
-        <div class="tech-stack-section" data-aos="fade-up">
-            <h2 class="tech-stack-header">Tech Stack</h2>
-            <div class="tech-icons">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
-                    title="HTML5" data-aos="fade-up">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
-                    title="CSS3" data-aos="fade-up">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                    alt="JavaScript" title="JavaScript" data-aos="fade-up">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt="jQuery"
-                    title="jQuery" data-aos="fade-up">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                    alt="Bootstrap" title="Bootstrap" data-aos="fade-up">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"
-                    title="PHP" data-aos="fade-up">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
-                    alt="Laravel" title="Laravel" data-aos="fade-up">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
-                    title="MySQL" data-aos="fade-up">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
-                    alt="Photoshop" title="Photoshop" data-aos="fade-up">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg"
-                    alt="Illustrator" title="Illustrator" data-aos="fade-up">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-plain.svg"
-                    alt="Premiere Pro" title="Premiere Pro" data-aos="fade-up">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-plain.svg"
-                    alt="After Effects" title="After Effects" data-aos="fade-up">
-                <img src="https://img.icons8.com/color/48/canva.png" alt="Canva" title="Canva" data-aos="fade-up">
-            </div>
-        </div>
+
     </div>
 
 </div>

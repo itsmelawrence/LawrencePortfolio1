@@ -1,8 +1,7 @@
 <div class="fade-in-viewc aos-init aos-animate" data-aos="fade-up" style="opacity: 1;">
     <div class="images-container">
-        <div class="image-container-header">
-            <h1>GALLERY - VISUALS</h1>
-        </div>
+        <h2>GALLERY - VISUALS</h2>
+      
 
         <div class="main-image-container">
             <h2 class="image-header1">Catalog Visuals</h2>
