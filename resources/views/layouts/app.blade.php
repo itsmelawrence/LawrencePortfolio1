@@ -11,8 +11,9 @@
         $ogImage   = 'https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/Lawrence%20Logo.ico';
     @endphp
 
-    <title>{{ $pageTitle }}</title>
+    <title>{!! $pageTitle !!}</title>
     <meta name="description" content="{{ $pageDesc }}">
+    <meta name="author" content="Lawrence Tendenilla">
     <link rel="canonical" href="{{ url()->current() }}">
 
     {{-- Open Graph --}}
@@ -30,12 +31,31 @@
 
     <link rel="icon" href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/Lawrence%20Logo.ico" type="image/x-icon">
 
+    <script>
+        (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})();
+    </script>
+
     @include('partials.fonts')
     @include('partials.styles')
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
+
+    <div id="loader" aria-hidden="true">
+        <svg class="loader-svg" viewBox="0 0 120 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line class="loader-line" id="l-vert" x1="15" y1="8"  x2="15" y2="58"/>
+            <line class="loader-line" id="l-horiz" x1="15" y1="58" x2="42" y2="58"/>
+            <line class="loader-line" id="t-horiz" x1="58" y1="8"  x2="105" y2="8"/>
+            <line class="loader-line" id="t-vert"  x1="81" y1="8"  x2="81" y2="58"/>
+        </svg>
+    </div>
+
+    <div id="scrollProgressBar"></div>
+
+    <button id="darkModeToggle" class="darkmode-toggle" aria-label="Toggle dark mode">
+        <i id="darkModeIcon" class="fa-solid fa-moon"></i>
+    </button>
 
     @yield('content')
 
