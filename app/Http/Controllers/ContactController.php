@@ -25,7 +25,7 @@ class ContactController extends Controller
             'cf-turnstile-response' => 'required',
         ]);
         
-        if (app()->env('production')) {
+        if (app()->environment('production')) {
             $token = $request->input('cf-turnstile-response');
             $secretKey = env('TURNSTILE_SECRET_KEY', '0x4AAAAAAB5a-LIzDwuQzJMaKLYPHJWbv9o');
             $remoteIp = $request->ip();
