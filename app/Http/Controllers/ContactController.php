@@ -24,8 +24,8 @@ class ContactController extends Controller
             'message' => 'required|string|max:1000',
             'cf-turnstile-response' => 'required',
         ]);
-
-        if (app()->environment('production')) {
+        
+        if (app()->env('production')) {
             $token = $request->input('cf-turnstile-response');
             $secretKey = env('TURNSTILE_SECRET_KEY', '0x4AAAAAAB5a-LIzDwuQzJMaKLYPHJWbv9o');
             $remoteIp = $request->ip();
@@ -54,12 +54,28 @@ class ContactController extends Controller
                 ], 422);
             }
         }
-
+        
         $contact = Contact::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
             'message' => $validated['message'],
         ]);
+
+        try {
+            Http::timeout(10)
+                ->acceptJson()
+                ->post('https://lawrencetendenilla.app.n8n.cloud/webhook/d7b0889e-e383-4630-8968-332be9c3a3b2', [
+                    'id'        => $contact->id,
+                    'name'      => $contact->name,
+                    'email'     => $contact->email,
+                    'message'   => $contact->message,
+                    'submitted' => now()->toDateTimeString(),
+                    'ip'         => $request->ip(),
+                    'user_agent' => $request->userAgent(),
+                ]);
+        } catch (\Exception $e) {
+            Log::error('Failed to send contact to n8n: ' . $e->getMessage());
+        }
 
         try {
             Mail::to('lawrencetendenilla83@gmail.com')->send(new ContactNotification($contact));
