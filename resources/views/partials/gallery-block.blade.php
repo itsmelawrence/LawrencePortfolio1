@@ -1,5 +1,5 @@
-<div class="fade-in-viewc" style="{{ $style }}">
-    <div class="main-info-container aos-init aos-animate" data-aos="fade-up">
+<div class="fade-in-viewc">
+    <div class="main-info-container" data-aos="fade-up">
         <div class="fade-left-info-holder">
             <div class="fade-left-info-holder-i">
                 <h2>{{ $title }}</h2>
@@ -7,8 +7,6 @@
                 @foreach ($description as $line)
                     <p>{{ $line }}</p>
                 @endforeach
-                
-                
             </div>
         </div>
         <div class="fade-right-info-holder">

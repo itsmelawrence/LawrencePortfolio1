@@ -20,7 +20,7 @@
 
 <script src="https://unpkg.com/tippy.js@6"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
@@ -41,4 +41,3 @@
 Cal("init", { origin: "https://cal.com" });
 Cal("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
 </script>
-

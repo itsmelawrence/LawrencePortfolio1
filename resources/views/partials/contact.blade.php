@@ -89,7 +89,7 @@
                             @enderror
                         </div>
                     </div>
-                    <div class="cf-turnstile" data-sitekey="0x4AAAAAAB5a-O9PNBLq5lzC" data-theme="light">
+                    <div class="cf-turnstile" data-sitekey="0x4AAAAAAB5a-O9PNBLq5lzC" data-theme="auto">
                     </div>
 
                     @if ($errors->has('cf-turnstile-response'))

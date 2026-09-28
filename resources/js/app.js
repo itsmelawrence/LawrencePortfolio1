@@ -15,7 +15,10 @@ window.addEventListener("load", function () {
 
 // --- DOMContentLoaded Master Handler ---
 document.addEventListener("DOMContentLoaded", function () {
-    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    if (window.gsap && window.ScrollTrigger && window.ScrollToPlugin) {
+        window.gsap.registerPlugin(window.ScrollTrigger, window.ScrollToPlugin);
+    }
+
     initTypedIntro();
     initLoaderAndAOS();
     initScrollMagicHighlights();
@@ -34,19 +37,35 @@ function initTypedIntro() {
     const introElement = document.getElementById("intro");
     if (!introElement) return;
 
-    new Typed("#intro", {
+    const onComplete = () => {
+        runEaseUpAnimation();
+        runEaseInAnimation();
+    };
+
+    if (!window.Typed) {
+        introElement.textContent = "Hey. Thanks for dropping by. I'm Lawrence.";
+        onComplete();
+        return;
+    }
+
+    new window.Typed("#intro", {
         strings: ["Hey. Thanks for dropping by. I&apos;m Lawrence."],
         typeSpeed: 30,
         showCursor: false,
-        onComplete: function () {
-            runEaseUpAnimation();
-            runEaseInAnimation();
-        },
+        onComplete,
     });
 }
 
 function runEaseUpAnimation() {
-    gsap.to(".nav-text", {
+    if (!window.gsap) {
+        document.querySelectorAll(".nav-text").forEach((element) => {
+            element.style.opacity = "1";
+            element.style.transform = "translateY(0)";
+        });
+        return;
+    }
+
+    window.gsap.to(".nav-text", {
         duration: 1,
         opacity: 1,
         y: 0,
@@ -56,7 +75,14 @@ function runEaseUpAnimation() {
 }
 
 function runEaseInAnimation() {
-    gsap.to(".scroll-down-t", {
+    if (!window.gsap) {
+        document.querySelectorAll(".scroll-down-t").forEach((element) => {
+            element.style.opacity = "1";
+        });
+        return;
+    }
+
+    window.gsap.to(".scroll-down-t", {
         duration: 2,
         opacity: 1,
         y: 0,
@@ -68,35 +94,52 @@ function runEaseInAnimation() {
 // SECTION: LOADER + AOS + TIPPY + LIGHTBOX
 // ==========================
 function initLoaderAndAOS() {
-    tippy(".links-container-icons", {
-        animation: "fade",
-        placement: "top",
-        delay: [100, 50],
-    });
+    if (window.tippy) {
+        window.tippy(".links-container-icons", {
+            animation: "fade",
+            placement: "top",
+            delay: [100, 50],
+        });
+    }
 
-    AOS.init({
-        duration: 1000,
-        once: true,
-    });
+    if (window.AOS) {
+        window.AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    }
 
-    lightbox.option({
-        disableScrolling: true,
-        resizeDuration: 200,
-        wrapAround: true,
-    });
+    if (window.lightbox) {
+        window.lightbox.option({
+            disableScrolling: true,
+            resizeDuration: 200,
+            wrapAround: true,
+        });
+    }
 }
 
 // ==========================
 // SECTION: SCROLLMAGIC WORD HIGHLIGHT
 // ==========================
 function initScrollMagicHighlights() {
-    const controller = new ScrollMagic.Controller();
+    const sections = document.querySelectorAll(".right-info-holder");
 
-    document.querySelectorAll(".right-info-holder").forEach((section) => {
+    if (!window.ScrollMagic || !window.gsap) {
+        sections.forEach((section) => {
+            section.querySelectorAll(".desc-text").forEach((word) => {
+                word.style.color = "var(--color-text-primary)";
+            });
+        });
+        return;
+    }
+
+    const controller = new window.ScrollMagic.Controller();
+
+    sections.forEach((section) => {
         const words = section.querySelectorAll(".desc-text");
         const totalWords = words.length;
 
-        new ScrollMagic.Scene({
+        new window.ScrollMagic.Scene({
             triggerElement: section,
             triggerHook: 0.8,
             duration: "50%",
@@ -105,12 +148,15 @@ function initScrollMagicHighlights() {
                 const scrollProgress = event.progress;
                 words.forEach((word, index) => {
                     const wordProgress = (index + 1) / totalWords;
-                    const isDark = document.documentElement.getAttribute("data-theme") === "dark";
-                    gsap.to(word, {
+                    const rootStyles = getComputedStyle(document.documentElement);
+                    const activeColor = rootStyles.getPropertyValue("--color-text-desc-active").trim();
+                    const inactiveColor = rootStyles.getPropertyValue("--color-text-desc").trim();
+
+                    window.gsap.to(word, {
                         opacity: 1,
                         color: scrollProgress >= wordProgress
-                            ? (isDark ? "#ffffff" : "#000000")
-                            : (isDark ? "#444444" : "#d7d7d7"),
+                            ? activeColor
+                            : inactiveColor,
                         duration: 0.2,
                     });
                 });
@@ -123,7 +169,14 @@ function initScrollMagicHighlights() {
 // SECTION: SCROLLTRIGGER FADE-IN/OUT
 // ==========================
 function initScrollTriggerFades() {
-    gsap.to(".fade-out-container", {
+    if (!window.gsap || !window.ScrollTrigger) {
+        document.querySelectorAll(".fade-in-viewc").forEach((element) => {
+            element.style.opacity = "1";
+        });
+        return;
+    }
+
+    window.gsap.to(".fade-out-container", {
         opacity: 0,
         stagger: 0.8,
         duration: 1,
@@ -136,8 +189,8 @@ function initScrollTriggerFades() {
         },
     });
 
-    gsap.utils.toArray(".fade-in-viewc").forEach((el) => {
-        gsap.fromTo(
+    window.gsap.utils.toArray(".fade-in-viewc").forEach((el) => {
+        window.gsap.fromTo(
             el,
             { opacity: 0 },
             {
@@ -170,11 +223,15 @@ function initSmoothAnchorScroll() {
         const elem = hash ? document.querySelector(hash) : null;
         if (elem) {
             if (e) e.preventDefault();
-            gsap.to(window, {
-                scrollTo: elem,
-                duration: 2.5,
-                ease: "power2.out",
-            });
+            if (window.gsap && window.ScrollToPlugin) {
+                window.gsap.to(window, {
+                    scrollTo: elem,
+                    duration: 2.5,
+                    ease: "power2.out",
+                });
+            } else {
+                elem.scrollIntoView({ behavior: "smooth" });
+            }
         }
     }
 
@@ -306,6 +363,7 @@ function initDarkMode() {
         document.documentElement.setAttribute("data-theme", theme);
         if (icon) icon.className = theme === "dark" ? "fa-solid fa-sun" : "fa-solid fa-moon";
         localStorage.setItem("theme", theme);
+        window.dispatchEvent(new Event("scroll"));
     };
 
     apply(localStorage.getItem("theme") || "light");

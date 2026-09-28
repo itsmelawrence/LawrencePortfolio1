@@ -55,8 +55,6 @@
 :root {
     --font-global: "Namdhinggo", sans-serif;
     --font-product-sans: "Product Sans", sans-serif;
-    --color-bg: #fafafa;
-    --color-text-muted: #d7d7d7;
     --color-neutral: #6d6d6d;
     --color-accent-hover: #784f2f;
     --color-link: #0661a7;
@@ -215,7 +213,6 @@ h2 {
     font-family: var(--font-global);
 }
 
-.darkmode-layer,
 .darkmode-toggle {
     z-index: 500;
 }
@@ -449,7 +446,7 @@ body {
     font-size: 14px;
     font-family: var(--font-product-sans);
     font-weight: 400;
-    color: var(--color-text-muted);
+    color: var(--color-text-desc);
     max-width: 900px;
 }
 
@@ -459,10 +456,6 @@ body {
 
 .desc-group {
     height: fit-content;
-}
-
-.highlighted {
-    background-color: yellow;
 }
 
 .tech-stack-section {
@@ -475,16 +468,10 @@ body {
     gap: 10px;
 }
 
-.tech-stack-header {
-    font-size: 32px;
-    color: #333;
-    margin-bottom: 1rem;
-}
-
 span.tech-stack-title {
     margin: 0;
     font-weight: 700;
-    color: #000;
+    color: var(--color-text-primary);
     flex-shrink: 0;
 }
 
@@ -850,10 +837,6 @@ span.list-item-icon svg {
     font-weight: 600;
 }
 
-.contact-header h2 {
-    height: 60px;
-}
-
 .main-form,
 .main-form label {
     display: flex;
@@ -870,22 +853,19 @@ span.list-item-icon svg {
     border: 2px solid var(--color-border);
     border-radius: 5px;
     height: 40px;
-    color: black;
+    background: var(--color-input-bg);
+    color: var(--color-input-text);
     transition:
         border 0.4s,
         color 0.4s;
 }
 
 .main-form input:hover {
-    color: black;
+    color: var(--color-input-text);
     border: 2px solid var(--color-accent-hover);
     transition:
         border 0.4s,
         color 0.4s;
-}
-
-.message-input {
-    width: 55%;
 }
 
 textarea {
@@ -980,7 +960,7 @@ textarea:hover {
 }
 
 .footer-card p {
-    color: #ffffff;
+    color: var(--color-footer-text);
     font-family: var(--font-product-sans);
     font-size: 10px;
     font-style: italic;
@@ -1154,12 +1134,6 @@ textarea:hover {
     }
 }
 
-@media screen and (max-width: 350px) {
-    .image-block-container {
-        columns: 1;
-    }
-}
-
 @media screen and (max-width: 768px) {
     .navigation-row {
         flex-wrap: wrap;
@@ -1180,5 +1154,11 @@ textarea:hover {
         columns: 2;
         column-gap: 0.75rem;
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .image-block-container {
+        columns: 1;
     }
 }
