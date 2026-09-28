@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Mail\ContactNotification;
-use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
@@ -55,32 +54,19 @@ class ContactController extends Controller
             }
         }
         
-        $contact = Contact::create([
-            'name' => $validated['name'],
-            'email' => $validated['email'],
-            'message' => $validated['message'],
-        ]);
-
         try {
-            Http::timeout(10)
-                ->acceptJson()
-                ->post('https://lawrencetendenilla.app.n8n.cloud/webhook/d7b0889e-e383-4630-8968-332be9c3a3b2', [
-                    'id'        => $contact->id,
-                    'name'      => $contact->name,
-                    'email'     => $contact->email,
-                    'message'   => $contact->message,
-                    'submitted' => now()->toDateTimeString(),
-                    'ip'         => $request->ip(),
-                    'user_agent' => $request->userAgent(),
-                ]);
-        } catch (\Exception $e) {
-            Log::error('Failed to send contact to n8n: ' . $e->getMessage());
-        }
-
-        try {
-            Mail::to('lawrencetendenilla83@gmail.com')->send(new ContactNotification($contact));
-        } catch (\Exception $e) {
+            Mail::to(config('mail.contact_recipient'))->send(new ContactNotification(
+                name: $validated['name'],
+                email: $validated['email'],
+                message: $validated['message'],
+                submittedAt: now(),
+            ));
+        } catch (\Throwable $e) {
             Log::error('Contact notification email failed: ' . $e->getMessage());
+
+            return response()->json([
+                'message' => 'Your message could not be delivered. Please try again.',
+            ], 503);
         }
 
         return response()->json(['message' => 'Message sent successfully.']);

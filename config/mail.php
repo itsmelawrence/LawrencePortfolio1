@@ -113,4 +113,6 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
+    'contact_recipient' => env('CONTACT_NOTIFICATION_TO', 'lawrence@skeemadigitalco.com'),
+
 ];

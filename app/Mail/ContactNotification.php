@@ -2,7 +2,7 @@
 
 namespace App\Mail;
 
-use App\Models\Contact;
+use Carbon\CarbonInterface;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Address;
@@ -14,13 +14,22 @@ class ContactNotification extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public function __construct(public Contact $contact) {}
+    public function __construct(
+        public string $name,
+        public string $email,
+        public string $message,
+        public CarbonInterface $submittedAt,
+    ) {}
 
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'New Contact Form Submission from ' . $this->contact->name,
-            replyTo: [new Address($this->contact->email, $this->contact->name)],
+            subject: sprintf(
+                '[Lawrence Portfolio] New message from %s — %s',
+                $this->name,
+                $this->submittedAt->copy()->setTimezone('Asia/Manila')->format('M j, Y g:i A'),
+            ),
+            replyTo: [new Address($this->email, $this->name)],
         );
     }
 
@@ -28,6 +37,7 @@ class ContactNotification extends Mailable
     {
         return new Content(
             view: 'mail.contact-notification',
+            text: 'mail.contact-notification-text',
         );
     }
 }
