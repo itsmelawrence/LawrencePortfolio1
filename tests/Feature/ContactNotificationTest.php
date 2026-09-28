@@ -28,7 +28,8 @@ class ContactNotificationTest extends TestCase
 
             return $mail->hasTo('lawrence@skeemadigitalco.com')
                 && str_starts_with($envelope->subject, '[Lawrence Portfolio] New message from Jane Example — ')
-                && $envelope->replyTo[0]->address === 'jane@example.com';
+                && $envelope->replyTo[0]->address === 'jane@example.com'
+                && $mail->render()->contains('I enjoyed reviewing your portfolio');
         });
     }
 }

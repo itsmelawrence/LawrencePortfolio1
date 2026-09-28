@@ -7,7 +7,7 @@ Email: {{ $email }}
 Received: {{ $submittedAt->copy()->setTimezone('Asia/Manila')->format('F j, Y \a\t g:i A') }} PHT
 
 MESSAGE
-{{ $message }}
+{{ $inquiryMessage }}
 
 Reply directly to this email to respond to {{ $name }}.
 

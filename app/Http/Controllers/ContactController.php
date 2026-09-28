@@ -58,7 +58,7 @@ class ContactController extends Controller
             Mail::to(config('mail.contact_recipient'))->send(new ContactNotification(
                 name: $validated['name'],
                 email: $validated['email'],
-                message: $validated['message'],
+                inquiryMessage: $validated['message'],
                 submittedAt: now(),
             ));
         } catch (\Throwable $e) {

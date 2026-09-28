@@ -17,7 +17,7 @@ class ContactNotification extends Mailable
     public function __construct(
         public string $name,
         public string $email,
-        public string $message,
+        public string $inquiryMessage,
         public CarbonInterface $submittedAt,
     ) {}
 

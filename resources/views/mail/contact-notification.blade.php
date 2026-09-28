@@ -50,7 +50,7 @@
             </table>
 
             <div class="message-label">Message</div>
-            <div class="message-box">{{ $message }}</div>
+            <div class="message-box">{{ $inquiryMessage }}</div>
 
             <a class="reply-button" href="mailto:{{ $email }}">Reply to {{ $name }}</a>
 
