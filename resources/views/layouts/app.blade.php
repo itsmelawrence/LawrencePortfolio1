@@ -7,7 +7,7 @@
 
     @php
         $pageTitle = $__env->yieldContent('title', "Lawrence's Portfolio");
-        $pageDesc  = $__env->yieldContent('description', 'Lawrence Tendenilla — Web & graphic designer crafting clean, purposeful digital experiences. Available for freelance projects.');
+        $pageDesc  = $__env->yieldContent('description', 'Lawrence Tendenilla — Web Developer at Pixeld, showcasing selected work across web development, graphic design, video editing, and UI/UX.');
         $ogImage   = 'https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/Lawrence%20Logo.ico';
     @endphp
 

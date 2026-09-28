@@ -1,6 +1,6 @@
 <section id="services" class="main-container services-section">
     <div class="services-inner fade-in-viewc" data-aos="fade-up">
-        <h2 class="services-heading">What I Do</h2>
+        <h2 class="services-heading">Capabilities</h2>
         <div class="services-grid">
 
             <div class="service-card" data-aos="fade-up" data-aos-delay="0">

@@ -1,10 +1,9 @@
 <div id="contact" class="main-container contact-card">
     <div class="fade-in-viewc">
         <div class="main-container-row">
-            <h2 class="contact-tag">Let's Work Together</h2>
+            <h2 class="contact-tag">Connect</h2>
             <p class="contact-links-header">
-                Have an idea, a vision, or a blank canvas? I’d love to hear from you.
-                Whether it's a brand redesign or your next big startup, let's make it happen.
+                Professional links and contact details.
             </p>
         </div>
         <div class="main-info-container">
@@ -29,7 +28,7 @@
     V385.92z" />
                             </svg>
                         </span>
-                        <a href="mailto:lawrencetendenilla@outlook.com"
+                        <a href="mailto:lawrencetendenilla83@gmail.com"
                             target="_blank">lawrencetendenilla83@gmail.com</a>
                     </li>
                     <li class="list-item-link">
