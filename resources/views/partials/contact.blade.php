@@ -3,7 +3,7 @@
         <div class="main-container-row">
             <h2 class="contact-tag">Connect</h2>
             <p class="contact-links-header">
-                Professional links and contact details.
+                Where to find me, follow the work, or start a conversation.
             </p>
         </div>
         <div class="main-info-container">

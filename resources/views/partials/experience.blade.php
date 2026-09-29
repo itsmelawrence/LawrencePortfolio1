@@ -2,8 +2,6 @@
     <div class="experience-inner fade-in-viewc">
         <header class="experience-header">
             <h2 class="experience-heading">Experience</h2>
-            <div class="experience-header-rule" aria-hidden="true"></div>
-            <span class="experience-count">02 chapters</span>
         </header>
 
         <div class="experience-grid">
