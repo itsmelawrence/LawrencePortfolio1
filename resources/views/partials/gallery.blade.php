@@ -2,6 +2,18 @@
 <div id="gallery" class="card-info-container">
 
     @include('partials.gallery-block', [
+        'title' => 'JAK PEST CONTROL WEBSITE',
+        'description' => [
+            '+ Client Website',
+            '+ WordPress & Spectra One',
+            '+ Spectra Blocks, Custom CSS & JavaScript',
+            '+ Max Mega Menu & Splide Carousel'
+        ],
+        'link' => 'https://jakpestcontrolservices.com/',
+        'video' => 'websitescrolls.mp4'
+    ])
+
+    @include('partials.gallery-block', [
         'title' => 'VESARO',
         'description' => ['+ Catalog Template', '+ Made in Canva'],
         'link' => '',
@@ -20,13 +32,6 @@
         'description' => ['+ Infographics Template', '+ Made in Canva'],
         'link' => '',
         'video' => 'websiteinfographics.mp4'
-    ])
-
-    @include('partials.gallery-block', [
-        'title' => 'JAK PEST CONTROL WEBSITE',
-        'description' => ['+ Website Project', '+ Laravel & Vanilla CSS'],
-        'link' => 'https://jakpestcontrolservices.com/',
-        'video' => 'websitescrolls.mp4'
     ])
 
     {{-- Visual Image Gallery --}}
