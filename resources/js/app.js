@@ -2,11 +2,20 @@ import "./bootstrap";
 
 // --- Global State ---
 let isCooldown = false;
+const isCaptureMode = new URLSearchParams(window.location.search).get("capture") === "1";
+
+document.documentElement.classList.toggle("capture-mode", isCaptureMode);
 
 // --- Loader ---
 window.addEventListener("load", function () {
     const loader = document.getElementById("loader");
     if (!loader) return;
+
+    if (isCaptureMode) {
+        loader.style.display = "none";
+        return;
+    }
+
     setTimeout(() => {
         loader.classList.add("fade-out");
         setTimeout(() => { loader.style.display = "none"; }, 700);
@@ -15,6 +24,12 @@ window.addEventListener("load", function () {
 
 // --- DOMContentLoaded Master Handler ---
 document.addEventListener("DOMContentLoaded", function () {
+    if (isCaptureMode) {
+        initCaptureMode();
+        initDarkMode();
+        return;
+    }
+
     if (window.gsap && window.ScrollTrigger && window.ScrollToPlugin) {
         window.gsap.registerPlugin(window.ScrollTrigger, window.ScrollToPlugin);
     }
@@ -29,6 +44,19 @@ document.addEventListener("DOMContentLoaded", function () {
     initContactForm();
     initDarkMode();
 });
+
+// ==========================
+// SECTION: FIGMA / SCREENSHOT CAPTURE MODE
+// ==========================
+function initCaptureMode() {
+    const loader = document.getElementById("loader");
+    if (loader) loader.style.display = "none";
+
+    const introElement = document.getElementById("intro");
+    if (introElement) {
+        introElement.textContent = "Hey. Thanks for dropping by. I'm Lawrence.";
+    }
+}
 
 // ==========================
 // SECTION: TYPED INTRO + GSAP

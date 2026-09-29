@@ -790,6 +790,30 @@ span.tech-stack-title {
     margin: auto;
 }
 
+html.capture-mode {
+    scroll-behavior: auto !important;
+}
+
+.capture-mode #loader {
+    display: none !important;
+}
+
+.capture-mode .fade-in-viewc,
+.capture-mode .fade-out-container,
+.capture-mode .nav-text,
+.capture-mode .scroll-down-t,
+.capture-mode [data-aos] {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+}
+
+.capture-mode .desc-text {
+    color: var(--color-text-primary) !important;
+}
+
 .fade-in-viewc ~ .fade-in-viewc {
     padding-top: 0;
 }
