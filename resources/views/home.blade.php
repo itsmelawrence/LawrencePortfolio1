@@ -5,6 +5,7 @@
 @section('content')
     @include('partials.hero')
     @include('partials.about')
+    @include('partials.tech-stack')
     @include('partials.experience')
     @include('partials.services')
     @include('partials.gallery')
