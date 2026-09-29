@@ -3,7 +3,7 @@
         <div class="main-container-row">
             <h2 class="contact-tag">Connect</h2>
             <p class="contact-links-header">
-                Where to find me, follow the work, or start a conversation.
+            Have an idea, a vision, or a blank canvas? I’d love to hear from you. Whether it's a brand redesign or your next big startup, let's make it happen.
             </p>
         </div>
         <div class="main-info-container">
