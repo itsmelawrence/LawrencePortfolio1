@@ -1,5 +1,13 @@
 <div id="about" class="main-container about">
     <div class="center-content">
+        @include('partials.section-header', [
+            'eyebrow' => 'Introduction',
+            'title' => 'About Me',
+            'count' => '01',
+            'label' => 'profile',
+            'headingId' => 'about-heading'
+        ])
+
         <div class="info-holder">
             <div class="left-info-holder">
                 <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/headimg.png" alt="">

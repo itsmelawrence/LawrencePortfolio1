@@ -1,7 +1,14 @@
 <div id="contact" class="main-container contact-card">
     <div class="fade-in-viewc">
+        @include('partials.section-header', [
+            'eyebrow' => 'Start a conversation',
+            'title' => 'Connect',
+            'count' => '03',
+            'label' => 'channels',
+            'headingId' => 'contact-heading'
+        ])
+
         <div class="main-container-row">
-            <h2 class="contact-tag">Connect</h2>
             <p class="contact-links-header">
             Have an idea, a vision, or a blank canvas? I’d love to hear from you. Whether it's a brand redesign or your next big startup, let's make it happen.
             </p>

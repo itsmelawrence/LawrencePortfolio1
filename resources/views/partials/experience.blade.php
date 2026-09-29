@@ -1,8 +1,12 @@
 <section id="experience" class="main-container experience-section">
     <div class="experience-inner fade-in-viewc">
-        <header class="experience-header">
-            <h2 class="experience-heading">Experience</h2>
-        </header>
+        @include('partials.section-header', [
+            'eyebrow' => 'Career path',
+            'title' => 'Experience',
+            'count' => '02',
+            'label' => 'chapters',
+            'headingId' => 'experience-heading'
+        ])
 
         <div class="experience-grid">
             <article class="experience-card experience-card--current" data-aos="fade-up">

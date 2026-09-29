@@ -1,6 +1,14 @@
 
 <div id="gallery" class="card-info-container">
 
+    @include('partials.section-header', [
+        'eyebrow' => 'Selected projects',
+        'title' => 'Selected Work',
+        'count' => '04',
+        'label' => 'projects',
+        'headingId' => 'work-heading'
+    ])
+
     @include('partials.gallery-block', [
         'title' => 'JAK PEST CONTROL WEBSITE',
         'description' => [

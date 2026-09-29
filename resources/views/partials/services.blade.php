@@ -1,12 +1,12 @@
 <section id="services" class="main-container services-section">
     <div class="services-inner fade-in-viewc">
-        <header class="services-header" data-aos="fade-up">
-            <div>
-                <p class="services-eyebrow">What I do</p>
-                <h2 class="services-heading">Capabilities</h2>
-            </div>
-            <p class="services-count"><span>04</span> disciplines</p>
-        </header>
+        @include('partials.section-header', [
+            'eyebrow' => 'What I do',
+            'title' => 'Capabilities',
+            'count' => '04',
+            'label' => 'disciplines',
+            'headingId' => 'capabilities-heading'
+        ])
 
         <div class="services-list">
 
