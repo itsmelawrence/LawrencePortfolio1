@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Mail\ContactNotification;
+use App\Mail\SpamRejection;
+use App\Support\ContactSpamDetector;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
@@ -15,18 +17,19 @@ class ContactController extends Controller
         return view('home');
     }
 
-    public function store(Request $request)
+    public function store(Request $request, ContactSpamDetector $spamDetector)
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'message' => 'required|string|max:1000',
+            'website' => 'nullable|string|max:255',
             'cf-turnstile-response' => 'required',
         ]);
-        
+
         if (app()->environment('production')) {
             $token = $request->input('cf-turnstile-response');
-            $secretKey = env('TURNSTILE_SECRET_KEY', '0x4AAAAAAB5a-LIzDwuQzJMaKLYPHJWbv9o');
+            $secretKey = config('services.turnstile.secret');
             $remoteIp = $request->ip();
 
             try {
@@ -53,7 +56,36 @@ class ContactController extends Controller
                 ], 422);
             }
         }
-        
+
+        $spamAssessment = $spamDetector->inspect($validated);
+
+        if ($spamAssessment['is_spam']) {
+            Log::notice('Contact form spam suppressed', [
+                'score' => $spamAssessment['score'],
+                'reasons' => $spamAssessment['reasons'],
+                'email_hash' => hash('sha256', strtolower($validated['email'])),
+                'ip_hash' => hash('sha256', (string) $request->ip()),
+            ]);
+
+            $shouldAutorespond = (bool) config('contact.spam.autorespond', false)
+                && $spamAssessment['score'] >= (int) config('contact.spam.autorespond_threshold', 10)
+                && in_array('brand_impersonation_domain', $spamAssessment['reasons'], true)
+                && !in_array('honeypot_filled', $spamAssessment['reasons'], true);
+
+            if ($shouldAutorespond) {
+                try {
+                    Mail::to($validated['email'])->send(new SpamRejection);
+                } catch (\Throwable $e) {
+                    Log::warning('Spam rejection email failed', [
+                        'error' => $e->getMessage(),
+                        'email_hash' => hash('sha256', strtolower($validated['email'])),
+                    ]);
+                }
+            }
+
+            return response()->json(['message' => 'Message sent successfully.']);
+        }
+
         try {
             Mail::to(config('mail.contact_recipient'))->send(new ContactNotification(
                 name: $validated['name'],
