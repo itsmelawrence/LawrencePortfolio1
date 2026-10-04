@@ -15,14 +15,12 @@ $socialImages = [
 @endphp
 
 @foreach($socialImages as $index => $img)
-    <div class="image-handler-block">
+    <figure class="image-handler-block">
         <div class="image-handler">
             <a href="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/{{ $img['src'] }}" data-lightbox="portfolio" data-title="{{ $img['title'] }}">
-                <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/{{ $img['src'] }}" alt="{{ $img['alt'] }}" loading="lazy">
+                <img src="https://lawrencebucket01.s3.ap-southeast-2.amazonaws.com/{{ $img['src'] }}" alt="{{ $img['alt'] }}" loading="lazy" decoding="async">
             </a>
         </div>
-        <div class="image-text">
-            <h3>Template {{ $index + 1 }}</h3>
-        </div>
-    </div>
+        <figcaption class="image-text">Template {{ $index + 1 }}</figcaption>
+    </figure>
 @endforeach
