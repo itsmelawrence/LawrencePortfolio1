@@ -7,6 +7,22 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## JARVIS monitoring reporter
+
+This application can send outbound-only health reports to the JARVIS Monitoring API. Create a site in the monitoring API, store its one-time ingest token in Laravel Cloud, and configure:
+
+```dotenv
+JARVIS_MONITORING_ENABLED=true
+JARVIS_MONITORING_URL=https://jarvis-monitoring-api-production-lhpmbl.laravel.cloud
+JARVIS_MONITORING_TOKEN=
+JARVIS_APPLICATION_VERSION=
+JARVIS_DEPLOYMENT_ID=
+```
+
+Laravel Cloud must run the Laravel scheduler. It sends a heartbeat every five minutes and a dependency/health snapshot every six hours. To verify the integration without exposing the token, run `php artisan jarvis:report heartbeat` in the production command console.
+
+The reporter sends framework/runtime versions, dependency names and versions, health-check results, and optional release identifiers. It does not send source code, environment values, user records, site content, or credentials.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
