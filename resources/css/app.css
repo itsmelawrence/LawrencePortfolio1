@@ -607,7 +607,7 @@ body {
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: repeat(4, minmax(74px, 1fr));
+    grid-template-columns: repeat(5, minmax(68px, 1fr));
     gap: 22px;
     align-items: center;
 }
@@ -632,8 +632,8 @@ body {
         box-shadow 0.3s ease;
 }
 
-.tech-item:nth-child(4n + 2),
-.tech-item:nth-child(4n + 4) {
+.tech-item:nth-child(5n + 2),
+.tech-item:nth-child(5n + 4) {
     margin-top: 36px;
 }
 
@@ -641,6 +641,24 @@ body {
     width: 44px;
     height: 44px;
     object-fit: contain;
+}
+
+.tech-item__mark {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: var(--tech-tone);
+    color: #ffffff !important;
+    font-family: var(--font-product-sans);
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.03em;
+}
+
+.tech-item--lettermark .tech-item__mark + span {
+    color: var(--color-text-muted);
 }
 
 .tech-item span {
@@ -694,6 +712,10 @@ body {
     box-shadow: 0 14px 30px rgba(0, 0, 0, 0.26);
 }
 
+[data-theme="dark"] .tech-item--monochrome img {
+    filter: invert(1);
+}
+
 @media screen and (max-width: 1100px) {
     .tech-stack-panel {
         gap: 48px;
@@ -704,16 +726,17 @@ body {
     }
 
     .tech-stack-grid {
-        grid-template-columns: repeat(3, minmax(72px, 1fr));
+        grid-template-columns: repeat(4, minmax(68px, 1fr));
         gap: 18px;
+    }
+
+    .tech-item:nth-child(5n + 2),
+    .tech-item:nth-child(5n + 4) {
+        margin-top: 0;
     }
 
     .tech-item:nth-child(4n + 2),
     .tech-item:nth-child(4n + 4) {
-        margin-top: 0;
-    }
-
-    .tech-item:nth-child(3n + 2) {
         margin-top: 30px;
     }
 }
@@ -743,10 +766,6 @@ body {
         grid-template-columns: repeat(4, minmax(66px, 1fr));
     }
 
-    .tech-item:nth-child(3n + 2) {
-        margin-top: 0;
-    }
-
     .tech-item:nth-child(4n + 2),
     .tech-item:nth-child(4n + 4) {
         margin-top: 28px;
@@ -774,6 +793,8 @@ body {
     }
 
     .tech-item,
+    .tech-item:nth-child(5n + 2),
+    .tech-item:nth-child(5n + 4),
     .tech-item:nth-child(4n + 2),
     .tech-item:nth-child(4n + 4) {
         min-height: 88px;
@@ -788,6 +809,13 @@ body {
     .tech-item img {
         width: 36px;
         height: 36px;
+    }
+
+    .tech-item__mark {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        font-size: 13px !important;
     }
 }
 
