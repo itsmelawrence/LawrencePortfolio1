@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\ContactNotification;
 use App\Mail\SpamRejection;
+use App\Models\Contact;
 use App\Support\ContactSpamDetector;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -86,15 +87,31 @@ class ContactController extends Controller
             return response()->json(['message' => 'Message sent successfully.']);
         }
 
+        // Saved before the email so a mail outage cannot lose the message; JARVIS reads saved messages.
+        $contact = null;
+        try {
+            $contact = Contact::create([
+                'name' => $validated['name'],
+                'email' => $validated['email'],
+                'message' => $validated['message'],
+            ]);
+        } catch (\Throwable $e) {
+            Log::error('Contact message could not be saved: ' . $e->getMessage());
+        }
+
         try {
             Mail::to(config('mail.contact_recipient'))->send(new ContactNotification(
                 name: $validated['name'],
                 email: $validated['email'],
                 inquiryMessage: $validated['message'],
-                submittedAt: now(),
+                submittedAt: $contact?->created_at ?? now(),
             ));
         } catch (\Throwable $e) {
             Log::error('Contact notification email failed: ' . $e->getMessage());
+
+            if ($contact) {
+                return response()->json(['message' => 'Message sent successfully.']);
+            }
 
             return response()->json([
                 'message' => 'Your message could not be delivered. Please try again.',

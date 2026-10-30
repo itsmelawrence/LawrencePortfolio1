@@ -4,11 +4,15 @@ namespace Tests\Feature;
 
 use App\Mail\ContactNotification;
 use App\Mail\SpamRejection;
+use App\Models\Contact;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Mail;
 use Tests\TestCase;
 
 class ContactNotificationTest extends TestCase
 {
+    use RefreshDatabase;
+
     public function test_contact_submission_sends_a_detailed_notification(): void
     {
         Mail::fake();
@@ -30,7 +34,7 @@ class ContactNotificationTest extends TestCase
             return $mail->hasTo('lawrence@skeemadigitalco.com')
                 && str_starts_with($envelope->subject, '[Lawrence Portfolio] New message from Jane Example — ')
                 && $envelope->replyTo[0]->address === 'jane@example.com'
-                && $mail->render()->contains('I enjoyed reviewing your portfolio');
+                && str_contains($mail->render(), 'I enjoyed reviewing your portfolio');
         });
     }
 
@@ -98,7 +102,55 @@ class ContactNotificationTest extends TestCase
         Mail::assertSent(SpamRejection::class, function (SpamRejection $mail) {
             return $mail->hasTo('domains@search-skeemadigitalco.com')
                 && $mail->envelope()->subject === '[Lawrence Portfolio] Unsolicited message rejected'
-                && $mail->render()->contains('Do not contact this address');
+                && str_contains($mail->render(), 'Do not contact this address');
         });
+    }
+
+    public function test_contact_submission_is_saved_for_jarvis(): void
+    {
+        Mail::fake();
+
+        $this->postJson(route('contact.us.store'), [
+            'name' => 'Jane Example',
+            'email' => 'jane@example.com',
+            'message' => 'Could we talk about a new website?',
+            'cf-turnstile-response' => 'test-token',
+        ])->assertOk();
+
+        $this->assertDatabaseHas('contacts', [
+            'name' => 'Jane Example',
+            'email' => 'jane@example.com',
+            'message' => 'Could we talk about a new website?',
+        ]);
+        $this->assertNull(Contact::first()->subject);
+    }
+
+    public function test_suppressed_spam_is_not_saved(): void
+    {
+        Mail::fake();
+
+        $this->postJson(route('contact.us.store'), [
+            'name' => 'Automated Visitor',
+            'email' => 'visitor@example.com',
+            'message' => 'This otherwise looks like an ordinary message.',
+            'website' => 'https://spam.example',
+            'cf-turnstile-response' => 'test-token',
+        ])->assertOk();
+
+        $this->assertSame(0, Contact::count());
+    }
+
+    public function test_saved_message_is_accepted_when_the_email_fails(): void
+    {
+        Mail::shouldReceive('to')->andThrow(new \RuntimeException('SMTP down'));
+
+        $this->postJson(route('contact.us.store'), [
+            'name' => 'Jane Example',
+            'email' => 'jane@example.com',
+            'message' => 'Could we talk about a new website?',
+            'cf-turnstile-response' => 'test-token',
+        ])->assertOk()->assertJson(['message' => 'Message sent successfully.']);
+
+        $this->assertSame(1, Contact::count());
     }
 }
